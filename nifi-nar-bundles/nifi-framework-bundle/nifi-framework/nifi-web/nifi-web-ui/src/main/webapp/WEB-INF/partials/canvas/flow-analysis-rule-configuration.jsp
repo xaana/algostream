@@ -16,6 +16,7 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="flow-analysis-rule-configuration" class="hidden large-dialog">
+    <img src="images/?70.png" style="position: absolute;right: 15px;top: 15px;z-index: 3;width: 28px" onclick="$('#flow-analysis-rule-configuration').hide()">
     <div class="flow-analysis-rule-configuration-tab-container dialog-content">
         <div id="flow-analysis-rule-configuration-tabs" class="tab-container"></div>
         <div id="flow-analysis-rule-configuration-tabs-content">

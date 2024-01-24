@@ -318,7 +318,9 @@
                     $('#process-group-log-file-suffix').removeClass('unset').val(processGroup.logFileSuffix);
 
                     // populate the header
-                    $('#process-group-configuration-header-text').text(processGroup.name + ' Configuration');
+                    // $('#process-group-configuration-header-text').text(processGroup.name + ' Configuration');
+                    $('#process-group-configuration-header-text').text(  'Flow Configuration');
+
 
                     setEditable(true);
 
@@ -364,7 +366,8 @@
                         $('#read-only-process-group-outbound-policy').text(outboundPolicyName);
 
                         // populate the header
-                        $('#process-group-configuration-header-text').text(processGroup.name + ' Configuration');
+                        // $('#process-group-configuration-header-text').text(processGroup.name + ' Configuration');
+                        $('#process-group-configuration-header-text').text('Flow Configuration');
 
                         // backpressure settings
                         $('#process-group-default-flowfile-expiration').text(processGroup.defaultFlowFileExpiration);
@@ -428,7 +431,7 @@
 
             var parameterContexts = parameterContextsResponse.parameterContexts;
             var options = [{
-                text: 'No parameter context',
+                text: 'Parameter Context',
                 value: null
             }];
 
@@ -471,8 +474,8 @@
                         $('#parameter-context-dialog').modal('setHeaderText', 'Add Parameter Context').modal('setButtonModel', [{
                             buttonText: 'Apply',
                             color: {
-                                base: '#728E9B',
-                                hover: '#004849',
+                                base: '#5734D3',
+                                hover: '#7747E8',
                                 text: '#ffffff'
                             },
                             disabled: function () {
@@ -507,9 +510,9 @@
                         }, {
                             buttonText: 'Cancel',
                             color: {
-                                base: '#E3E8EB',
-                                hover: '#C7D2D7',
-                                text: '#004849'
+                                base: '#FFFFFF',
+                                hover: '#E6E7EB',
+                                text: '#333333'
                             },
                             handler: {
                                 click: function () {
@@ -635,7 +638,7 @@
 
                         if (canWrite) {
                             $('#add-process-group-configuration-controller-service').show();
-                            $('#process-group-controller-services-tab-content').css('top', '32px');
+                            $('#process-group-controller-services-tab-content').css('top', '60px');
                         } else {
                             $('#add-process-group-configuration-controller-service').hide();
                             $('#process-group-controller-services-tab-content').css('top', '0');

@@ -39,9 +39,9 @@
 
 #flow-summary-refresh-container {
     position: absolute;
-    bottom: 0px;
-    left: 20px;
-    right: 20px;
+    /*bottom: 0px;*/
+    /*left: 20px;*/
+    right: 7%;
 }
 
 #summary-loading-container {
@@ -73,7 +73,9 @@
     right: 0px;
     z-index: 1;
 }
-
+#processor-summary-tab-content {
+    top: 90px !important;
+}
 /* view single node dialog */
 
 #view-single-node-dialog {
@@ -264,11 +266,20 @@ dl.setting-attributes-list {
 }
 
 #summary-tabs-content {
-    top: 80px;
+    /*top: 80px;*/
+    width: 100%;
+    height: 35px;
 }
 
 #summary-filter-controls {
+    position: relative;
     z-index: 1;
+    top: 1px;
+}
+#summary-filter-container{
+    display: flex;
+    align-items: center;
+    column-gap: 55px;
 }
 
 .summary-tab {
@@ -306,17 +317,22 @@ dl.setting-attributes-list {
 
 #summary div.configuration-tab {
     display: none;
+    top: 30px;
+    z-index: 3;
 }
 
 div.summary-table {
     position: absolute;
-    top: 70px;
+    top: 50px;
     left: 0px;
-    bottom: 48px;
+    bottom: 0px;
     right: 0px;
     overflow: hidden;
     background-color: #fff;
-    min-height: 150px;
+    /*min-height: 150px;*/
+    border: 1px solid #E5E4E7;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
 div.summary-table div.slick-viewport {
@@ -920,3 +936,51 @@ span.sorted {
     left: 0px;
     right: 0px;
 }
+.dialog-content .setting{
+    display:block;
+}
+/*??*/
+.show-processor-details,.show-action-details,.view-reporting-task,.show-action-details,.show-connection-details,.view-parameter-context,.view-flow-analysis-rule,.view-parameter-provider{
+    background-image: url(../images/nfDetail.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+/*?????*/
+.go-to{
+    background-image: url(../images/nfGoTo.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+/*????*/
+.show-processor-status-history,.show-connection-status-history,.show-process-group-status-history{
+    background-image: url(../images/nfHistory.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+/*????*/
+.has-comments {
+    background-image: url(../images/nfRemark.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+
+/*??*/
+.has-errors,.dialog-status-bar-bulletins {
+    background-image: url(../images/nfHint.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+/*????*/
+.flow-analysis-rule-usage,.reporting-task-usage,.parameter-provider-usage {
+    pointer-events: none;
+    display: none;
+}
+/*????*/
+.fetch-parameter-provider{
+    background-image: url(../images/nfParameter.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+
+
+

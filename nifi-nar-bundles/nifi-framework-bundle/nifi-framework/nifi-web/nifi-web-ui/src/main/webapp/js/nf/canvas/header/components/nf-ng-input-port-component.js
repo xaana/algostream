@@ -160,16 +160,16 @@
                     $('#new-port-dialog > .dialog-header > .dialog-header-text').text('Add Input Port')
 
                     var optionLocal = {
-                                text: 'Local connections',
-                                value: 'false',
-                                description: 'Receive FlowFiles from components in parent process groups'
-                            };
+                        text: 'Local connections',
+                        value: 'false',
+                        description: 'Receive FlowFiles from components in parent process groups'
+                    };
 
                     var optionRemote = {
-                                text: 'Remote connections (site-to-site)',
-                                value: 'true',
-                                description: 'Receive FlowFiles from remote process group (site-to-site)'
-                            };
+                        text: 'Remote connections (site-to-site)',
+                        value: 'true',
+                        description: 'Receive FlowFiles from remote process group (site-to-site)'
+                    };
 
                     // initialize the remote access combo
                     $('#port-allow-remote-access-label').text('Receive from');
@@ -259,8 +259,8 @@
                 this.modal.update('setButtonModel', [{
                     buttonText: 'Add',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -270,9 +270,9 @@
                     {
                         buttonText: 'Cancel',
                         color: {
-                            base: '#E3E8EB',
-                            hover: '#C7D2D7',
-                            text: '#004849'
+                            base: '#FFFFFF',
+                            hover: '#E6E7EB',
+                            text: '#333333'
                         },
                         handler: {
                             click: function () {

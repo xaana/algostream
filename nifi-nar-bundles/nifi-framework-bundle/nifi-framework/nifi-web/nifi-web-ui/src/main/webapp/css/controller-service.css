@@ -27,8 +27,31 @@
     font-size: 10px;
     z-index: 1301;
     display: none;
+    min-height: 200px;
+    min-width: 200px;
+    height: 60% !important;
+    width: 60%; !important;
+    top: 20% !important;
+    left: 20% !important;
 }
 
+ .dialog-content {
+    top: 50px;
+}
+#controller-service-name{
+    height: 30px;
+    width: 300px;
+}
+/* .dialog-header .dialog-header-subtitle:before{*/
+/*    content: '';*/
+/*    display: inline-block;*/
+/*    width: 2px;*/
+/*    height: 15px;*/
+/*    background-color: black;*/
+/*    position: relative;*/
+/*    left: -10px;*/
+/*    top: 2px;*/
+/*}*/
 #controller-service-configuration-advanced {
     display: none;
 }
@@ -148,7 +171,7 @@ div.controller-service-canceling {
 */
 
 #controller-service-comments {
-    height: 100%;
+    height: 80%;
 }
 
 #read-only-controller-service-comments {

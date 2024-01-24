@@ -42,9 +42,8 @@
 
 #templates-refresh-container {
     position: absolute;
-    bottom: 0px;
-    left: 20px;
-    right: 20px;
+    top: 0;
+    right: 7%;
 }
 
 #templates-loading-container {
@@ -85,7 +84,7 @@
 
 #templates-table {
     position: absolute;
-    top: 98px;
+    top: 60px;
     left: 0px;
     bottom: 47px;
     right: 0px;

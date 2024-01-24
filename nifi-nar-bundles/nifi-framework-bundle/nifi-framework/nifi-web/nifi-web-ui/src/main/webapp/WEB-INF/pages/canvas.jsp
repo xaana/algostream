@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>NiFi</title>
+        <title>Algopipe</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <link rel="shortcut icon" href="images/nifi16.ico"/>
         <link rel="stylesheet" href="assets/reset.css/reset.css" type="text/css" />
@@ -100,8 +100,8 @@
         </div>
         <jsp:include page="/WEB-INF/partials/message-pane.jsp"/>
         <jsp:include page="/WEB-INF/partials/banners-main.jsp"/>
-        <jsp:include page="/WEB-INF/partials/canvas/canvas-header.jsp"/>
         <jsp:include page="/WEB-INF/partials/canvas/flow-status.jsp"/>
+        <jsp:include page="/WEB-INF/partials/canvas/canvas-header.jsp"/>
         <jsp:include page="/WEB-INF/partials/canvas/about-dialog.jsp"/>
         <jsp:include page="/WEB-INF/partials/ok-dialog.jsp"/>
         <jsp:include page="/WEB-INF/partials/yes-no-dialog.jsp"/>

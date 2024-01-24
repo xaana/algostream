@@ -16,18 +16,19 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="connections-dialog" class="hidden">
+    <img src="images/?70.png" style="width: 28px;height: 28px;margin: -1px 0px 0px -6px;cursor: pointer;position: absolute;right: 10px;top: 10px" onclick="$('#connections-dialog').hide()">
     <div class="dialog-content">
         <div class="setting">
-            <div class="setting-name">Selected component</div>
-            <div class="setting-field">
+            <div class="setting-name">Selected component
+                <div class="setting-name" style="margin-left: 360px; margin-top: -21px">Destination</div></div>
+            <div class="setting-field" style="margin-left: -24px">
                 <div id="connections-context"></div>
             </div>
         </div>
         <div class="setting">
             <div id="connections-source" class="setting-name">Source</div>
-            <div id="connections-destination" class="setting-name">Destination</div>
             <div class="clear"></div>
-            <div class="setting-field">
+            <div class="setting-field" style="margin-left: -5px">
                 <div id="connections-container"></div>
             </div>
         </div>

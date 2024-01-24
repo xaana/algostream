@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>NiFi Login</title>
+        <title>Algopipec Login</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <link rel="shortcut icon" href="images/nifi16.ico"/>
         <link rel="stylesheet" href="assets/reset.css/reset.css" type="text/css" />
@@ -44,23 +44,19 @@
         ${nf.login.script.tags}
     </head>
     <body class="login-body">
-        <div id="login-user-links-container">
-            <ul id="login-user-links" class="links">
-                <li id="user-logout-container" style="display: none;">
-                    <span id="user-logout" class="link">log out</span>
-                </li>
-                <li>
-                    <span id="user-home" class="link">home</span>
-                </li>
-            </ul>
-            <div class="clear"></div>
-        </div>
+    <div class="nf_Login_outer">
         <div id="login-contents-container">
+
+        </div>
+        <div id="login-contents-container2">
+            <div class="clear"></div>
             <jsp:include page="/WEB-INF/partials/login/login-message.jsp"/>
             <jsp:include page="/WEB-INF/partials/login/login-form.jsp"/>
             <jsp:include page="/WEB-INF/partials/login/login-submission.jsp"/>
             <jsp:include page="/WEB-INF/partials/login/login-progress.jsp"/>
         </div>
+    </div>
+
         <jsp:include page="/WEB-INF/partials/ok-dialog.jsp"/>
     </body>
 </html>

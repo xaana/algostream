@@ -2224,8 +2224,8 @@
                 var buttons = [{
                     buttonText: 'Apply',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -2245,9 +2245,9 @@
                 }, {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#fff',
+                        hover: '#f3f3f3',
+                        text: '#333'
                     },
                     handler: {
                         click: function () {

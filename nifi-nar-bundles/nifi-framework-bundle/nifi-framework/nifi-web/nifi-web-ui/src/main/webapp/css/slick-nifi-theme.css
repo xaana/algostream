@@ -19,11 +19,11 @@
 
 .slick-header-columns {
     color: #fff;
-    background-color: #728E9B;
+    /*background-color: #728E9B;*/
 }
 
 .slick-header-column {
-    background: #728E9B;
+    background: #F9F6FE;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
@@ -41,7 +41,7 @@
 }
 
 .slick-row:hover {
-    background-color: #dce3e6 !important;
+    background-color: #f9f6fe !important;
 }
 
 .slick-cell {
@@ -50,14 +50,15 @@
 }
 
 .slick-cell.selected {
-    background-color: #ffef85;
+    background-color: #ffef85 !important;
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
     padding-top: 0px;
+    color: #000;
 }
 
 .slick-row.odd {
-    background: #f4f6f7;
+    /*background: #f4f6f7;*/
 }
 
 .slick-cell.invalid {
@@ -71,18 +72,33 @@
 .grid-canvas .slick-cell:first-child{
     border-left: 0;
 }
-
+.controller-service-usage {
+    display: none;
+}
 .slick-viewport .fa {
     color: #004849;
     line-height: 22px;
     margin-top: 0;
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
     float: left;
     margin-right: 5px;
     text-align: center;
 }
-
+.show-action-details{
+    background-image: url(../images/nfDetail.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+.reporting-task-usage{
+    display: none;
+    pointer-events: none;
+}
+.view-reporting-task {
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-image: url(../images/nfDetail.png);
+}
 .slick-viewport .icon {
     color: #004849;
     line-height: 24px;
@@ -95,7 +111,7 @@
 }
 
 .slick-header.ui-state-default {
-    background-color: #728E9B;
+    /*background-color: #728E9B;*/
 }
 
 .slick-header.ui-state-default, .slick-headerrow.ui-state-default {
@@ -104,12 +120,16 @@
     font-size: 12px;
     font-style: normal;
     border: 0px;
+    border-radius: 5px 5px 0 0;
 }
 
 .slick-header-column.ui-state-default {
     height: 24px;
     line-height: 24px;
-    border-right: 1px solid #728E9B;
+    border-right: 0px;
+    color: #222426;
+    font-size: 16px;
+    font-style: normal;
 }
 
 .slick-sortable-placeholder {
@@ -122,6 +142,11 @@
     font-style: normal;
     font-weight: normal;
     color: #262626;
+}
+.slick-row.ui-widget-content .slickgrid_212397 .r6{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
 
 .slick-cell, .slick-headerrow-column {
@@ -150,4 +175,20 @@ div.status-text {
 
 .slick-sort-indicator-asc {
     background: url(../images/sort-asc.gif) !important;
+}
+
+.edit-controller-service,.delete-controller-service{
+    margin: 0 10px;
+}
+.edit-controller-service,.edit-parameter-context {
+    background-image: url(../images/table_edit_icon.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    margin: 3px;
+}
+.delete-controller-service,.delete-variable,.delete-parameter-context{
+    background-image: url(../images/table_delete_icon.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    margin: 3px;
 }

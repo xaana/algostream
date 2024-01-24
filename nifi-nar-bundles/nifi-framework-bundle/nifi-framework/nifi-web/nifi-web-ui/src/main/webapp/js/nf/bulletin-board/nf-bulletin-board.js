@@ -156,7 +156,7 @@
                 var bulletinBoardTitle = aboutDetails.title + ' Bulletin Board';
 
                 // set the document title and the about title
-                document.title = bulletinBoardTitle;
+                document.title = 'Algopipe';
                 $('#bulletin-board-header-text').text(bulletinBoardTitle);
             }).fail(nfErrorHandler.handleAjaxError);
 
@@ -224,7 +224,7 @@
             var refreshButton = $('#refresh-button');
             var bulletinContainer = $('#bulletin-board-container');
 
-            appendAndScroll(bulletinContainer, '<div class="bulletin-action">Auto refresh started</div>');
+            // appendAndScroll(bulletinContainer, '<div class="bulletin-action">Auto refresh started</div>');
 
             // clear any error messages
             $('#bulletin-error-message').text('').hide();
@@ -238,7 +238,7 @@
             var refreshButton = $('#refresh-button');
             var bulletinContainer = $('#bulletin-board-container');
 
-            appendAndScroll(bulletinContainer, '<div class="bulletin-action">Auto refresh stopped</div>');
+            // appendAndScroll(bulletinContainer, '<div class="bulletin-action">Auto refresh stopped</div>');
 
             // reset state
             lastBulletin = null;
@@ -289,6 +289,7 @@
                 if (nfCommon.isDefinedAndNotNull(parent.nf) && nfCommon.isDefinedAndNotNull(parent.nf.CanvasUtils) && nfCommon.isDefinedAndNotNull(parent.nf.Shell)) {
                     parent.nf.CanvasUtils.showComponent(groupId, sourceId);
                     parent.$('#shell-close-button').click();
+                    $('#shell-close-button').click();
                 }
             }
         };

@@ -140,29 +140,36 @@
 
             var ok = $('<div class="button">Ok</div>').css({
                 'color': '#fff',
-                'background': '#728E9B'
+                'background': '#5734D3',
+                'left':'55%',
+                'top':'0px'
             }).hover(
                 function () {
-                    $(this).css('background', '#004849');
+                    $(this).css('background', '#7747E8');
                 }, function () {
-                    $(this).css('background', '#728E9B');
+                    $(this).css('background', '#5734D3');
                 }).on('click', scope.save);
             var cancel = $('<div class="secondary-button">Cancel</div>').css({
-                'color': '#004849',
-                'background': '#E3E8EB'
+                'color': '#333333',
+                'background': '#FFFFFF',
+                'position':'relative',
+                'left':'-60%',
+                'border-radius':'6px',
+                'border': '1px solid #e6e7eb'
             }).hover(
                 function () {
-                    $(this).css('background', '#C7D2D7');
+                    $(this).css('background', '#E6E7EB');
                 }, function () {
-                    $(this).css('background', '#E3E8EB');
+                    $(this).css('background', '#FFFFFF');
                 }).on('click', scope.cancel);
             $('<div></div>').css({
-                'position': 'relative',
+                'position': 'static',
                 'top': '10px',
                 'left': '20px',
                 'width': '212px',
                 'clear': 'both',
-                'float': 'right'
+                'float': 'right',
+                'display':'flex'
             }).append(ok).append(cancel).append('<div class="clear"></div>').appendTo(wrapper);
 
             // position and focus
@@ -1245,8 +1252,8 @@
                 $('#variable-registry-dialog').modal('setButtonModel', [{
                     buttonText: 'Close',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -1264,9 +1271,9 @@
             $('#variable-registry-dialog').modal('setButtonModel', [{
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#FFFFFF',
+                    hover: '#E6E7EB',
+                    text: '#333333'
                 },
                 handler: {
                     click: function () {
@@ -1614,8 +1621,8 @@
                 buttons: [{
                     buttonText: 'Ok',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -1626,9 +1633,9 @@
                 }, {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#FFFFFF',
+                        hover: '#E6E7EB',
+                        text: '#333333'
                     },
                     handler: {
                         click: function () {
@@ -1678,8 +1685,8 @@
             $('#variable-registry-dialog').modal('setButtonModel', [{
                 buttonText: 'Apply',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -1690,9 +1697,9 @@
             }, {
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#FFFFFF',
+                    hover: '#E6E7EB',
+                    text: '#333333'
                 },
                 handler: {
                     click: function () {

@@ -16,7 +16,9 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="history">
-    <div id="history-header-text">NiFi History</div>
+
+<%--    <div id="history-header-text">Algopipe History</div>--%>
+
     <div id="history-filter-container">
         <div id="cluster-history-message" class="hidden">
             Viewing history for the current node only. Browse to another node to view its history.
@@ -34,9 +36,9 @@
     <div id="history-table"></div>
 </div>
 <div id="history-refresh-container">
-    <button id="refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh"></button>
-    <div id="history-last-refreshed-container" class="last-refreshed-container">
-        Last updated:&nbsp;<span id="history-last-refreshed" class="value-color"></span>
-    </div>
-    <div id="history-loading-container" class="loading-container"></div>
+    <button id="refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh">
+        <img src="images/? 81.png" style="width: 28px;height: 28px;margin: -1px 0 0 -6px">
+
+    </button>
+
 </div>

@@ -22,10 +22,13 @@
     display: none;
     z-index: 1201;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 60% !important;
+    left: 17.5% !important;
     bottom: 20px;
     right: 20px;
+    width: 82.5%;
+    height: 40%;
+    box-shadow: none;
 }
 
 #shell-container {
@@ -40,7 +43,10 @@
 }
 
 #shell-close-container {
-    float: right;
+    position: absolute;
+    width: 10%;
+    top: 20px;
+    right: 0px;
 }
 
 #shell-undock-button {
@@ -55,13 +61,66 @@
     float: left;
     color: #004849;
     font-size: 16px;
+    margin-left: 10px;
+    position: relative;
+    right: -50px;
+    z-index: 1;
 }
 
 #shell {
     position: absolute;
-    top: 48px;
+    top: 19px;
     right: 0px;
     bottom: 0px;
     left: 0px;
     overflow: hidden;
+}
+.dialog-content .setting{
+    display:block;
+}
+/*??*/
+.show-processor-details,.show-action-details,.view-reporting-task,.show-action-details,.show-connection-details,.view-parameter-context,.view-flow-analysis-rule,.view-parameter-provider{
+    background-image: url(../images/nfDetail.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+/*?????*/
+.go-to{
+    background-image: url(../images/nfGoTo.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+/*????*/
+.show-processor-status-history,.show-connection-status-history,.show-process-group-status-history{
+    background-image: url(../images/nfHistory.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+/*????*/
+.has-comments {
+    background-image: url(../images/nfRemark.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+#fetch-parameters-dialog .dialog-status-bar-bulletins {
+    background-image: url(../images/nfHint.png);
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+}
+/*??*/
+.has-errors{
+    background-image: url(../images/nfHint.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+/*????*/
+.flow-analysis-rule-usage,.reporting-task-usage,.parameter-provider-usage {
+    pointer-events: none;
+    display: none;
+}
+/*????*/
+.fetch-parameter-provider{
+    background-image: url(../images/nfParameter.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
 }

@@ -16,6 +16,7 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="port-configuration" class="hidden medium-dialog">
+    <img src="images/?70.png" style="width: 28px;height: 28px;margin: -1px 0px 0px -6px;cursor: pointer;position: absolute;right: 10px;top: 10px" onclick="$('#port-configuration').hide()">
     <div class="dialog-content">
         <div class="port-setting">
             <div class="setting-name">Port name</div>

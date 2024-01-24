@@ -42,9 +42,7 @@
 
 #provenance-refresh-container {
     position: absolute;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
+    right: 7%;
 }
 
 #provenance-loading-container {
@@ -76,14 +74,18 @@ div.provenance-panel {
 /* filter controls */
 
 #provenance-filter-container {
-    height: 24px;
+    /*height: 24px;*/
     width: 100%;
 }
 
 #provenance-filter {
-    width: 173px;
-    margin-right: 3px;
-    float: left;
+    width: 300px;
+    height: 33px;
+    font-size: 16px;
+    margin-right: 10%;
+}
+#provenance-filter::-webkit-input-placeholder{
+    color: #666;
 }
 
 #provenance-filter-type {
@@ -349,6 +351,8 @@ div.content-detail-value {
     overflow: hidden;
     background-color: #fff;
     min-height: 150px;
+    border: 1px solid #ccc;
+    height: 80%;
 }
 
 #provenance-table div.slick-viewport {

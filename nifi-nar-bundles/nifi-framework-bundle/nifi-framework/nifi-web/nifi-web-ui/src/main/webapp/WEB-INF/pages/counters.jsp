@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>NiFi Counters</title>
+        <title>Algopipec Counters</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <link rel="shortcut icon" href="images/nifi16.ico"/>
         <link rel="stylesheet" href="assets/reset.css/reset.css" type="text/css" />
@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="css/slick-nifi-theme.css" type="text/css" />
         <link rel="stylesheet" href="fonts/flowfont/flowfont.css" type="text/css" />
         <link rel="stylesheet" href="assets/angular-material/angular-material.min.css" type="text/css" />
-        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+<%--        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" type="text/css" />--%>
         <script type="text/javascript" src="assets/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery/jquery.base64.js"></script>
         <script type="text/javascript" src="js/jquery/jquery.center.js"></script>

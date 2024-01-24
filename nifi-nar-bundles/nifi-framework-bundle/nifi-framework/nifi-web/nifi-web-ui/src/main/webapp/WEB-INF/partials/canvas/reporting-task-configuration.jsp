@@ -16,6 +16,7 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="reporting-task-configuration" class="hidden large-dialog">
+    <img src="images/?70.png" style="position: absolute;right: 15px;top: 15px;z-index: 3;width: 28px" onclick="$('#reporting-task-configuration').hide()">
     <div class="reporting-task-configuration-tab-container dialog-content">
         <div id="reporting-task-configuration-tabs" class="tab-container"></div>
         <div id="reporting-task-configuration-tabs-content">

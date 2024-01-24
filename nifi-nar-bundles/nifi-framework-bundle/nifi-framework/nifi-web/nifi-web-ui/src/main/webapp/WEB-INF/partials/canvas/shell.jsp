@@ -18,11 +18,8 @@
 <div id="shell-dialog" class="hidden cancellable">
     <div id="shell-container" class="dialog-content">
         <div id="shell-close-container">
-            <button id="shell-undock-button" class="undock-normal pointer " title="Open in New Window">
-                <div class="fa fa-external-link-square"></div>
-            </button>
             <button id="shell-close-button" class="close-normal pointer" title="Close">
-                <div class="fa fa-times"></div>
+                    <img src="images/? 74.png" style="width: 28px;height: 28px;margin: -2px 0px 1px -6px;">
             </button>
             <div class="clear"></div>
         </div>

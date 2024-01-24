@@ -318,29 +318,35 @@
 
                 var ok = $('<div class="button">Ok</div>').css({
                     'color': '#fff',
-                    'background': '#728E9B'
+                    'background': '#5734D3',
+                    'left':'55%',
+                    'top':'0px'
                 }).hover(
                     function () {
-                        $(this).css('background', '#004849');
+                        $(this).css('background', '#7747E8');
                     }, function () {
-                        $(this).css('background', '#728E9B');
+                        $(this).css('background', '#5734D3');
                     }).on('click', scope.save);
                 var cancel = $('<div class="secondary-button">Cancel</div>').css({
-                    'color': '#004849',
-                    'background': '#E3E8EB'
+                    'color': '#333333',
+                    'background': '#FFFFFF',
+                    'left':'-60%',
+                    'border-radius':'6px',
+                    'border': '1px solid #e6e7eb'
                 }).hover(
                     function () {
-                        $(this).css('background', '#C7D2D7');
+                        $(this).css('background', '#E6E7EB');
                     }, function () {
-                        $(this).css('background', '#E3E8EB');
+                        $(this).css('background', '#FFFFFF');
                     }).on('click', scope.cancel);
                 $('<div></div>').css({
-                    'position': 'relative',
+                    'position': 'static',
                     'top': '10px',
                     'left': '20px',
                     'width': '212px',
                     'clear': 'both',
-                    'float': 'right'
+                    'float': 'right',
+                    'display':'flex'
                 }).append(ok).append(cancel).append('<div class="clear"></div>').appendTo(wrapper);
 
                 // position and focus
@@ -646,32 +652,31 @@
                 }
 
                 // add buttons for handling user input
-                var cancel = $('<div class="secondary-button">Cancel</div>').css({
-                    'color': '#004849',
-                    'background': '#E3E8EB'
+                var cancel = $('<div class="secondary-button cc">Cancel</div>').css({
+                    'color': '#333',
+                    'background': '#fff',
+                    'border-radius' : '5px',
+                    'border':'1px solid #e6e7eb',
+                    'font-size':'16px'
                 }).hover(
                     function () {
-                        $(this).css('background', '#C7D2D7');
+                        $(this).css('background', '#f3f3f3');
                     }, function () {
-                        $(this).css('background', '#E3E8EB');
+                        $(this).css('background', '#fff');
                     }).on('click', scope.cancel);
                 var ok = $('<div class="button">Ok</div>').css({
                     'color': '#fff',
-                    'background': '#728E9B'
+                    'background': '#5734D3',
+                    'top':'0',
+                    'margin-left':'40px'
                 }).hover(
                     function () {
-                        $(this).css('background', '#004849');
+                        $(this).css('background', '#7747E8');
                     }, function () {
-                        $(this).css('background', '#728E9B');
+                        $(this).css('background', '#5734D3');
                     }).on('click', scope.save);
 
-                $('<div></div>').css({
-                    'position': 'relative',
-                    'top': '10px',
-                    'left': '20px',
-                    'width': '212px',
-                    'float': 'right'
-                }).append(ok).append(cancel).appendTo(wrapper);
+                $('<div></div>').css({}).append(ok).append(cancel).appendTo(wrapper);
 
                 // position and focus
                 scope.position(position);
@@ -894,13 +899,15 @@
 
                     $('<div class="button">Ok</div>').css({
                         'position': 'relative',
+                        'color': '#fff',
+                        'background': '#5734D3',
                         'top': '10px',
                         'left': '20px'
                     }).hover(
                         function () {
-                            $(this).css('background', '#004849');
+                            $(this).css('background', '#7747E8');
                         }, function () {
-                            $(this).css('background', '#728E9B');
+                            $(this).css('background', '#5734D3');
                         }).on('click', function () {
                         wrapper.hide().remove();
                     }).appendTo(wrapper);
@@ -990,13 +997,15 @@
                     // add an ok button that will remove the entire pop up
                     var ok = $('<div class="button">Ok</div>').css({
                         'position': 'relative',
+                        'color': '#fff',
+                        'background': '#5734D3',
                         'top': '10px',
                         'left': '20px'
                     }).hover(
                         function () {
-                            $(this).css('background', '#004849');
+                            $(this).css('background', '#7747E8');
                         }, function () {
-                            $(this).css('background', '#728E9B');
+                            $(this).css('background', '#5734D3');
                         }).on('click', function () {
                         cleanUp();
                     });
@@ -1149,8 +1158,8 @@
                     buttons: [{
                         buttonText: 'Create',
                         color: {
-                            base: '#728E9B',
-                            hover: '#004849',
+                            base: '#5734D3',
+                            hover: '#7747E8',
                             text: '#ffffff'
                         },
                         handler: {
@@ -1162,9 +1171,9 @@
                         {
                             buttonText: 'Cancel',
                             color: {
-                                base: '#E3E8EB',
-                                hover: '#C7D2D7',
-                                text: '#004849'
+                                base: '#FFFFFF',
+                                hover: '#E6E7EB',
+                                text: '#333333'
                             },
                             handler: {
                                 click: function () {
@@ -2131,11 +2140,12 @@
                         // build the new property dialog
                         var newPropertyDialogMarkup =
                             '<div id="new-property-dialog" class="dialog cancellable small-dialog hidden">' +
+                                '<img id="nf_imgHideHandler" src="images/?70.png" style="position: absolute;right: 15px;top: 15px;z-index: 3;width: 28px" >'+
                                 '<div class="dialog-content">' +
                                     '<div class="setting">' +
-                                        '<div class="setting-name">Property name</div>' +
+                                        // '<div class="setting-name">Property name</div>' +
                                         '<div class="setting-field new-property-name-container">' +
-                                            '<input class="new-property-name" type="text"/>' +
+                                            '<input class="new-property-name" placeholder="Property name" type="text"/>' +
                                         '</div>' +
                                     '</div>' +
                                     '<div class="setting">' +
@@ -2158,14 +2168,17 @@
                         var newPropertyNameField = newPropertyDialog.find('input.new-property-name');
                         var valueSensitiveField = newPropertyDialog.find('#value-sensitive-radio-button');
                         var valueNotSensitiveField = newPropertyDialog.find('#value-not-sensitive-radio-button');
-
+                        var imgEle = document.getElementById('nf_imgHideHandler')
+                        imgEle.addEventListener('click',function (){
+                            $("#new-property-dialog").hide()
+                        })
                         newPropertyDialog.modal({
                             headerText: 'Add Property',
                             buttons: [{
                                 buttonText: 'Ok',
                                 color: {
-                                    base: '#728E9B',
-                                    hover: '#004849',
+                                    base: '#5734D3',
+                                    hover: '#7747E8',
                                     text: '#ffffff'
                                 },
                                 handler: {
@@ -2177,9 +2190,9 @@
                                 {
                                     buttonText: 'Cancel',
                                     color: {
-                                        base: '#E3E8EB',
-                                        hover: '#C7D2D7',
-                                        text: '#004849'
+                                        base: '#FFFFFF',
+                                        hover: '#E6E7EB',
+                                        text: '#333333'
                                     },
                                     handler: {
                                         click: function () {
@@ -2409,7 +2422,7 @@
 
                     // clear any existing new property dialogs
                     if (nfCommon.isDefinedAndNotNull(options.dialogContainer)) {
-                        $('#new-property-dialog').modal("hide");
+                        $('.reporting-task-usage').modal("hide");
                         $(options.dialogContainer).children('div.new-inline-controller-service-dialog').remove();
                     }
                 }

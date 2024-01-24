@@ -240,8 +240,8 @@
                         templateComponent.modal.update('setButtonModel', [{
                             buttonText: 'Add',
                             color: {
-                                base: '#728E9B',
-                                hover: '#004849',
+                                base: '#5734D3',
+                                hover: '#7747E8',
                                 text: '#ffffff'
                             },
                             handler: {

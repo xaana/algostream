@@ -16,15 +16,16 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="connection-configuration" layout="column" class="hidden large-dialog">
+    <img src="images/?70.png" style="width: 28px;height: 28px;margin: -1px 0px 0px -6px;cursor: pointer;position: absolute;right: 10px;top: 10px" onclick="$('#connection-configuration').hide()">
     <div class="connection-configuration-tab-container dialog-content">
         <div id="connection-configuration-tabs" class="tab-container"></div>
         <div id="connection-configuration-tabs-content">
             <div id="connection-settings-tab-content" class="configuration-tab">
                 <div class="settings-left">
                     <div class="setting">
-                        <div class="setting-name">Name</div>
+                        <%--                        <div class="setting-name">Name</div>--%>
                         <div class="setting-field">
-                            <input type="text" id="connection-name" name="connection-name" class="setting-input"/>
+                            <input type="text" id="connection-name" name="connection-name" class="setting-input" placeholder="Name"/>
                         </div>
                     </div>
                     <div class="setting">
@@ -35,40 +36,34 @@
                     </div>
                     <div class="setting">
                         <div class="setting-name">
-                            FlowFile expiration
                             <div class="fa fa-question-circle" alt="Info" title="The maximum amount of time an object may be in the flow before it will be automatically aged out of the flow."></div>
                         </div>
                         <div class="setting-field">
-                            <input type="text" id="flow-file-expiration" name="flow-file-expiration" class="setting-input"/>
+                            <input type="text" id="flow-file-expiration" name="flow-file-expiration" class="setting-input" placeholder="FlowFile expiration"/>
                         </div>
                     </div>
-                    <div class="multi-column-settings">
-                        <div class="setting">
-                            <div class="setting-name">
-                                Back Pressure<br/>Object threshold
-                                <div class="fa fa-question-circle" alt="Info" title="The maximum number of objects that can be queued before back pressure is applied."></div>
-                            </div>
-                            <div class="setting-field">
-                                <input type="text" id="back-pressure-object-threshold" name="back-pressure-object-threshold" class="setting-input"/>
-                            </div>
+                    <div class="setting">
+                        <div class="setting-name">
+                            <div class="fa fa-question-circle" alt="Info" title="The maximum number of objects that can be queued before back pressure is applied."></div>
                         </div>
-                        <div class="separator">&nbsp;</div>
-                        <div class="setting">
-                            <div class="setting-name">
-                                &nbsp;<br/>Size threshold
-                                <div class="fa fa-question-circle" alt="Info" title="The maximum data size of objects that can be queued before back pressure is applied."></div>
-                            </div>
-                            <div class="setting-field">
-                                <input type="text" id="back-pressure-data-size-threshold" name="back-pressure-data-size-threshold" class="setting-input"/>
-                            </div>
+                        <div class="setting-field">
+                            <input type="text" id="back-pressure-object-threshold" name="back-pressure-object-threshold" class="setting-input" placeholder="Back Pressure Object threshold"/>
+                        </div>
+                    </div>
+                    <div class="separator">&nbsp;</div>
+                    <div class="setting">
+                        <div class="setting-name">
+                            <div class="fa fa-question-circle" alt="Info" title="The maximum data size of objects that can be queued before back pressure is applied."></div>
+                        </div>
+                        <div class="setting-field">
+                            <input type="text" id="back-pressure-data-size-threshold" name="back-pressure-data-size-threshold" class="setting-input" placeholder="Size threshold"/>
                         </div>
                     </div>
                     <div>
                         <div class="multi-column-settings">
                             <div class="setting">
                                 <div class="setting-name">
-                                    Load Balance Strategy
-                                    <div class="fa fa-question-circle" alt="Info" title="How to load balance the data in this Connection across the nodes in the cluster."></div>
+                                    <div class="fa fa-question-circle" alt="Info" title="How to load balance the data in this Connection across the nodes in the cluster." style="top: 25px;"></div>
                                 </div>
                                 <div class="setting-field">
                                     <div id="load-balance-strategy-combo"></div>
@@ -101,7 +96,7 @@
                     <div class="setting">
                         <div class="setting-name">
                             Available prioritizers
-                            <div class="fa fa-question-circle" alt="Info" title="Available prioritizers that could reprioritize FlowFiles in this work queue."></div>
+                            <div class="fa fa-question-circle" alt="Info" title="Available prioritizers that could reprioritize FlowFiles in this work queue." style="position: relative;top: auto"></div>
                         </div>
                         <div class="setting-field">
                             <ol id="prioritizer-available"></ol>
@@ -109,11 +104,10 @@
                     </div>
                     <div class="setting">
                         <div class="setting-name">
-                            Selected prioritizers
-                            <div class="fa fa-question-circle" alt="Info" title="Prioritizers that have been selected to reprioritize FlowFiles in this work queue."></div>
+                            <div class="fa fa-question-circle" alt="Info" title="Prioritizers that have been selected to reprioritize FlowFiles in this work queue." style="top: 27px;right: 30px;"></div>
                         </div>
                         <div class="setting-field">
-                            <ul id="prioritizer-selected"></ul>
+                            <ul id="prioritizer-selected" class="bb" style="background-color: #F3F3F3">Selected prioritizers</ul>
                         </div>
                     </div>
                 </div>
@@ -160,7 +154,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="connection-source-group" class="setting">
+                    <div id="connection-source-group" class="setting" style="margin-top: 25px">
                         <div class="setting-name">Within group</div>
                         <div class="setting-field">
                             <div id="connection-source-group-name"></div>

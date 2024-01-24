@@ -16,6 +16,8 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="parameter-provider-configuration" class="hidden large-dialog">
+    <img src="images/?70.png" style="position: absolute;right: 15px;top: 15px;z-index: 3;width: 28px" onclick="$('#parameter-provider-configuration').hide()">
+
     <div class="parameter-provider-configuration-tab-container dialog-content">
         <div id="parameter-provider-configuration-tabs" class="tab-container"></div>
         <div id="parameter-provider-configuration-tabs-content">

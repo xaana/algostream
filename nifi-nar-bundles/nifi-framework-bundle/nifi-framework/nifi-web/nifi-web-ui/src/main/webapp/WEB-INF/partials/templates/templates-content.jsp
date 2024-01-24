@@ -19,13 +19,13 @@
 <div id="templates">
     <span id="template-group-id" class="hidden"><c:out value="${param.groupId}"/></span>
     <div id="templates-header-and-filter">
-        <div id="templates-header-text">NiFi Templates</div>
+<%--        <div id="templates-header-text">NiFi Templates</div>--%>
         <div id="templates-filter-controls">
-            <div id="templates-filter-stats" class="filter-status">
-                Displaying&nbsp;<span id="displayed-templates"></span>&nbsp;of&nbsp;<span id="total-templates"></span>
-            </div>
+<%--            <div id="templates-filter-stats" class="filter-status">--%>
+<%--                Displaying&nbsp;<span id="displayed-templates"></span>&nbsp;of&nbsp;<span id="total-templates"></span>--%>
+<%--            </div>--%>
             <div id="templates-filter-container" class="filter-container">
-                <input type="text" id="templates-filter" class="filter" placeholder="Filter"/>
+<%--                <input type="text" id="templates-filter" class="filter" placeholder="Filter"/>--%>
                 <div id="templates-filter-type" class="filter-type"></div>
             </div>
         </div>
@@ -33,9 +33,11 @@
     <div id="templates-table"></div>
 </div>
 <div id="templates-refresh-container">
-    <button id="refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh"></button>
-    <div id="templates-last-refreshed-container" class="last-refreshed-container">
-        Last updated:&nbsp;<span id="templates-last-refreshed" class="value-color"></span>
-    </div>
-    <div id="templates-loading-container" class="loading-container"></div>
+    <button id="refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh">
+        <img src="images/? 81.png" style="width: 28px;height: 28px;margin: -1px 0 0 -6px">
+    </button>
+<%--    <div id="templates-last-refreshed-container" class="last-refreshed-container">--%>
+<%--        Last updated:&nbsp;<span id="templates-last-refreshed" class="value-color"></span>--%>
+<%--    </div>--%>
+<%--    <div id="templates-loading-container" class="loading-container"></div>--%>
 </div>

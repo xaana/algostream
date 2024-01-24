@@ -86,7 +86,18 @@
     local('RobotoSlab-Bold'),
     url('../fonts/Roboto_Slab/RobotoSlab-Bold.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: 'testFont';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Tomorrow-Regular'),
+    local('Tomorrow-Regular'),
+    url('../fonts/flowfont/Tomorrow-Regular.ttf') format('truetype');
+    url('../flowfont.svg?33669169#testFont') format('svg');
+}
+* {
+    font-family: testFont !important;
+}
 /*remove margin from font awesome*/
 i[class^="fa-"]:before, i[class*=" fa-"]:before {
     margin: -1px;
@@ -109,9 +120,9 @@ body {
     color: #262626;
 }
 
-body.md-default-theme, body, html.md-default-theme, html {
-    background-color: white;
-}
+/*body.md-default-theme, body, html.md-default-theme, html {*/
+/*    background-color: white;*/
+/*}*/
 
 button {
     border-radius: 0;
@@ -217,14 +228,14 @@ label {
 }
 
 input[type=text], input[type=password] {
-    background-color: #eaeef0;
+    background-color: #F3F3F3;
     border: 1px solid #eaeef0;
     font-family: Roboto, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     padding: 0px 10px 0px 10px;
     resize: none;
     height: 32px;
-    width: 100%;
+    width: 86%;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box;
@@ -232,6 +243,9 @@ input[type=text], input[type=password] {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    border-radius: 11px; /* ??????????,????????? */
+    padding-left: 20px;
+    border-radius: 6px;
 }
 
 input:focus, textarea:focus {
@@ -242,7 +256,7 @@ input:focus, textarea:focus {
 }
 
 textarea {
-    background-color: #eaeef0;
+    background-color: #F3F3F3;
     border: 1px solid #eaeef0;
     font-family: Roboto, sans-serif;
     font-size: 13px !important;
@@ -294,15 +308,24 @@ div.nf-checkbox.disabled {
 }
 
 div.checkbox-unchecked {
-    background: transparent url(../images/inputCheckbox.png) no-repeat scroll top left;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/unchecked.png);
+    background-repeat: no-repeat;
 }
 
 div.checkbox-checked {
-    background: transparent url(../images/inputCheckbox.png) no-repeat scroll top right;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/checked.png);
+    background-repeat: no-repeat;
+
 }
 
 div.ajax-loading {
     background-image: url(../images/iconLoading.gif);
+    background-repeat: no-repeat;
+
 }
 
 div.ajax-complete:before {
@@ -353,8 +376,8 @@ span.link-bold {
 button {
     height: 28px;
     width: 28px;
-    border: 1px solid #CCDADB; /*tint link-color 80%*/
-    background-color: rgba(249, 250, 251, 0.97);
+    border: 1px solid #ffffff; /*tint link-color 80%*/
+    background-color: #EBEBEB;
     color: #004849;
 }
 
@@ -363,13 +386,13 @@ button.refresh-button {
 }
 
 button:hover {
-    border: 1px solid #004849; /*link-color*/
+    border: 0px solid #EBEBEB; /*link-color*/
 }
 
 button:disabled {
-    color: #CCDADB !important; /*tint link-color 80%*/
+    color: #EBEBEB !important; /*tint link-color 80%*/
     cursor: not-allowed;
-    border: 1px solid #CCDADB; /*tint link-color 80%*/
+    border: 0px solid #EBEBEB; /*tint link-color 80%*/
 }
 
 /* angular material override */
@@ -392,8 +415,8 @@ input:focus {
 /* filter controls */
 
 .filter-controls {
-    position: absolute;
-    top: 10px;
+    /*position: absolute;*/
+    /*top: 10px;*/
 }
 
 .filter-container {
@@ -408,7 +431,14 @@ input:focus {
 }
 
 input.filter {
-    width: 173px;
+    width: 300px;
+    margin-right: 10%;
+    height: 33px;
+    background-color: #F3F3F3;
+    font-size: 16px;
+}
+input.filter::-webkit-input-placeholder{
+    color: #666;
 }
 
 .filter-type,
@@ -427,10 +457,10 @@ input.filter {
 }
 
 .setting-field.summary-filter-primary-node-container {
-    display: inline-block;
-    margin-left: 10px;
-    margin-top: 8px;
     width: auto;
+    display: flex;
+    align-items: center;
+    color: #B3B5B7;
 }
 
 /* overlay icon styles */
@@ -499,15 +529,35 @@ div.button {
     padding: 0 8px;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 11px;
+    font-size: 16px;
     line-height: 33px;
     text-align: center;
     border: 0px;
     float: right;
     position: relative;
-    background: #728E9B;
+    background: #5734D3 ;
     color: #fff;
     cursor: pointer;
+    margin-right: 30px;
+    border-radius: 6px;
+    bottom: 25px;
+    border: 1px solid #E6E7EB;
+}
+div.button2 {
+    height: 44px;
+    width:  100%;
+    /*text-transform: uppercase;*/
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 44px;
+    text-align: center;
+    border: 0px;
+    float: right;
+    position: relative;
+    background: #5D39B4;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 22px;
 }
 
 div.button.disabled-button {
@@ -517,7 +567,7 @@ div.button.disabled-button {
 }
 
 div.button:hover:not(.disabled-button) {
-    background-color: #004849;
+    background-color: #7747E8;
 }
 
 div.secondary-button {
@@ -526,22 +576,25 @@ div.secondary-button {
     padding: 0 8px;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 33px;
     text-align: center;
     border: 0px;
     float: right;
     position: relative;
-    background: #E3E8EB;
-    color: #004849;
+    background: #FFFFFF;
+    color:#333333;
     cursor:pointer
 }
 
 div.secondary-button:hover {
-    background-color: #C7D2D7;
+    background-color: #F3F3F3;
 }
 
 /* tooltips */
+.qtip{
+    margin-left: 50px !important;
+}
 
 .qtip-nifi {
     border: 0px !important;
@@ -568,7 +621,7 @@ div.nifi-tooltip {
 }
 
 .scrollable {
-    border-bottom: 1px solid #d0dbe0;
+    /*border-bottom: 1px solid #d0dbe0;*/
 }
 
 /*context menu */
@@ -579,7 +632,7 @@ div.nifi-tooltip {
     z-index: 10006;
     font-size: 13px;
     padding:3px 0;
-    background-color:rgba(249,250,251,0.97); /*tint base-color 96%*/
+    background-color:#ffffff; /*tint base-color 96%*/
     border:1px solid #004849; /*link-color*/
     box-shadow: 0 3px 6px rgba(0,0,0,0.3);
     width: 215px;
@@ -595,7 +648,7 @@ div.context-menu-item {
 }
 
 div.context-menu-item.hover {
-    background-color:#C7D2D7; /*tint base-color 60%*/
+    background-color:#DFF5ED; /*tint base-color 60%*/
     box-shadow:0 1px 1px rgba(0,0,0,0.15);
 }
 
@@ -619,10 +672,11 @@ div.context-menu-item.hover {
 }
 
 div.context-menu-item-text {
-    margin-left: 4px;
+    margin-left: 9px;
     line-height: 16px;
     float: left;
     color: #262626;
+    background-color: transparent !important;
 }
 
 div.context-menu-group-item-img {
@@ -656,21 +710,49 @@ md-progress-linear > div {
 }
 
 .setting {
-    margin-bottom: 15px;
+    position: relative;
+    /*margin-bottom: 15px;*/
+}
+#processor-tag-cloud-container .setting {
+    margin: 0;
+}
+#status-history-details .setting-name {
+    font-size: 16px;
 }
 
 .setting-name {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 500;
     font-family: Roboto Slab;
     text-transform: capitalize;
     padding-bottom: 4px;
     color: #262626;
 }
-
+#new-remote-process-group-dialog .setting:first-child .setting-name div {
+    top: 30px;
+    left: 94.5%;
+}
+#new-remote-process-group-dialog .setting:first-child>.setting-name {
+    order: 1;
+}
+#new-remote-process-group-dialog {
+    height: 80% !important;
+    min-height: 0 !important;
+    top: 5% !important;
+}
+input#new-remote-process-group-uris {
+    width: 93%;
+}
+div#new-remote-process-group-transport-protocol-combo {
+    width: 85.5%;
+}
 .setting-name .fa {
-    color: #004849;
+    color: #5734D3;
     margin-left: 5px;
+    position: relative;
+    left: 90%;
+    top: 29px;
+    fill: currentColor;
 }
 
 .setting-field .fa {
@@ -685,6 +767,24 @@ md-progress-linear > div {
     color: #775351;
     font-size: 13px;
     font-weight: 500;
+    /*margin-top: 14px;*/
+}
+#select-file-button {
+    margin-bottom: 15px;
+}
+.input-with-icon {
+    padding-left: 20px; /* ?????????????20px */
+    background-image: url("../images/ms-user.svg"); /* ????????? */
+    background-position: 15px center; /* ??????????????? */
+    background-repeat: no-repeat; /* ???????? */
+    background-size: 16px; /* ?????? */
+}
+.input-with-icon2 {
+    padding-left: 20px; /* ?????????????20px */
+    background-image: url("../images/ms-password.svg"); /* ????????? */
+    background-position: 15px center; /* ??????????????? */
+    background-repeat: no-repeat; /* ???????? */
+    background-size: 16px; /* ?????? */
 }
 
 .setting-header {

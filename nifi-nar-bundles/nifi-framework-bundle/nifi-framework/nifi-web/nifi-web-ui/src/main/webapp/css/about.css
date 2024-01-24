@@ -19,18 +19,24 @@
     width: 500px;
     height: 500px;
     max-height: 450px;
+    border-radius: 6px;
 }
 
 #nf-about-pic {
     height: 60%;
-    background: url(../images/nifi-logo-about.svg) #000000 no-repeat center center;
+    /*background: url(../images/nifi-logo-about.svg) #5734D3 no-repeat center center;*/
     top: 20%;
     position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    left: 35%;
+    font-size: 47px;
 }
 
 #nf-about-pic-container {
     height: 40%;
-    background: #000000;
+    background: #5734D3;
 }
 
 #nf-version {

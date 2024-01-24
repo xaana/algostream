@@ -179,7 +179,9 @@
                             var countersTitle = aboutDetails.title + ' Cluster';
 
                             // set the document title and the about title
-                            document.title = countersTitle;
+                            // document.title = 'countersTitle';
+                            document.title = 'Algopipe';
+
                             $('#counters-header-text').text(countersTitle);
                         }).fail(nfErrorHandler.handleAjaxError);
 

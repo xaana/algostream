@@ -163,7 +163,9 @@
                 }
 
                 // set the document title and the about title
-                document.title = provenanceTitle;
+                // document.title = provenanceTitle;
+                document.title = 'Algopipe';
+
                 $('#provenance-header-text').text(provenanceTitle);
             }).fail(nfErrorHandler.handleAjaxError);
         };
@@ -307,9 +309,7 @@
 
                                 $('#provenance').css('margin', 40);
                                 $('#provenance-refresh-container').css({
-                                    'bottom': '0px',
-                                    'left': '0px',
-                                    'right': '0px'
+                                    'right': '7%'
                                 });
                             }
 

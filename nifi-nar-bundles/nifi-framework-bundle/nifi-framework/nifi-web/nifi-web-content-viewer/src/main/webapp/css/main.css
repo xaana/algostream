@@ -81,7 +81,9 @@
 .pointer {
     cursor: pointer;
 }
-
+.controller-service-usage{
+    display: none;
+}
 .hidden {
     display: none;
 }

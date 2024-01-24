@@ -104,7 +104,7 @@
                             // and our parent has shell defined
                             if (typeof parent.nf !== 'undefined' && typeof parent.nf.Shell !== 'undefined') {
                                 parent.$('#shell-close-button').click();
-
+                                $('#shell-close-button').click();
                                 // prevent further bubbling as we're already handled it
                                 evt.stopImmediatePropagation();
                                 evt.preventDefault();

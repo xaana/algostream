@@ -60,7 +60,7 @@
 
     // default dimensions for each type of component
     var dimensions = {
-        width: 352,
+        width: 200,
         height: 128
     };
 
@@ -124,60 +124,61 @@
             processor.append('rect'),
             {
                 'class': 'border',
-                'width': function (d) {
+                'width':  function (d) {
                     return d.dimensions.width;
                 },
-                'height': function (d) {
-                    return d.dimensions.height;
-                },
+                'height': 105,
                 'fill': 'transparent',
-                'stroke': 'transparent'
+                'stroke': 'transparent',
+                'rx':20,
+                'ry':20
             });
 
         // processor body
         d3Helpers.multiAttr(
             processor.append('rect'),
             {
-                'class': 'body',
-                'width': function (d) {
+                'class': 'body aa-fill',
+                'width':  function (d) {
                     return d.dimensions.width;
                 },
-                'height': function (d) {
-                    return d.dimensions.height;
-                },
+                'height': 105,
                 'filter': 'url(#component-drop-shadow)',
-                'stroke-width': 0
+                'stroke-width': 0,
+                'rx':20,
+                'ry':20
             });
-
-        // processor name
-        d3Helpers.multiAttr(
-            processor.append('text'),
-            {
-                'x': 75,
-                'y': 18,
-                'width': 230,
-                'height': 14,
-                'class': 'processor-name'
-            });
-
-        // processor icon container
         d3Helpers.multiAttr(
             processor.append('rect'),
             {
-                'x': 0,
-                'y': 0,
-                'width': 50,
-                'height': 50,
-                'class': 'processor-icon-container'
+                'width': 200,
+                'height': 69,
+                'fill': '#5734D3',
+                'rx':20,
+                'ry':20
             });
+        // processor icon container
+        // d3Helpers.multiAttr(
+        //     processor.append('rect'),
+        //     {
+        //         'x': 20,
+        //         'y': 0,
+        //         'width': 50,
+        //         'height': 50,
+        //         'class': 'processor-icon-container',
+        //         'fill':'#5734D3'
+        //     });
 
         // processor icon
         d3Helpers.multiAttr(
-            processor.append('text'),
+            processor.append('image'),
             {
-                'x': 9,
-                'y': 35,
-                'class': 'processor-icon'
+                'x': 1,
+                'y': 10,
+                'class': 'processor-icon',
+                'xlink:href': 'images/processor.svg', // ????
+                'width': '30px', // ????
+                'height': '30px'
             })
             .text('\ue807');
 
@@ -272,33 +273,33 @@
                         details.append('text'),
                         {
                             'class': 'run-status-icon',
-                            'x': 55,
-                            'y': 23,
+                            'x': 30,
+                            'y': 30,
                             'width': 14,
                             'height': 14
                         });
 
                     // processor type
-                    d3Helpers.multiAttr(
-                        details.append('text'),
-                        {
-                            'class': 'processor-type',
-                            'x': 75,
-                            'y': 32,
-                            'width': 230,
-                            'height': 12
-                        });
+                    // d3Helpers.multiAttr(
+                    //     details.append('text'),
+                    //     {
+                    //         'class': 'processor-type',
+                    //         'x': 30,
+                    //         'y': 32,
+                    //         'width': 230,
+                    //         'height': 12
+                    //     });
 
                     // processor type
-                    d3Helpers.multiAttr(
-                        details.append('text'),
-                        {
-                            'class': 'processor-bundle',
-                            'x': 75,
-                            'y': 45,
-                            'width': 200,
-                            'height': 12
-                        });
+                    // d3Helpers.multiAttr(
+                    //     details.append('text'),
+                    //     {
+                    //         'class': 'processor-bundle',
+                    //         'x': 30,
+                    //         'y': 45,
+                    //         'width': 200,
+                    //         'height': 12
+                    //     });
 
                     // -----
                     // stats
@@ -306,96 +307,120 @@
 
                     // draw the processor statistics table
 
+                    // processor name
+                    d3Helpers.multiAttr(
+                        details.append('text'),
+                        {
+                            'x': 45,
+                            'y': 30,
+                            'width': 230,
+                            'height': 14,
+                            'class': 'processor-name'
+                        });
+                    d3Helpers.multiAttr(
+                        details.append('rect'),
+                        {
+                            'width': 200,
+                            'height': 19,
+                            'x': 0,
+                            'y': 50,
+                            'fill': '#B6B6B6',
+                            'class': 'aa-fill'
+                        });
+                    // processor type
+                    d3Helpers.multiAttr(
+                        details.append('text'),
+                        {
+                            'class': 'processor-type',
+                            'x': 10,
+                            'y': 63,
+                            'width': 230,
+                            'height': 12
+                        });
                     // in
                     d3Helpers.multiAttr(
                         details.append('rect'),
                         {
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 19,
-                            'x': 0,
-                            'y': 50,
-                            'fill': '#f4f6f7'
-                        });
-
-                    // border
-                    d3Helpers.multiAttr(
-                        details.append('rect'),
-                        {
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 1,
-                            'x': 0,
-                            'y': 68,
-                            'fill': '#c7d2d7'
-                        });
-
-                    // read/write
-                    d3Helpers.multiAttr(
-                        details.append('rect'),
-                        {
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
+                            'width': 200,
                             'height': 19,
                             'x': 0,
                             'y': 69,
-                            'fill': '#ffffff'
+                            'fill': '#ffffff',
+                            'class': 'aa-fill'
                         });
 
                     // border
                     d3Helpers.multiAttr(
                         details.append('rect'),
                         {
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
+                            'width': 200,
+                            'height': 1,
+                            'x': 0,
+                            'y': 68,
+                            'fill': '#ffffff',
+                            'class': 'aa-fill'
+                        });
+
+                    // // read/write
+                    // d3Helpers.multiAttr(
+                    //     details.append('rect'),
+                    //     {
+                    //         'width': 200,
+                    //         'height': 19,
+                    //         'x': 0,
+                    //         'y': 69,
+                    //         'fill': '#ffffff',
+                    //         'class': 'aa-fill'
+                    //     });
+
+                    // border
+                    d3Helpers.multiAttr(
+                        details.append('rect'),
+                        {
+                            'width': 200,
                             'height': 1,
                             'x': 0,
                             'y': 87,
-                            'fill': '#c7d2d7'
+                            'fill': '#ffffff',
+                            'class': 'aa-fill'
                         });
 
                     // out
-                    d3Helpers.multiAttr(
-                        details.append('rect'),
-                        {
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 20,
-                            'x': 0,
-                            'y': 88,
-                            'fill': '#f4f6f7'
-                        });
+                    // d3Helpers.multiAttr(
+                    //     details.append('rect'),
+                    //     {
+                    //         'width': 200,
+                    //         'height': 20,
+                    //         'x': 0,
+                    //         'y': 88,
+                    //         'fill': '#ffffff',
+                    //         'class': 'aa-fill'
+                    //     });
 
                     // border
-                    d3Helpers.multiAttr(
-                        details.append('rect'),
-                        {
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 1,
-                            'x': 0,
-                            'y': 106,
-                            'fill': '#c7d2d7'
-                        });
+                    // d3Helpers.multiAttr(
+                    //     details.append('rect'),
+                    //     {
+                    //         'width': 200,
+                    //         'height': 1,
+                    //         'x': 0,
+                    //         'y': 106,
+                    //         'fill': '#ffffff',
+                    //         'class': 'aa-fill'
+                    //     });
 
-                    // tasks/time
-                    d3Helpers.multiAttr(
-                        details.append('rect'),
-                        {
-                            'width': function () {
-                                return processorData.dimensions.width;
-                            },
-                            'height': 19,
-                            'x': 0,
-                            'y': 107,
-                            'fill': '#ffffff'
-                        });
+                    // // tasks/time
+                    // d3Helpers.multiAttr(
+                    //     details.append('rect'),
+                    //     {
+                    //         'width': 100,
+                    //         'height': 19,
+                    //         'x': 20,
+                    //         'y': 107,
+                    //         'fill': '#ffffff',
+                    //         'class': 'aa-fill'
+                    //
+                    //     });
 
                     // stats label container
                     var processorStatsLabel = d3Helpers.multiAttr(
@@ -410,21 +435,21 @@
                         {
                             'width': 73,
                             'height': 10,
-                            'y': 9,
+                            'y': 27,
                             'class': 'stats-label'
                         })
                         .text('In');
 
                     // read/write label
-                    d3Helpers.multiAttr(
-                        processorStatsLabel.append('text'),
-                        {
-                            'width': 73,
-                            'height': 10,
-                            'y': 27,
-                            'class': 'stats-label'
-                        })
-                        .text('Read/Write');
+                    // d3Helpers.multiAttr(
+                    //     processorStatsLabel.append('text'),
+                    //     {
+                    //         'width': 73,
+                    //         'height': 10,
+                    //         'y': 27,
+                    //         'class': 'stats-label'
+                    //     })
+                    //     .text('Read/Write');
 
                     // out label
                     d3Helpers.multiAttr(
@@ -437,22 +462,21 @@
                         })
                         .text('Out');
 
-                    // tasks/time label
-                    d3Helpers.multiAttr(
-                        processorStatsLabel.append('text'),
-                        {
-                            'width': 73,
-                            'height': 10,
-                            'y': 65,
-                            'class': 'stats-label'
-                        })
-                        .text('Tasks/Time');
-
+                        // tasks/time label
+//                     d3Helpers.multiAttr(
+//                         processorStatsLabel.append('text'),
+//                         {
+//                             'width': 73,
+//                             'height': 10,
+//                             'y': 65,
+//                             'class': 'stats-label'
+//                         })
+//                         .text('Tasks/Time');
                     // stats value container
                     var processorStatsValue = d3Helpers.multiAttr(
                         details.append('g'),
                         {
-                            'transform': 'translate(85, 55)'
+                            'transform': 'translate(55, 55)'
                         });
 
                     // in value
@@ -461,9 +485,10 @@
                         {
                             'width': 180,
                             'height': 9,
-                            'y': 9,
+                            'y': 27,
                             'class': 'processor-in stats-value'
-                        });
+                        })
+                        .style('font-size','10px');
 
                     // in count
                     d3Helpers.multiAttr(
@@ -480,15 +505,14 @@
                         });
 
                     // read/write value
-                    d3Helpers.multiAttr(
-                        processorStatsValue.append('text'),
-                        {
-                            'width': 180,
-                            'height': 10,
-                            'y': 27,
-                            'class': 'processor-read-write stats-value'
-                        });
-
+                    // d3Helpers.multiAttr(
+                    //     processorStatsValue.append('text'),
+                    //     {
+                    //         'width': 180,
+                    //         'height': 10,
+                    //         'y': 27,
+                    //         'class': 'processor-read-write stats-value'
+                    //     });
                     // out value
                     var outText = d3Helpers.multiAttr(
                         processorStatsValue.append('text'),
@@ -497,7 +521,8 @@
                             'height': 10,
                             'y': 46,
                             'class': 'processor-out stats-value'
-                        });
+                        })
+                        .style('font-size','10px');
 
                     // out count
                     d3Helpers.multiAttr(
@@ -514,18 +539,18 @@
                         });
 
                     // tasks/time value
-                    d3Helpers.multiAttr(
-                        processorStatsValue.append('text'),
-                        {
-                            'width': 180,
-                            'height': 10,
-                            'y': 65,
-                            'class': 'processor-tasks-time stats-value'
-                        });
+                    // d3Helpers.multiAttr(
+                    //     processorStatsValue.append('text'),
+                    //     {
+                    //         'width': 180,
+                    //         'height': 10,
+                    //         'y': 65,
+                    //         'class': 'processor-tasks-time stats-value'
+                    //     });
 
                     // stats value container
                     var processorStatsInfo = details.append('g')
-                        .attr('transform', 'translate(305, 55)');
+                        .attr('transform', 'translate(120, 55)');
 
                     // in info
                     d3Helpers.multiAttr(
@@ -533,7 +558,7 @@
                         {
                             'width': 25,
                             'height': 10,
-                            'y': 9,
+                            'y': 27,
                             'class': 'stats-info'
                         })
                         .text('5 min');
@@ -560,16 +585,135 @@
                         })
                         .text('5 min');
 
-                    // tasks/time info
+                    // d3Helpers.multiAttr(
+                    //     processorStatsInfo.append('text'),
+                    //     {
+                    //         'width': 25,
+                    //         'height': 10,
+                    //         'y': 65,
+                    //         'class': 'stats-info'
+                    //     })
+                    //     .text('5 min');
+                    var processorLabel = null; // ?????????????????
+
                     d3Helpers.multiAttr(
                         processorStatsInfo.append('text'),
                         {
                             'width': 25,
                             'height': 10,
-                            'y': 65,
+                            'x': 40,
+                            'y': 44,
                             'class': 'stats-info'
                         })
-                        .text('5 min');
+                        .style('font-size','32px')
+                        .text('...')
+                        .on('click', function() {
+                            // ???????????
+                            console.log('Button clicked!');
+
+                            if (processorLabel) {
+                                processorLabel.remove();
+                                processorLabel = null;
+                                d3.select('.processor-read-write, .processor-tasks-time').remove();
+                            } else {
+                                processorLabel = d3Helpers.multiAttr(
+                                    details.append('g'),
+                                    {
+                                        'transform': 'translate(100, 50)',
+
+                                    });
+
+                                d3Helpers.multiAttr(
+                                    processorLabel.append('rect'),
+                                    {
+                                        'width': 195,
+                                        'height': 50,
+                                        'y': 50,
+                                        'x': 95,
+                                        'rx': 6,
+                                        'ry': 6
+                                    })
+                                    .style('fill', '#666666');
+
+                                // ?????????
+                                d3Helpers.multiAttr(
+                                    processorLabel.append('text'),
+                                    {
+                                        'width': 73,
+                                        'height': 10,
+                                        'y': 70,
+                                        'x': 95,
+                                        'class': 'stats-label'
+                                    })
+                                    .style('fill', 'currentColor')
+                                    .style('color','#ffffff')
+                                    .text('Read/Write');
+
+                                d3Helpers.multiAttr(
+                                    processorLabel.append('text'),
+                                    {
+                                        'width': 73,
+                                        'height': 10,
+                                        'y': 90,
+                                        'x': 95,
+                                        'class': 'stats-label'
+                                    })
+                                    .style('fill', 'currentColor')
+                                    .style('color','#ffffff')
+                                    .text('Tasks/Time');
+
+                                // ????????????
+                                d3Helpers.multiAttr(
+                                    processorLabel.append('text'),
+                                    {
+                                        'width': 180,
+                                        'height': 10,
+                                        'y': 70,
+                                        'x': 165,
+                                        'class': 'processor-read-write stats-value'
+                                    })
+                                    .style('font-size', '10px');
+
+                                d3Helpers.multiAttr(
+                                    processorLabel.append('text'),
+                                    {
+                                        'width': 180,
+                                        'height': 10,
+                                        'y': 90,
+                                        'x': 165,
+                                        'class': 'processor-tasks-time stats-value'
+                                    })
+                                    .style('font-size', '10px');
+
+                                // ?????????????
+                                d3Helpers.multiAttr(
+                                    processorLabel.append('text'),
+                                    {
+                                        'width': 25,
+                                        'height': 10,
+                                        'y': 70,
+                                        'x': 250,
+                                        'class': 'stats-info'
+                                    })
+                                    .style('fill', 'currentColor')
+                                    .style('color','#ffffff')
+                                    .text('5 min');
+
+                                d3Helpers.multiAttr(
+                                    processorLabel.append('text'),
+                                    {
+                                        'width': 25,
+                                        'height': 10,
+                                        'y': 90,
+                                        'x': 250,
+                                        'class': 'stats-info'
+                                    })
+                                    .style('fill', 'currentColor')
+                                    .style('color','#ffffff')
+                                    .text('5 min');
+                            }
+                        });
+
 
                     // --------
                     // comments
@@ -579,7 +723,7 @@
                         details.append('path'),
                         {
                             'class': 'component-comments',
-                            'transform': 'translate(' + (processorData.dimensions.width - 2) + ', ' + (processorData.dimensions.height - 10) + ')',
+                            'transform': 'translate(' + (processorData.dimensions.width - 2) + ', ' + (processorData.dimensions.height) + ')',
                             'd': 'm0,0 l0,8 l-8,0 z'
                         });
 
@@ -887,7 +1031,7 @@
             updated.select('text.run-status-icon'),
             {
                 'fill': function (d) {
-                    var fill = '#728e9b';
+                    var fill = '#9dd9ee';
 
                     if (d.status.aggregateSnapshot.runStatus === 'Validating') {
                         fill = '#a8a8a8';
@@ -901,13 +1045,16 @@
 
                     return fill;
                 },
-                'font-family': function (d) {
-                    var family = 'FontAwesome';
-                    if (d.status.aggregateSnapshot.runStatus === 'Disabled') {
-                        family = 'flowfont';
-                    }
-                    return family;
-                }
+            'style': function (d) {
+            var fontFamily = 'FontAwesome !important';
+
+            if (d.status.aggregateSnapshot.runStatus === 'Disabled') {
+                fontFamily = 'flowfont !important';
+            }
+
+            return 'font-family: ' + fontFamily;
+        }
+
             })
             .classed('fa-spin', function (d) {
                 return d.status.aggregateSnapshot.runStatus === 'Validating';

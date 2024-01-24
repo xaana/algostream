@@ -337,9 +337,17 @@
                 var selection = nfCanvasUtils.getSelection();
 
                 if (nfCanvasUtils.isConfigurable(selection)) {
+                    $('#shell-close-button').click();
                     nfActions.showConfiguration(selection);
+                    $(document).ready(function() {
+                        $('#graph-controls').css('margin-bottom', '20%');
+                    });
                 } else if (nfCanvasUtils.hasDetails(selection)) {
+                    $('#shell-close-button').click();
                     nfActions.showDetails(selection);
+                    $(document).ready(function() {
+                        $('#graph-controls').css('margin-bottom', '20%');
+                    });
                 }
             }
         }

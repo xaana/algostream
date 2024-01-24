@@ -191,13 +191,19 @@
             }
 
             if(DEFAULT_PAGE_TITLE == ''){
-                DEFAULT_PAGE_TITLE = document.title;
+                // DEFAULT_PAGE_TITLE = document.title;
+                DEFAULT_PAGE_TITLE = 'Algopipe';
+
             }
 
             if(rootBreadcrumb.permissions.canRead){
-                document.title = rootBreadcrumb.breadcrumb.name + BANNER_TEXT;
+                // document.title = rootBreadcrumb.breadcrumb.name + BANNER_TEXT;
+                document.title = 'Algopipe';
+
             } else {
-                document.title = DEFAULT_PAGE_TITLE + BANNER_TEXT;
+                // document.title = DEFAULT_PAGE_TITLE + BANNER_TEXT;
+                document.title = 'Algopipe';
+
             }
 
             // update the timestamp

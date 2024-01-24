@@ -1380,8 +1380,8 @@
                     $('#drop-request-status-dialog').modal('setButtonModel', [{
                         buttonText: 'Stop',
                         color: {
-                            base: '#728E9B',
-                            hover: '#004849',
+                            base: '#5734D3',
+                            hover: '#7747E8',
                             text: '#ffffff'
                         },
                         handler: {
@@ -1559,8 +1559,8 @@
                     $('#drop-request-status-dialog').modal('setButtonModel', [{
                         buttonText: 'Stop',
                         color: {
-                            base: '#728E9B',
-                            hover: '#004849',
+                            base: '#5734D3',
+                            hover: '#7747E8',
                             text: '#ffffff'
                         },
                         handler: {
@@ -2177,8 +2177,8 @@
             $('#new-template-dialog').modal('setButtonModel', [{
                 buttonText: 'Create',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -2238,9 +2238,9 @@
             }, {
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#FFFFFF',
+                    hover: '#E6E7EB',
+                    text: '#333333'
                 },
                 handler: {
                     click: function () {

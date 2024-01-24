@@ -176,7 +176,9 @@
                             var countersTitle = aboutDetails.title + ' Counters';
 
                             // set the document title and the about title
-                            document.title = countersTitle;
+                            // document.title = countersTitle;
+                            document.title = 'Algopipe';
+
                             $('#counters-header-text').text(countersTitle);
 
                             // set the initial size

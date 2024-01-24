@@ -18,14 +18,31 @@
 /*
     Login Styles
 */
-
+.nf_Login_outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 #login-contents-container {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    background: #fff url(../images/bg-error.png) left top no-repeat;
+    /*position: absolute;*/
+    top: 130px;
+    left: 225px;
+    bottom: 0;
+    right: 0;
+    background: #fff url(../images/ms-login.jpg) no-repeat;
+    padding-top: 100px;
+    padding-left: 100px;
+    width: 428px;
+    height: 566px;
+    border-radius: 20px; /* ??????????,????????? */
+}
+#login-contents-container2 {
+    /*position: absolute;*/
+    top: 180px;
+    left: 1070px;
+    bottom: 0;
+    right: 0;
     padding-top: 100px;
     padding-left: 100px;
 }
@@ -34,6 +51,8 @@
     font-size: 18px;
     color: #294c58;
     margin-bottom: 16px;
+    display: flex;
+    align-items: end;
 }
 
 #login-message {
@@ -41,11 +60,11 @@
 }
 
 .login-title {
-    font-size: 18px;
+    font-size: 34px;
     font-weight: bold;
     font-family: Roboto Slab;
-    margin-bottom: 10px;
-    color: #728e9b;
+    margin-bottom: 32px;
+    color: #1c1d1e;
 }
 
 #login-user-links-container {
@@ -59,7 +78,8 @@
 }
 
 #login-user-links {
-    float: right;
+    /*float: right;*/
+    /*margin-right: 345px;*/
 }
 
 /*
@@ -68,6 +88,7 @@
 
 body.login-body input, body.login-body textarea {
     width: 412px;
+    height: 45px;
 }
 
 div.login-container {

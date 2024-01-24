@@ -20,8 +20,11 @@
 */
 
 #new-port-dialog {
-    min-height:280px;
+    min-height:187px !important;
     height: 280px;
     width: 320px;
-    min-width: 320px;
+    min-width: 449px !important;
+    /*top:360px!important;*/
+    /*left: 736px!important;*/
+    border-radius: 6px;
 }

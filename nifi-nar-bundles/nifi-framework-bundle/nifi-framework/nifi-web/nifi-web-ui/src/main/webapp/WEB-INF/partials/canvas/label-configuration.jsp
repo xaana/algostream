@@ -18,9 +18,9 @@
 <div id="label-configuration" class="hidden medium-dialog">
     <div id="label-configuration-contents" class="dialog-content">
         <div class="setting">
-            <div class="setting-name">Label Value</div>
+<%--            <div class="setting-name">Label Value</div>--%>
             <div class="setting-field">
-                <textarea cols="30" rows="4" id="label-value" class="setting-input"></textarea>
+                <textarea cols="30" rows="4" id="label-value" class="setting-input" placeholder="Label Value"></textarea>
             </div>
         </div>
         <div class="setting">

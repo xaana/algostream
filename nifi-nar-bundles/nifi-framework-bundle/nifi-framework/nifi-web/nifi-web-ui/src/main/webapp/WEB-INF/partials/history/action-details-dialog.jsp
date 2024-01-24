@@ -16,6 +16,7 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="action-details-dialog" class="hidden medium-dialog">
+    <img src="images/?70.png" style="width: 28px;height: 28px;margin: -1px 0px 0px -6px;cursor: pointer;position: absolute;right: 10px;top: 25px" onclick="$('#action-details-dialog').hide()">
     <div class="dialog-content">
         <div class="setting">
             <div class="setting-field">

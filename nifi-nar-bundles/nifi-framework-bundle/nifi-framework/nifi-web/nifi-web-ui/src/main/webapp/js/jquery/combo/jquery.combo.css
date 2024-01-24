@@ -22,7 +22,7 @@
     color: #262626;
     font-family: Roboto, sans-serif;
     font-size: 13px;
-    padding:0 10px;
+    /*padding:0 10px;*/
     height: 30px;
     line-height: 30px;
     border: 1px solid #eaeef0;
@@ -44,7 +44,7 @@
 }
 
 .combo-open {
-    background: #fff !important;
+    background: #fff;
     border: 1px solid #004849 !important;
     border-bottom: 1px solid #fff !important;
     font-weight: bold;
@@ -54,7 +54,7 @@
 
 .combo-arrow {
     float: right;
-    width: 10px;
+    /*width: 10px;*/
     margin-top: 4px;
 }
 
@@ -65,6 +65,7 @@
     text-overflow: ellipsis;
     width: calc(100% - 15px);
     font-weight: normal;
+    padding-left: 20px;
 }
 
 div.selected-disabled-option {
@@ -114,5 +115,11 @@ div.combo-nifi-tooltip {
 }
 
 div.combo-button-normal {
-    background-color: #eaeef0;
+    border-radius: 6px;
+    width: 300px;
+    height: 33px;
+    /*background-color: #F3F3F3;*/
+    font-size: 16px;
+    color: #666;
+
 }

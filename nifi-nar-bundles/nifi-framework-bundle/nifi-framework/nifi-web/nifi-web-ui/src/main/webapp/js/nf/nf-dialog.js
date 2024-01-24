@@ -76,8 +76,8 @@
             $('#nf-ok-dialog').modal('setButtonModel', [{
                 buttonText: 'Ok',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -117,8 +117,8 @@
             $('#nf-yes-no-dialog').modal('setButtonModel', [{
                 buttonText: options.yesText,
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -134,9 +134,9 @@
                 {
                     buttonText: options.noText,
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#fff',
+                        hover: '#F3F3F3',
+                        text: '#333'
                     },
                     handler: {
                         click: function () {

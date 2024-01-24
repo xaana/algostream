@@ -20,7 +20,7 @@
 
 .dialog-status-bar {
     padding-left : 32px;
-    background-color : #e3e8eb;
+    background-color : #ffffff;
     width : calc(100% - 32px);
     height : 32px;
 }
@@ -37,7 +37,12 @@
 .dialog-status-bar-threads[count="0"] {
     display : none;
 }
-
+.dialog-status-bar-bulletins-content {
+    position: relative;
+    z-index: 10;
+    top: 10%;
+    right: 10px;
+}
 .dialog-status-bar[state] text.run-status-icon {
     position : absolute;
     font-style : normal;
@@ -79,7 +84,7 @@
 .dialog-status-bar[state="DISABLED"] text.run-status-icon::before {
     content: '\e802';
     color : #7728e9b;
-    font-family: flowfont;
+    font-family: flowfont !important;
 }
 
 .dialog-status-bar[state="INVALID"] text.run-status-icon::before {
@@ -107,12 +112,24 @@
     height: 32px;
     width : auto !important;
 }
-
+.dialog-status-bar-bulletins.fa.fa-sticky-note-o{
+    float: right;
+    display: inline-block;
+    /* padding: 10px 8px 7px 8px; */
+    /* background-color: #ba544a; */
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+}
 .dialog-status-bar-bulletins:not([count="0"]) {
     float : right;
     display : inline-block;
     padding : 10px 8px 7px 8px;
-    background-color : #ba544a;
     color : #ffffff;
     font-size : 15px;
     cursor : pointer;

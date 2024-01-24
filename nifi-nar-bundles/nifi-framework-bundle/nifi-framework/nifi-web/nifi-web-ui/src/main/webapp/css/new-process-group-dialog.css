@@ -20,10 +20,20 @@
 */
 
 #new-process-group-dialog {
-    min-height:320px;
-    height: 320px;
-    width: 540px;
-    min-width: 500px;
+    height: 250px!important;
+    min-height: 250px !important;
+    min-width: 449px !important;
+    width: 449px !important;
+    position: absolute!important;
+    top: 30% !important;
+    left: 38% !important;
+    border-radius: 5px;
+}
+#setting-field #select-file-button{
+    position: relative;
+}
+#new-process-group-dialog .dialog-content{
+    /*overflow: hidden !important;*/
 }
 
 div.fa-cloud-download.button-icon {
@@ -34,4 +44,30 @@ div.fa-cloud-download.button-icon {
     color: #888;
     font-weight: 400;
     display: none;
+}
+#new-process-group-name{
+    padding-left: 20px !important;
+    background-color: #f3f3f3;
+    font-size: 16px;
+    width: 100%;
+}
+#new-process-group-name::placeholder{
+    color: #666;
+}
+/* WebKit browsers ???? */
+#new-process-group-name::-webkit-input-placeholder {
+    color: #666;
+}
+/* Mozilla Firefox 4 to 18 ???? */
+#new-process-group-name:-moz-placeholder {
+    color: #666;
+}
+
+#cancel_dialog_view{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }

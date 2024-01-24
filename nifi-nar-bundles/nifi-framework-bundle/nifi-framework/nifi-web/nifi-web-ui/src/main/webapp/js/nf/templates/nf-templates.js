@@ -212,7 +212,9 @@
                             var templatesTitle = aboutDetails.title + ' Templates';
 
                             // set the document title and the about title
-                            document.title = templatesTitle;
+                            // document.title = templatesTitle;
+                            document.title = 'Algopipe';
+
                             $('#templates-header-text').text(templatesTitle);
 
                             // set the initial size

@@ -222,7 +222,9 @@
                             var countersTitle = aboutDetails.title + ' Users';
 
                             // set the document title and the about title
-                            document.title = countersTitle;
+                            // document.title = countersTitle;
+                            document.title = 'Algopipec';
+
                             $('#users-header-text').text(countersTitle);
                         }).fail(nfErrorHandler.handleAjaxError);
                     });

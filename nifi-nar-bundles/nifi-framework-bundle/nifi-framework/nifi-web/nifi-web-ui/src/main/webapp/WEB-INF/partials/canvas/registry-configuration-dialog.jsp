@@ -16,6 +16,8 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="registry-configuration-dialog" layout="column" class="hidden large-dialog">
+    <img src="images/?70.png" style="position: absolute;right: 15px;top: 15px;z-index: 3;width: 28px" onclick="$('#registry-configuration-dialog').hide()">
+
     <div>
         <div class="clear"></div>
     </div>

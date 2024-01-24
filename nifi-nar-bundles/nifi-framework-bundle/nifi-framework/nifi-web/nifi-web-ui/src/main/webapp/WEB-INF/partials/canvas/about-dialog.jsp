@@ -16,8 +16,9 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="nf-about">
+    <img src="images/?70.png" style="width: 28px;height: 28px;margin: -1px 0px 0px -6px;cursor: pointer;position: absolute;right: 10px;top: 10px" onclick="$('#nf-about').hide()">
     <div id="nf-about-pic-container">
-        <div id="nf-about-pic"></div>
+        <div id="nf-about-pic">LOGO</div>
     </div>
     <div class="dialog-content">
         <div id="nf-about-content">
@@ -34,10 +35,7 @@
                 </p>
             </div>
             <p>
-                Apache NiFi is a framework to support highly scalable and flexible dataflows.
-                It can be run on laptops up through clusters of enterprise class servers.
-                Instead of dictating a particular dataflow or behavior it empowers you to design your own
-                optimal dataflow tailored to your specific environment.
+                AlgoPipe is a framework for supporting highly scalable and flexible data pipelines. It can be run on laptops or scaled up to clusters of enterprise-class servers. Instead of prescribing a specific data flow or behavior, it empowers you to design your own optimal data pipeline tailored to your specific environment.
             </p>
         </div>
     </div>

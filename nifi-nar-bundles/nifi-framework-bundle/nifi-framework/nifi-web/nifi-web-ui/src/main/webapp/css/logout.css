@@ -21,11 +21,9 @@
 
 #logout-contents-container {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    background: #fff url(../images/bg-error.png) left top no-repeat;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     padding-top: 100px;
     padding-left: 100px;
 }
@@ -43,7 +41,7 @@
 #logout-user-links-container {
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: 35%;
     padding-top: 100px;
     padding-left: 100px;
     z-index: 1300;

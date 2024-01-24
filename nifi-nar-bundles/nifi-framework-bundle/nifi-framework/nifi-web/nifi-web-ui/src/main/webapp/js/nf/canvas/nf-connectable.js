@@ -258,13 +258,15 @@
                             var addConnect = d3.select('text.add-connect');
                             if (addConnect.empty()) {
                                 var x = (d.dimensions.width / 2) - 14;
-                                var y = (d.dimensions.height / 2) + 14;
+                                var y = (d.dimensions.height / 2) + 1;
 
                                 selection
-                                    .append('text')
+                                    .append('image')
                                     .attr('class', 'add-connect')
+                                    .attr('xlink:href','images/link.svg')
+                                    .attr('width','20px')
+                                    .attr('height','20px')
                                     .attr('transform', 'translate(' + x + ', ' + y + ')')
-                                    .text('\ue834')
                                     .datum({
                                         origX: x,
                                         origY: y
@@ -276,7 +278,7 @@
                 })
                 .on('mouseleave.connectable', function () {
                     // conditionally remove the connector
-                    var addConnect = d3.select(this).select('text.add-connect');
+                    var addConnect = d3.select(this).select('image.add-connect');
                     if (!addConnect.empty() && !addConnect.classed('dragging')) {
                         addConnect.remove();
                     }

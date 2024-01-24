@@ -866,7 +866,7 @@
             }
 
             // always include a button to view the usage
-            var markup = '<div title="Usage" class="pointer controller-service-usage fa fa-book"></div>';
+            var markup = '<div title="Usage" class="pointer controller-service-usage fa fa-book" style="display: none"></div>';
 
             var hasComments = !nfCommon.isBlank(dataContext.component.comments);
             var hasErrors = !nfCommon.isEmpty(dataContext.component.validationErrors);
@@ -945,7 +945,7 @@
 
                 if (canRead) {
                     if (canWrite && isDisabled) {
-                        markup += '<div class="pointer edit-controller-service fa fa-gear" title="Configure"></div>';
+                        markup += '<div class="pointer edit-controller-service fa fa-gear" title="Configure"> </div>';
                     } else {
                         markup += '<div class="pointer view-controller-service fa fa-gear" title="View Configuration"></div>';
                     }
@@ -1355,8 +1355,8 @@
             $('#new-controller-service-dialog').modal('setButtonModel', [{
                 buttonText: 'Add',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 disabled: function () {
@@ -1378,9 +1378,9 @@
             }, {
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#fff',
+                    hover: '#F3F3F3',
+                    text: '#333'
                 },
                 handler: {
                     click: function () {

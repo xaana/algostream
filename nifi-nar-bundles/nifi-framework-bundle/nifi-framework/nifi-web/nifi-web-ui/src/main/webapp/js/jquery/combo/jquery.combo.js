@@ -160,9 +160,10 @@
                         var comboOptions = $('<div></div>').addClass('combo-options').css({
                             'position': 'absolute',
                             'left': position.left + 'px',
-                            'top': (position.top + Math.round(combo.outerHeight()) - 1) + 'px',
+                            'top': (position.top + Math.round(combo.outerHeight()) - 3) + 'px',
                             'width': (Math.round(combo.outerWidth()) - 2) + 'px',
-                            'overflow-y': 'auto'
+                            'overflow-y': 'auto',
+                            'border-radius':'0 0 5px 5px'
                         });
 
                         // keep track of the overall height
@@ -190,7 +191,7 @@
                             var optionValue = $('<span class="hidden"></span>').text(option.value);
 
                             // create each option
-                            var optionElement = $('<li></li>').addClass(option.optionClass).append(optionText).append(optionValue).appendTo(optionList);
+                            var optionElement = $('<li></li>').addClass('bb').addClass(option.optionClass).append(optionText).append(optionValue).appendTo(optionList);
 
                             // this is option is enabled register appropriate listeners
                             if (option.disabled === true) {

@@ -394,7 +394,7 @@ span.parameter-provider-referencing-component-name {
     margin-right: 8px;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .selectable-parameters-buttons span {

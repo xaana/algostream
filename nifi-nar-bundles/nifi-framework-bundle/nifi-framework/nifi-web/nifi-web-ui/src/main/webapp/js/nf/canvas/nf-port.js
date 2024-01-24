@@ -60,12 +60,12 @@
     var OFFSET_VALUE = 25;
 
     var portDimensions = {
-        width: 240,
-        height: 48
+        width: 150,
+        height: 50
     };
     var remotePortDimensions = {
-        width: 240,
-        height: 80
+        width: 150,
+        height: 50
     };
 
     var dimensions = function (d) {
@@ -153,30 +153,26 @@
         d3Helpers.multiAttr(
             port.append('rect'),
             {
-                'class': 'border',
-                'width': function (d) {
-                    return d.dimensions.width;
-                },
-                'height': function (d) {
-                    return d.dimensions.height;
-                },
+                'class': 'border aa-fill',
+                'width': portDimensions.width,
+                'height': remotePortDimensions.height,
                 'fill': 'transparent',
-                'stroke': 'transparent'
+                'stroke': 'transparent',
+                'rx':20,
+                'ry':20
             });
 
         // port body
         d3Helpers.multiAttr(
             port.append('rect'),
             {
-                'class': 'body',
-                'width': function (d) {
-                    return d.dimensions.width;
-                },
-                'height': function (d) {
-                    return d.dimensions.height;
-                },
+                'class': 'body aa-fill',
+                'width': portDimensions.width,
+                'height': remotePortDimensions.height,
                 'filter': 'url(#component-drop-shadow)',
-                'stroke-width': 0
+                'stroke-width': 0,
+                'rx':20,
+                'ry':20
             });
 
         // port remote banner
@@ -185,18 +181,37 @@
             {
                 'class': 'remote-banner',
                 'width': remotePortDimensions.width,
-                'height': OFFSET_VALUE,
-                'fill': '#e3e8eb'
+                'height': 29,
+                'fill': '#5734D3',
+                'rx':20,
+                'ry':20
             })
             .classed('hidden', isLocalPort);
 
+        d3Helpers.multiAttr(
+            port.append('rect'),
+            {
+
+                'y':15,
+                'width': remotePortDimensions.width,
+                'height': 15,
+                'fill': '#fff',
+                'class': 'aa-fill'
+            });
         // port icon
         d3Helpers.multiAttr(
-            port.append('text'),
+            port.append('image'),
             {
                 'class': 'port-icon',
                 'x': 10,
-                'y': offsetY(38)
+                'y': 25,
+                'href': function (d) {
+                    if (d.portType === 'INPUT_PORT') {
+                        return 'images/input1.svg';
+                    } else {
+                        return 'images/output1.svg';
+                    }
+                }
             })
             .text(function (d) {
                 if (d.portType === 'INPUT_PORT') {
@@ -211,8 +226,8 @@
             port.append('text'),
             {
                 'x': 70,
-                'y': offsetY(25),
-                'width': 95,
+                'y': offsetY(15),
+                'width': 80,
                 'height': 30,
                 'class': 'port-name'
             });
@@ -277,11 +292,14 @@
 
                     // port transmitting icon
                     d3Helpers.multiAttr(
-                        details.append('text'),
+                        details.append('image'),
                         {
                             'class': 'port-transmission-icon',
                             'x': 10,
-                            'y': 18
+                            'y': 3,
+                            'xlink:href': 'images/port.svg',
+                            'width':'10px',
+                            'height':'10px'
                         })
                         .classed('hidden', isLocalPort);
 
@@ -313,7 +331,7 @@
                         {
                             'class': 'run-status-icon',
                             'x': 50,
-                            'y': offsetY(25)
+                            'y': offsetY(15),
                         });
 
                     // --------
@@ -324,7 +342,7 @@
                         details.append('path'),
                         {
                             'class': 'component-comments',
-                            'transform': 'translate(' + (portData.dimensions.width - 2) + ', ' + (portData.dimensions.height - 10) + ')',
+                            'transform': 'translate(' + (portData.dimensions.width - 2) + ', ' + (portData.dimensions.height - 28) + ')',
                             'd': 'm0,0 l0,8 l-8,0 z'
                         });
 
@@ -390,7 +408,7 @@
                                 nfCanvasUtils.multilineEllipsis(portName, 2, name, 'port-name');
                             }
                         }), {
-                            'y': offsetY(25)
+                            'y': offsetY(15)
                         }).append('title').text(function (d) {
                             return d.component.name;
                         });
@@ -500,14 +518,16 @@
 
                     return fill;
                 },
-                'font-family': function (d) {
-                    var family = 'FontAwesome';
-                    if (d.status.aggregateSnapshot.runStatus === 'Disabled') {
-                        family = 'flowfont';
-                    }
-                    return family;
-                },
-                'y': offsetY(25)
+                'style': function (d) {
+            var fontFamily = 'FontAwesome !important';
+
+            if (d.status.aggregateSnapshot.runStatus === 'Disabled') {
+                fontFamily = 'flowfont !important';
+            }
+
+            return 'font-family: ' + fontFamily;
+        },
+                'y': offsetY(15)
             })
             .text(function (d) {
                 var img = '';

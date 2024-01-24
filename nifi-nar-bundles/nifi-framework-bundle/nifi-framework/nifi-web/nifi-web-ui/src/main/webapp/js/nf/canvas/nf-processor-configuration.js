@@ -905,13 +905,14 @@
                     var buttons = [{
                         buttonText: 'Apply',
                         color: {
-                            base: '#728E9B',
-                            hover: '#004849',
+                            base: '#5734D3',
+                            hover: '#7747E8',
                             text: '#ffffff'
                         },
-                        disabled : function() {
-                            return !nfCanvasUtils.supportsModification(selection);
-                        },
+                        disabled : true,
+                        // disabled : function() {
+                        //     return !nfCanvasUtils.supportsModification(selection);
+                        // },
                         handler: {
                             click: function () {
                                 // close all fields currently being edited
@@ -931,19 +932,22 @@
                             }
                         }
                     },
-                    {
-                        buttonText: 'Cancel',
-                        color: {
-                            base: '#E3E8EB',
-                            hover: '#C7D2D7',
-                            text: '#004849'
-                        },
-                        handler: {
-                            click: function () {
-                                $('#processor-configuration').modal('hide');
-                            }
-                        }
-                    }];
+                    // {
+                    //     buttonText: 'Cancel',
+                    //     color: {
+                    //         base: '#FFFFFF',
+                    //         hover: '#E6E7EB',
+                    //         text: '#333333'
+                    //     },
+                    //     handler: {
+                    //         click: function () {
+                    //             console.log('cancel???')
+                    //             $('#processor-configuration').hide()
+                    //             $('#processor-configuration').modal('hide');
+                    //         }
+                    //     }
+                    // }
+                    ];
 
                     // determine if we should show the advanced button
                     if (nfCommon.isDefinedAndNotNull(processor.config.customUiUrl) && processor.config.customUiUrl !== '') {
@@ -951,9 +955,9 @@
                             buttonText: 'Advanced',
                             clazz: 'fa fa-cog button-icon',
                             color: {
-                                base: '#E3E8EB',
-                                hover: '#C7D2D7',
-                                text: '#004849'
+                                base: '#FFFFFF',
+                                hover: '#E6E7EB',
+                                text: '#333333'
                             },
                             handler: {
                                 click: function () {
@@ -1023,9 +1027,9 @@
                                 buttonText: 'Terminate',
                                 clazz: 'fa fa-hourglass-end button-icon',
                                 color: {
-                                    hover: '#C7D2D7',
-                                    base: 'transparent',
-                                    text: '#004849'
+                                    base: '#FFFFFF',
+                                    hover: '#E6E7EB',
+                                    text: '#333333'
                                 },
                                 disabled : function() {
                                     return nfCanvasUtils.supportsModification(selection);

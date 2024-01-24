@@ -34,44 +34,55 @@ div.settings-header-text {
 
 div.settings-container {
     position: absolute;
-    top: 58px;
+    top: 0px;
     bottom: 52px;
     left: 0px;
     right: 0px;
+    height: 100%;
 }
 
 #new-service-or-task {
     float: right;
+    position: absolute;
+    right: 10%;
+    top: 0;
 }
 
 #settings-refresh-container {
     position: absolute;
-    bottom: 20px;
-    right: 0px;
-    left: 0px;
-    height: 32px;
+    right: 7%;
 }
 
 /* settings tabs */
 
 div.settings-tabs {
     float: left;
+    position: relative;
 }
 
 #settings-tabs-content {
-    top: 43px;
+    top: 0px;
     bottom: 48px;
+    height: 80%;
+    overflow-x: hidden;
 }
 
 div.settings-table {
     position: absolute;
-    top: 0px;
+    top: 20px;
     left: 0px;
     bottom: 20px;
     right: 0px;
     min-height: 150px;
 }
+#parameter-providers-table {
+    border: 1px solid #ccc;
+    border-radius: 5px;
 
+}
+#parameter-providers-table .slick-pane-top .slick-viewport-left.slick-viewport-top {
+    overflow-x: hidden !important;
+}
 span.sorted {
     text-decoration: underline;
 }
@@ -109,19 +120,59 @@ div.settings-refresh-button {
     width: 350px;
     vertical-align: middle;
 }
-
+#general-settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 40px;
+}
 div.settings-buttons {
     float: right;
 }
 
 .editable.settings-buttons {
     float: left;
+    position: relative;
+    right: 75px;
+    top: -50px;
+}
+#settings-save{
+    margin: 0;
+    top: -10px;
+    right: 10px;
 }
 
 div.settings-buttons div.button {
-    float: left;
+    /*float: left;*/
+    bottom: 0;
 }
 
 div.controller-settings-table {
     top: 32px;
+}
+
+.edit-reporting-task {
+    background-image: url(../images/table_edit_icon.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    margin: 3px;
+}
+.start-reporting-task {
+    background-image: url(../images/nifi_start1.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    margin: 3px;
+}
+.stop-reporting-task {
+    background-image: url(../images/nifi_stop1.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    margin: 3px;
+}
+.delete-reporting-task{
+    background-image: url(../images/table_delete_icon.png);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    margin: 3px;
 }

@@ -16,6 +16,7 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="variable-registry-dialog" class="hidden">
+    <img src="images/? 74.png" style="width: 28px;height: 28px;margin: -1px 0px 0px -6px; z-index: 3;position: absolute;top: 12px;right: 10px" onclick="$('#variable-registry-dialog').hide()">
     <div class="dialog-content">
         <div class="settings-left">
             <div class="setting">
@@ -26,7 +27,7 @@
                         <span id="variable-registry-process-group-id" class="hidden"></span>
                     </div>
                 </div>
-                <div id="add-variable"><button class="button fa fa-plus"></button></div>
+                <div id="add-variable"><button class="button fa fa-plus"><img src="images/? 87.png" style="width: 28px;height: 28px;margin: -1px 0 0 -6px;"></button></div>
                 <div class="clear"></div>
             </div>
             <div id="variable-registry-table"></div>

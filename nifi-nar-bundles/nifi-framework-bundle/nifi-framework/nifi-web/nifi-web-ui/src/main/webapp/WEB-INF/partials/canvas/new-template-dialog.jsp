@@ -16,17 +16,17 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="new-template-dialog" class="hidden medium-dialog">
+    <img src="images/?70.png" style="width: 28px;height: 28px;margin: -1px 0px 0px -6px;cursor: pointer;position: absolute;right: 10px;top: 10px" onclick="$('#new-template-dialog').hide()">
     <div class="dialog-content">
         <div class="setting">
-            <div class="setting-name">Name</div>
+            <div class="setting-name"></div>
             <div class="setting-field">
-                <input id="new-template-name" class="new-template-field" type="text"/>
+                <input id="new-template-name" class="new-template-field" type="text" placeholder="Name"/>
             </div>
         </div>
         <div class="setting">
-            <div class="setting-name">Description</div>
             <div class="setting-field">
-                <textarea cols="30" rows="8" id="new-template-description" class="new-template-field"></textarea>
+                <textarea cols="30" rows="8" id="new-template-description" class="new-template-field" placeholder="Description"></textarea>
             </div>
         </div>
     </div>

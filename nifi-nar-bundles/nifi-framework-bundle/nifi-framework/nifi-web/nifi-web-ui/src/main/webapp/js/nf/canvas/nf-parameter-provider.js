@@ -414,8 +414,8 @@
                 fetchParametersDialog.modal('setButtonModel', [{
                     buttonText: 'Close',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -431,8 +431,8 @@
                 fetchParametersDialog.modal('setButtonModel', [{
                     buttonText: 'Apply',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -446,9 +446,9 @@
                 }, {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#FFFFFF',
+                        hover: '#E6E7EB',
+                        text: '#333333'
                     },
                     handler: {
                         click: function () {
@@ -465,9 +465,9 @@
             fetchParametersDialog.modal('setButtonModel', [{
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#FFFFFF',
+                    hover: '#E6E7EB',
+                    text: '#333333'
                 },
                 handler: {
                     click: function () {
@@ -670,8 +670,8 @@
             var buttons = [{
                 buttonText: 'Apply',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 disabled: function () {
@@ -688,9 +688,9 @@
             }, {
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#FFFFFF',
+                    hover: '#E6E7EB',
+                    text: '#333333'
                 },
                 handler: {
                     click: function () {
@@ -3082,8 +3082,8 @@
                 var buttons = [{
                     buttonText: 'Apply',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -3105,9 +3105,9 @@
                     {
                         buttonText: 'Cancel',
                         color: {
-                            base: '#E3E8EB',
-                            hover: '#C7D2D7',
-                            text: '#004849'
+                            base: '#FFFFFF',
+                            hover: '#E6E7EB',
+                            text: '#333333'
                         },
                         handler: {
                             click: function () {
@@ -3122,9 +3122,9 @@
                         buttonText: 'Advanced',
                         clazz: 'fa fa-cog button-icon',
                         color: {
-                            base: '#E3E8EB',
-                            hover: '#C7D2D7',
-                            text: '#004849'
+                            base: '#FFFFFF',
+                            hover: '#E6E7EB',
+                            text: '#333333'
                         },
                         handler: {
                             click: function () {
@@ -3251,8 +3251,8 @@
                 var buttons = [{
                     buttonText: 'Ok',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -3269,9 +3269,9 @@
                         buttonText: 'Advanced',
                         clazz: 'fa fa-cog button-icon',
                         color: {
-                            base: '#E3E8EB',
-                            hover: '#C7D2D7',
-                            text: '#004849'
+                            base: '#FFFFFF',
+                            hover: '#E6E7EB',
+                            text: '#333333'
                         },
                         handler: {
                             click: function () {

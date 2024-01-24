@@ -16,25 +16,26 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="fill-color-dialog" class="hidden">
+    <img src="images/?70.png" style="width: 28px;height: 28px;margin: -1px 0px 0px -6px;cursor: pointer;position: absolute;right: 10px;top: 10px" onclick="$('#fill-color-dialog').hide()">
     <div class="dialog-content">
-        <div class="setting" style="margin-bottom: 0px;">
+        <div class="setting" style="margin-bottom: 0px; display: block;">
             <div class="setting-name">Color</div>
-            <div class="setting-field">
+            <div class="setting-field" style="margin-top: 14px">
                 <input type="text" id="fill-color" value="#FFFFFF"/>
             </div>
-            <div class="setting-name" style="margin-top: 10px;">Value</div>
-            <div class="setting-field">
-                <input type="text" id="fill-color-value" value="#FFFFFF"/>
+            <%--            <div class="setting-name" style="margin-top: 10px;">Value</div>--%>
+            <div class="setting-field" style="margin-top: 34px">
+                <input type="text" id="fill-color-value" value="#FFFFFF" style="width: 100%"/>
             </div>
-            <div class="setting-name" style="margin-top: 10px;">Preview</div>
-            <div class="setting-field">
+            <div class="setting-name" style="margin-top: 35px;">Preview</div>
+            <div class="setting-field" style="margin-top: 14px">
                 <div id="fill-color-processor-preview">
-                    <div id="fill-color-processor-preview-icon" class="icon icon-processor"></div>
-                    <div id="fill-color-processor-preview-name" style="margin-left: 35px; line-height: 25px; font-size: 12px; height: 25px; color: #262626;">Processor Name</div>
-                    <div style="width: 100%; height: 9px; border-bottom: 1px solid #c7d2d7; background-color: #f4f6f7;"></div>
-                    <div style="width: 100%; height: 9px; border-bottom: 1px solid #c7d2d7; background-color: #ffffff;"></div>
-                    <div style="width: 100%; height: 10px; border-bottom: 1px solid #c7d2d7; background-color: #f4f6f7;"></div>
-                    <div style="width: 100%; height: 9px; background-color: #ffffff;"></div>
+                    <div id="fill-color-processor-preview-icon" class="icon icon-processor" ></div>
+                    <div id="fill-color-processor-preview-name" style="line-height: 25px; font-size: 12px; height: 25px; color: #ffffff; background-color: #5734D3; border-top-left-radius: 20px;border-top-right-radius: 20px;margin-left: 0">Processor Name</div>
+                    <div style="width: 100%; height: 9px; border-bottom: 1px solid #ffffff; background-color: #ffffff;"></div>
+                    <div style="width: 100%; height: 9px; border-bottom: 1px solid #ffffff; background-color: #ffffff;"></div>
+                    <div style="width: 95%;height: 10px;border-bottom: 1px solid #ffffff;background-color: #ffffff;margin-left: 5px;"></div>
+                    <div style="width: 80%; height: 9px; background-color: #ffffff; margin-left: 15px"></div>
                 </div>
                 <div id="fill-color-label-preview">
                     <div id="fill-color-label-preview-value">Label Value</div>

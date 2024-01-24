@@ -145,14 +145,16 @@
                     return d.dimensions.height;
                 },
                 'fill': 'transparent',
-                'stroke': 'transparent'
+                'stroke': 'transparent',
+                'rx':6,
+                'ry':6
             });
 
         // process group body
         d3Helpers.multiAttr(
             processGroup.append('rect'),
             {
-                'class': 'body',
+                'class': 'body aa-fill',
                 'width': function (d) {
                     return d.dimensions.width;
                 },
@@ -160,7 +162,9 @@
                     return d.dimensions.height;
                 },
                 'filter': 'url(#component-drop-shadow)',
-                'stroke-width': 0
+                'stroke-width': 0,
+                'rx':6,
+                'ry':6
             });
 
         // process group name background
@@ -170,8 +174,10 @@
                 'width': function (d) {
                     return d.dimensions.width;
                 },
-                'height': 32,
-                'fill': '#b8c6cd'
+                'height': 55,
+                'fill': '#5734D3',
+                'rx':6,
+                'ry':6
             });
 
         // process group name
@@ -293,7 +299,8 @@
                                 return processGroupData.dimensions.width;
                             },
                             'height': 24,
-                            'fill': '#e3e8eb'
+                            'fill': '#F9F6FE',
+                            'class':'aa-fill'
                         });
 
                     d3Helpers.multiAttr(
@@ -307,7 +314,10 @@
                                 return processGroupData.dimensions.width;
                             },
                             'height': 24,
-                            'fill': '#e3e8eb'
+                            'fill': '#F9F6FE',
+                            'rx':6,
+                            'ry':6,
+                            'class':'aa-fill'
                         });
 
                     // --------
@@ -323,9 +333,10 @@
                             'class': 'process-group-transmitting process-group-contents-icon',
                             'font-family': 'FontAwesome'
                         })
+                        .style('font-family', 'FontAwesome !important')
                         .text('\uf140')
                         .append('title')
-                        .text('Transmitting Remote Process Groups');
+                        .text('Transmitting Remote Process Groups')
 
                     // transmitting count
                     d3Helpers.multiAttr(
@@ -341,8 +352,9 @@
                         {
                             'y': 49,
                             'class': 'process-group-not-transmitting process-group-contents-icon',
-                            'font-family': 'flowfont'
+                            // 'font-family': 'FontAwesome !important'
                         })
+                        .style('font-family', 'FontAwesome !important')
                         .text('\ue80a')
                         .append('title')
                         .text('Not Transmitting Remote Process Groups');
@@ -361,8 +373,9 @@
                         {
                             'y': 49,
                             'class': 'process-group-running process-group-contents-icon',
-                            'font-family': 'FontAwesome'
+                            // 'font-family': 'FontAwesome !important'
                         })
+                        .style('font-family', 'FontAwesome !important')
                         .text('\uf04b')
                         .append('title')
                         .text('Running Components');
@@ -381,8 +394,9 @@
                         {
                             'y': 49,
                             'class': 'process-group-stopped process-group-contents-icon',
-                            'font-family': 'FontAwesome'
+                            // 'font-family': 'FontAwesome !important'
                         })
+                        .style('font-family', 'FontAwesome !important')
                         .text('\uf04d')
                         .append('title')
                         .text('Stopped Components');
@@ -401,8 +415,9 @@
                         {
                             'y': 49,
                             'class': 'process-group-invalid process-group-contents-icon',
-                            'font-family': 'FontAwesome'
+                            // 'font-family': 'FontAwesome !important'
                         })
+                        .style('font-family', 'FontAwesome !important')
                         .text('\uf071')
                         .append('title')
                         .text('Invalid Components');
@@ -421,8 +436,8 @@
                         {
                             'y': 49,
                             'class': 'process-group-disabled process-group-contents-icon',
-                            'font-family': 'flowfont'
                         })
+                        .style('font-family','flowfont !important')
                         .text('\ue802')
                         .append('title')
                         .text('Disabled Components');
@@ -444,8 +459,9 @@
                                 return processGroupData.dimensions.height - 7;
                             },
                             'class': 'process-group-up-to-date process-group-contents-icon',
-                            'font-family': 'FontAwesome'
+                            // 'font-family': 'FontAwesome'
                         })
+                        .style('font-family', 'FontAwesome !important')
                         .text('\uf00c')
                         .append('title')
                         .text('Up to date Versioned Process Groups');
@@ -468,8 +484,9 @@
                                 return processGroupData.dimensions.height - 7;
                             },
                             'class': 'process-group-locally-modified process-group-contents-icon',
-                            'font-family': 'FontAwesome'
+                            // 'font-family': 'FontAwesome'
                         })
+                        .style('font-family', 'FontAwesome !important')
                         .text('\uf069')
                         .append('title')
                         .text('Locally modified Versioned Process Groups');
@@ -492,8 +509,9 @@
                                 return processGroupData.dimensions.height - 7;
                             },
                             'class': 'process-group-stale process-group-contents-icon',
-                            'font-family': 'FontAwesome'
+                            // 'font-family': 'FontAwesome'
                         })
+                        .style('font-family', 'FontAwesome !important')
                         .text('\uf0aa')
                         .append('title')
                         .text('Stale Versioned Process Groups');
@@ -516,8 +534,9 @@
                                 return processGroupData.dimensions.height - 7;
                             },
                             'class': 'process-group-locally-modified-and-stale process-group-contents-icon',
-                            'font-family': 'FontAwesome'
+                            // 'font-family': 'FontAwesome'
                         })
+                        .style('font-family', 'FontAwesome !important')
                         .text('\uf06a')
                         .append('title')
                         .text('Locally modified and stale Versioned Process Groups');
@@ -540,8 +559,9 @@
                                 return processGroupData.dimensions.height - 7;
                             },
                             'class': 'process-group-sync-failure process-group-contents-icon',
-                            'font-family': 'FontAwesome'
+                            // 'font-family': 'FontAwesome'
                         })
+                        .style('font-family', 'FontAwesome !important')
                         .text('\uf128')
                         .append('title')
                         .text('Sync failure Versioned Process Groups');
@@ -570,7 +590,8 @@
                             'height': 19,
                             'x': 0,
                             'y': 66,
-                            'fill': '#f4f6f7'
+                            'fill': '#ffffff',
+                            "class":'aa-fill'
                         });
 
                     // border
@@ -583,7 +604,9 @@
                             'height': 1,
                             'x': 0,
                             'y': 84,
-                            'fill': '#c7d2d7'
+                            'fill': '#ffffff',
+                            "class":'aa-fill'
+
                         });
 
                     // in
@@ -596,7 +619,9 @@
                             'height': 19,
                             'x': 0,
                             'y': 85,
-                            'fill': '#ffffff'
+                            'fill': '#ffffff',
+                            "class":'aa-fill'
+
                         });
 
                     // border
@@ -609,7 +634,9 @@
                             'height': 1,
                             'x': 0,
                             'y': 103,
-                            'fill': '#c7d2d7'
+                            'fill': '#ffffff',
+                            "class":'aa-fill'
+
                         });
 
                     // read/write
@@ -622,7 +649,9 @@
                             'height': 19,
                             'x': 0,
                             'y': 104,
-                            'fill': '#f4f6f7'
+                            'fill': '#ffffff',
+                            "class":'aa-fill'
+
                         });
 
                     // border
@@ -635,7 +664,9 @@
                             'height': 1,
                             'x': 0,
                             'y': 122,
-                            'fill': '#c7d2d7'
+                            'fill': '#ffffff',
+                            "class":'aa-fill'
+
                         });
 
                     // out
@@ -648,7 +679,9 @@
                             'height': 19,
                             'x': 0,
                             'y': 123,
-                            'fill': '#ffffff'
+                            'fill': '#ffffff',
+                            "class":'aa-fill'
+
                         });
 
                     // -----
@@ -726,7 +759,8 @@
                             'x': 4,
                             'y': 5,
                             'class': 'process-group-queued stats-value'
-                        });
+                        })
+                            .style('font-size','10px');
 
                     // queued count
                     d3Helpers.multiAttr(
@@ -751,7 +785,8 @@
                             'x': 4,
                             'y': 24,
                             'class': 'process-group-in stats-value'
-                        });
+                        })
+                        .style('font-size','10px');
 
                     // in count
                     d3Helpers.multiAttr(
@@ -790,7 +825,8 @@
                             'x': 4,
                             'y': 42,
                             'class': 'process-group-read-write stats-value'
-                        });
+                        })
+                        .style('font-size','10px');
 
                     // out value
                     var outText = d3Helpers.multiAttr(
@@ -801,7 +837,8 @@
                             'x': 4,
                             'y': 60,
                             'class': 'process-group-out stats-value'
-                        });
+                        })
+                        .style('font-size','10px');
 
                     // out ports
                     d3Helpers.multiAttr(
@@ -915,13 +952,13 @@
                     d3Helpers.multiAttr(
                         details.append('rect'),
                         {
-                            'class': 'bulletin-background',
+                            'class': 'bulletin-background aa-fill',
                             'x': function () {
                                 return processGroupData.dimensions.width - 24;
                             },
                             'y': 32,
                             'width': 24,
-                            'height': 24
+                            'height': 24,
                         });
 
                     // bulletin icon

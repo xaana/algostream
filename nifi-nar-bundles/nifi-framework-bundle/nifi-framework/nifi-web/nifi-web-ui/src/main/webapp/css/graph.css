@@ -20,13 +20,14 @@
 
 #canvas-container {
     position: absolute;
-    top: 88px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
+    top: 33px;
+    left: 0;
+    bottom: 0;
+    right: 0;
     background-color: #f9fafb;
-    background-size: 14px 14px;
-    background-image: linear-gradient(to right, rgba(229, 235, 237, 1) 1px, transparent 1px), linear-gradient(to bottom, rgba(229, 235, 237, 1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    /*background-image: radial-gradient(circle,#e3e3e3 1px,#f0f0f0 2px);*/
+    background-image: radial-gradient(circle, #E0DFE1 1px, transparent 2px);
     z-index: 1;
     overflow: hidden;
 }
@@ -99,8 +100,8 @@ text.stats-label {
 }
 
 text.stats-value {
-    fill: #775351;
-    font-size: 12px;
+    fill: #FF9315;
+    font-size: 7px;
     font-weight: bold;
 }
 
@@ -124,9 +125,9 @@ rect.bulletin-background {
 }
 
 text.active-thread-count-icon {
-    font-family: flowfont;
+    font-family: flowfont !important;
     font-size: 12px;
-    fill: #728e9b;
+    fill: #5734D3;
     text-anchor: end;
 }
 
@@ -210,18 +211,18 @@ text.add-connect {
 */
 
 text.processor-name {
-    fill: #262626;
-    font-size: 14px;
+    fill: #ffffff;
+    font-size: 13px;
 }
 
 text.processor-type {
-    fill: #728e9b;
-    font-size: 12px;
+    fill: #7747E8;
+    font-size: 9px;
 }
 
 text.processor-bundle {
-    fill: #666;
-    font-size: 10px;
+    fill: #ffffff;
+    font-size: 8px;
 }
 
 rect.processor-icon-container {
@@ -254,6 +255,7 @@ text.is-primary {
 text.run-status-icon {
     font-size: 14px;
     transform-origin: 62px 18px 0;
+    font-family: FontAwesome !important;
 }
 
 /*
@@ -307,7 +309,7 @@ path.connector.connectable {
 g.connection path.connection-path {
     fill: none;
     stroke: #000000;
-    stroke-width: 2;
+    stroke-width: 1px;
     cursor: pointer;
 }
 
@@ -468,7 +470,7 @@ g.label.selected rect.labelpoint {
 
 /* funnels */
 
-text.funnel-icon {
+img.funnel-icon {
     fill: #ad9897;
     font-family: flowfont;
     font-size: 30px;
@@ -501,8 +503,9 @@ text.active-thread-count {
 /* process groups */
 
 text.process-group-name {
-    fill: #262626;
-    font-size: 14px;
+    fill: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 text.version-control {
@@ -527,6 +530,7 @@ g.process-group.drop rect.border {
 text.process-group-contents-icon {
     font-size: 15px;
     fill: #728e9b;
+    /*font-family: FontAwesome !important;*/
 }
 
 /* remote process group */
@@ -554,4 +558,35 @@ text.remote-process-group-transmission-secure {
 
 text.remote-process-group-last-refresh {
     fill: #728e9b;
+}
+
+.process-group-transmitting {
+    font-family: FontAwesome !important;
+}
+.process-group-not-transmitting {
+    font-family: flowfont !important;
+}
+.process-group-running {
+    font-family: FontAwesome !important;
+}
+.process-group-stopped{
+    font-family: FontAwesome !important;
+}
+.process-group-invalid {
+    font-family: FontAwesome !important;
+}
+.process-group-disabled {
+    font-family: flowfont !important;
+}
+.process-group-up-to-date {
+    font-family: FontAwesome !important;
+}
+.process-group-locally-modified {
+    font-family: FontAwesome !important;
+}
+.process-group-stale {
+    font-family: FontAwesome !important;
+}
+.process-group-locally-modified-and-stale {
+    font-family: FontAwesome !important;
 }

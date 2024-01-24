@@ -16,6 +16,7 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="component-state-dialog" layout="column" class="hidden large-dialog">
+    <img src="images/?70.png" style="width: 28px;height: 28px;margin: -1px 0px 0px -6px;cursor: pointer;position: absolute;right: 10px;top: 10px" onclick="$('#component-state-dialog').hide()">
     <div class="dialog-content">
         <div class="setting">
             <div class="setting-name">Name</div>

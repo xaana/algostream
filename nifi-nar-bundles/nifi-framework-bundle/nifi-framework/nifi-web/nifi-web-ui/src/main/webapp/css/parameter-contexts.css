@@ -49,10 +49,7 @@ div.parameter-contexts-container {
 
 #parameter-contexts-refresh-container {
     position: absolute;
-    bottom: 20px;
-    right: 0px;
-    left: 0px;
-    height: 32px;
+    right: 7%;
 }
 
 div.parameter-contexts-table {

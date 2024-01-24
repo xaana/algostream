@@ -17,11 +17,11 @@
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="counters">
     <div id="counters-header-and-filter">
-        <div id="counters-header-text">NiFi Counters</div>
+<%--        <div id="counters-header-text">NiFi Counters</div>--%>
         <div id="counters-filter-controls">
-            <div id="counters-filter-stats" class="filter-status">
-                Displaying&nbsp;<span id="displayed-counters"></span>&nbsp;of&nbsp;<span id="total-counters"></span>
-            </div>
+<%--            <div id="counters-filter-stats" class="filter-status">--%>
+<%--                Displaying&nbsp;<span id="displayed-counters"></span>&nbsp;of&nbsp;<span id="total-counters"></span>--%>
+<%--            </div>--%>
             <div id="counters-filter-container" class="filter-container">
                 <input type="text" id="counters-filter" placeholder="Filter" class="filter"/>
                 <div id="counters-filter-type" class="filter-type"></div>
@@ -31,9 +31,11 @@
     <div id="counters-table"></div>
 </div>
 <div id="counters-refresh-container">
-    <button id="refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh"></button>
-    <div id="counters-last-refreshed-container" class="last-refreshed-container">
-        Last updated:&nbsp;<span id="counters-last-refreshed" class="value-color"></span>
-    </div>
-    <div id="counters-loading-container" class="loading-container"></div>
+    <button id="refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh">
+        <img src="images/? 81.png" style="width: 28px;height: 28px;margin: -1px 0 0 -6px">
+    </button>
+<%--    <div id="counters-last-refreshed-container" class="last-refreshed-container">--%>
+<%--        Last updated:&nbsp;<span id="counters-last-refreshed" class="value-color"></span>--%>
+<%--    </div>--%>
+<%--    <div id="counters-loading-container" class="loading-container"></div>--%>
 </div>

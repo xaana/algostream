@@ -186,7 +186,9 @@
                         var historyTitle = aboutDetails.title + ' History';
 
                         // set the document title and the about title
-                        document.title = historyTitle;
+                        // document.title = historyTitle;
+                        document.title = 'Algopipe';
+
                         $('#history-header-text').text(historyTitle);
 
                         // set the initial size

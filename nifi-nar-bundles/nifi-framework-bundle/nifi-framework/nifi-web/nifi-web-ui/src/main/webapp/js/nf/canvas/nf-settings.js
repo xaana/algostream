@@ -1108,8 +1108,8 @@
             buttons: [{
                 buttonText: 'Add',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 disabled: function () {
@@ -1132,9 +1132,9 @@
                 {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#FFFFFF',
+                        hover: '#E6E7EB',
+                        text: '#333333'
                     },
                     handler: {
                         click: function () {
@@ -1510,8 +1510,8 @@
             buttons: [{
                 buttonText: 'Add',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 disabled: function () {
@@ -1534,9 +1534,9 @@
                 {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#FFFFFF',
+                        hover: '#E6E7EB',
+                        text: '#333333'
                     },
                     handler: {
                         click: function () {
@@ -1594,7 +1594,7 @@
             var markup = '<div title="View Details" class="pointer view-reporting-task fa fa-info-circle"></div>';
 
             // always include a button to view the usage
-            markup += '<div title="Usage" class="pointer reporting-task-usage fa fa-book"></div>';
+            markup += '<div title="Usage" class="pointer reporting-task-usage fa fa-book" style="display: none"></div>';
 
             var hasComments = !nfCommon.isBlank(dataContext.component.comments);
             var hasErrors = !nfCommon.isEmpty(dataContext.component.validationErrors);
@@ -2420,8 +2420,8 @@
             buttons: [{
                 buttonText: 'Add',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 disabled: function () {
@@ -2444,9 +2444,9 @@
                 {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#FFFFFF',
+                        hover: '#E6E7EB',
+                        text: '#333333'
                     },
                     handler: {
                         click: function () {
@@ -2516,7 +2516,7 @@
             var markup = '<div title="View Details" class="pointer view-flow-analysis-rule fa fa-info-circle"></div>';
 
             // always include a button to view the usage
-            markup += '<div title="Usage" class="pointer flow-analysis-rule-usage fa fa-book"></div>';
+            markup += '<div title="Usage" class="pointer flow-analysis-rule-usage fa fa-book" style="display: none"></div>';
 
             var hasErrors = !nfCommon.isEmpty(dataContext.component.validationErrors);
 
@@ -2769,8 +2769,8 @@
             buttons: [{
                 buttonText: 'Add',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -2781,9 +2781,9 @@
             }, {
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#FFFFFF',
+                    hover: '#E6E7EB',
+                    text: '#333333'
                 },
                 handler: {
                     click: function () {
@@ -3001,7 +3001,7 @@
             var markup = '<div title="View Details" class="pointer view-parameter-provider fa fa-info-circle"></div>';
 
             // always include a button to view the usage
-            markup += '<div title="Usage" class="pointer parameter-provider-usage fa fa-book"></div>';
+            markup += '<div title="Usage" class="pointer parameter-provider-usage fa fa-book" style="display: none"></div>';
 
             var hasErrors = !nfCommon.isEmpty(dataContext.component.validationErrors);
             var hasBulletins = !nfCommon.isEmpty(dataContext.bulletins);
@@ -3263,8 +3263,8 @@
             $('#registry-configuration-dialog').modal('setHeaderText', 'Edit Registry Client').modal('setButtonModel', [{
                 buttonText: 'Update',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -3275,9 +3275,9 @@
             }, {
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#FFFFFF',
+                    hover: '#E6E7EB',
+                    text: '#333333'
                 },
                 handler: {
                     click: function () {

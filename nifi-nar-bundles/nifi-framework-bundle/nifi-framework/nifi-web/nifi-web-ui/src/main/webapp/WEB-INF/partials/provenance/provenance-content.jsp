@@ -21,34 +21,36 @@
     <span id="initial-flowfile-query" class="hidden"><c:out value="${param.flowFileUuid}"/></span>
     <span id="nifi-controller-uri" class="hidden"></span>
     <span id="nifi-content-viewer-url" class="hidden"></span>
-    <div id="provenance-header-text">NiFi Data Provenance</div>
-    <div id="provenance-event-search" class="provenance-panel">
+<%--    <div id="provenance-header-text">NiFi Data Provenance</div>--%>
+    <div id="provenance-event-search" class="provenance-panel" style="top: 0px">
         <div id="provenance-filter-controls" class="filter-controls">
-            <div id="provenance-filter-stats" class="filter-status">
-                Displaying&nbsp;<span id="displayed-events"></span>&nbsp;of&nbsp;<span id="total-events"></span>
-            </div>
-            <div id="oldest-event-message">
-                Oldest event available:&nbsp;<span id="oldest-event" class="value-color"></span>
-            </div>
+<%--            <div id="provenance-filter-stats" class="filter-status">--%>
+<%--                Displaying&nbsp;<span id="displayed-events"></span>&nbsp;of&nbsp;<span id="total-events"></span>--%>
+<%--            </div>--%>
+<%--            <div id="oldest-event-message">--%>
+<%--                Oldest event available:&nbsp;<span id="oldest-event" class="value-color"></span>--%>
+<%--            </div>--%>
             <div id="provenance-filter-container" class="filter-container">
                 <input type="text" placeholder="Filter" id="provenance-filter" class="filter"/>
                 <div id="provenance-filter-type" class="filter-type"></div>
             </div>
         </div>
-        <div id="provenance-search-container">
-            <div id="provenance-search-overview">
-                <span id="provenance-query-message">&nbsp;</span>
-                <span id="clear-provenance-search" class="link">Clear search</span>
-            </div>
-            <button id="provenance-search-button" class="fa fa-search"></button>
-        </div>
-        <div id="provenance-table"></div>
-        <div id="provenance-refresh-container">
-            <button id="refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh"></button>
-            <div id="provenance-last-refreshed-container" class="last-refreshed-container">
-                Last updated:&nbsp;<span id="provenance-last-refreshed" class="value-color"></span>
-            </div>
-            <div id="provenance-loading-container" class="loading-container"></div>
+<%--        <div id="provenance-search-container">--%>
+<%--            <div id="provenance-search-overview">--%>
+<%--                <span id="provenance-query-message">&nbsp;</span>--%>
+<%--                <span id="clear-provenance-search" class="link">Clear search</span>--%>
+<%--            </div>--%>
+<%--            <button id="provenance-search-button" class="fa fa-search"></button>--%>
+<%--        </div>--%>
+        <div id="provenance-table" style="top: 50px;border-radius: 5px"></div>
+        <div id="provenance-refresh-container" style="right: 6%">
+            <button id="refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh">
+                <img src="images/? 81.png" style="width: 28px;height: 28px;margin: -1px 0 0 -6px">
+            </button>
+<%--            <div id="provenance-last-refreshed-container" class="last-refreshed-container">--%>
+<%--                Last updated:&nbsp;<span id="provenance-last-refreshed" class="value-color"></span>--%>
+<%--            </div>--%>
+<%--            <div id="provenance-loading-container" class="loading-container"></div>--%>
         </div>
     </div>
     <div id="provenance-lineage" class="provenance-panel hidden">

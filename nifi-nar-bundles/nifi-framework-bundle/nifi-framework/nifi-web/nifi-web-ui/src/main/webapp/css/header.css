@@ -20,10 +20,11 @@
 */
 
 md-toolbar.md-small {
-    height: 56px;
-    background-color:#AABBC3; /*tint base-color 40%*/
-    min-height: 56px;
-    max-height: 56px;
+    height: 100%;
+    width: 3.5%;
+    background-color:#1C0D52; /*tint base-color 40%*/
+    /*min-height: 56px;*/
+    /*max-height: 56px;*/
     position: relative;
     z-index: 4;
 }
@@ -34,9 +35,9 @@ md-toolbar.md-small .md-toolbar-tools {
 }
 
 #header .icon {
-    font-size:32px;
-    color: #004849;
-    padding-left:12px
+    font-size:25px;
+    color: #FFFFFF;
+    /*padding-left:10px*/
 }
 
 #header .fa {
@@ -63,8 +64,37 @@ md-toolbar.md-small .md-toolbar-tools {
 }
 
 #nifi-logo {
-    height: 37px;
-    margin:0 20px 3px 15px;
+    height: 40px;
+    width: 40px;
+    margin:15px 16px 3px 15px;
+    border-radius: 10px;
+}
+.status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* ??????????? */
+    border: 1px solid #ccc; /* ???? */
+    padding: 5px; /* ????? */
+}
+
+.status-icon {
+    margin-right: 10px; /* ????????????? */
+    font-size: 20px; /* ??????? */
+}
+
+.loading-icon {
+    /* ???????? */
+    width: 20px;
+    height: 20px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 #global-menu-button {
@@ -81,13 +111,19 @@ md-toolbar.md-small .md-toolbar-tools {
 }
 
 #global-menu-content {
-    font-size: 13px;
+    font-size: 11px;
     padding: 3px 0;
-    background-color: rgba(249, 250, 251, 0.97); /*tint base-color 96%*/
-    border: 1px solid #004849; /*link-color*/
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-    width: 215px;
+    background-color: #FFFFFF; /*tint base-color 96%*/
+    /*border: 1px solid #004849; !*link-color*!*/
+    /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);*/
+    /*width: 215px;*/
     max-height: inherit;
+    margin-bottom: 40px;
+}
+/* Define a custom class to make the menu always visible */
+.global-menu-open {
+    display: block !important;
+    visibility: visible !important;
 }
 
 #global-menu-content md-menu-item{
@@ -96,7 +132,7 @@ md-toolbar.md-small .md-toolbar-tools {
 }
 
 #global-menu-content md-menu-divider{
-    background-color:#C7D2D7; /*tint base-color 60%*/
+    background-color:#DFF5ED; /*tint base-color 60%*/
     margin-top: 3px;
     margin-bottom: 3px;
 }
@@ -107,6 +143,10 @@ md-toolbar.md-small .md-toolbar-tools {
     cursor: pointer;
     padding-left: 10px;
     padding-right: 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 14px;
 }
 
 #global-menu-content a.disabled {
@@ -142,18 +182,19 @@ md-toolbar.md-small .md-toolbar-tools {
 
 #header .component-button {
     background: none;
-    height: 56px;
-    position: relative;
-    width: 56px;
+    height: 45px;
+    /*position: relative;*/
+    width: 100%;
     border: none;
 }
 
 #header .component-button:hover {
-    background-color: #e3e8eb;
+    background-color: #583AAE;
     box-shadow: 0 3px 6px rgba(0,0,0,0.3);
     cursor:grab;
     cursor:-moz-grab;
     cursor:-webkit-grab;
+    border-radius: 10px;
 }
 
 #header .component-button:active {
@@ -177,7 +218,7 @@ md-toolbar.md-small .md-toolbar-tools {
     bottom: 2px;
     height: 4px;
     left: 2px;
-    position: absolute;
+    /*position: absolute;*/
     width: 52px;
 }
 

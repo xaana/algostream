@@ -77,11 +77,14 @@ div.undefined {
 
 #prioritizer-available, #prioritizer-selected {
     list-style-type: none;
-    margin: 0px;
-    background: #eaeef0;
+    margin: 0;
+    background: #fff;
     min-height: 32px;
     margin-bottom: 5px;
     padding: 2px;
+    color: #666;
+    border-radius: 6px;
+    width: 300px;
 }
 
 #prioritizer-available li, #prioritizer-selected li {
@@ -94,20 +97,20 @@ div.undefined {
 }
 
 #prioritizer-available li {
+    margin-top: 10px;
     background: #fff;
-    border-top: 1px solid #CCDADB;
-    border-right: 1px solid #CCDADB;
-    border-bottom: 1px solid #CCDADB;
-    border-left: 1px solid #CCDADB;
-    color: #004849;
+    border-top: 1px solid #e5e4e7;
+    border-right: 1px solid #e5e4e7;
+    border-bottom: 1px solid #e5e4e7;
+    border-left: 1px solid #e5e4e7;
+    color: #5734d3;
     font-weight: 500;
     cursor: grab;
     cursor: -moz-grab;
     cursor: -webkit-grab;
     line-height: 32px;
     height: 32px;
-    padding: 0px 10px;
-    box-shadow:0 1px 1px rgba(0,0,0,0.4);
+    padding: 0 10px;
 }
 
 #prioritizer-selected li {

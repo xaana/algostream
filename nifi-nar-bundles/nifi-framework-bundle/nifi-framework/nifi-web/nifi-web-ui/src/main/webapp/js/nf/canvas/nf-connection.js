@@ -66,7 +66,7 @@
 
     // the dimensions for the connection label
     var dimensions = {
-        width: 224
+        width: 100
     };
 
     // width of a backpressure indicator - half of width, left/right padding, left/right border
@@ -851,22 +851,27 @@
                                 'class': 'body',
                                 'width': dimensions.width,
                                 'x': 0,
-                                'y': 0
+                                'y': 0,
+                                'rx':14,
+                                'ry':14,
+                                'height':50
                             });
 
                         // processor border
                         d3Helpers.multiAttr(
                             connectionLabelContainer.append('rect'),
                             {
-                                'class': 'border',
+                                'class': 'border aa-fill',
                                 'width': dimensions.width,
                                 'fill': 'transparent',
-                                'stroke': 'transparent'
+                                'stroke': 'transparent',
+                                'rx':14,
+                                'ry':14
                             });
                     }
 
                     var labelCount = 0;
-                    var rowHeight = 19;
+                    var rowHeight = 34;
                     var backgrounds = [];
                     var borders = [];
 
@@ -913,7 +918,7 @@
                                     {
                                         'class': 'stats-label',
                                         'x': 5,
-                                        'y': 14
+                                        'y': 35
                                     })
                                     .text('From');
 
@@ -1129,35 +1134,42 @@
                                     {
                                         'class': 'connection-label-background',
                                         'width': dimensions.width,
-                                        'height': rowHeight
+                                        'height': rowHeight,
+                                        'rx':14,
+                                        'ry':14
                                     }));
 
                                 // border
                                 borders.push(d3Helpers.multiAttr(
                                     connectionName.append('rect'),
                                     {
-                                        'class': 'connection-label-border',
                                         'width': dimensions.width,
-                                        'height': 1
-                                    }));
+                                        'height': 13,
+                                        'y':22,
+                                    })
+                                    .style('fill','#B6B6B6'));
 
                                 d3Helpers.multiAttr(
                                     connectionName.append('text'),
                                     {
                                         'class': 'stats-label',
                                         'x': 5,
-                                        'y': 14
+                                        'y': 17
                                     })
+                                    .style('fill','currentColor')
+                                    .style('color','#ffffff')
                                     .text('Name');
 
                                 d3Helpers.multiAttr(
                                     connectionName.append('text'),
                                     {
                                         'class': 'stats-value connection-name',
-                                        'x': 45,
-                                        'y': 14,
+                                        'x': 0,
+                                        'y': 31,
                                         'width': 142
-                                    });
+                                    })
+                                    .style('fill','currentColor')
+                                    .style('color','#5734D3');
                             } else {
                                 backgrounds.push(connectionName.select('rect.connection-label-background'));
                                 borders.push(connectionName.select('rect.connection-label-border'));
@@ -1214,9 +1226,20 @@
                             {
                                 'class': 'connection-label-background',
                                 'width': dimensions.width,
-                                'height': rowHeight + HEIGHT_FOR_BACKPRESSURE
+                                'height': 21,
+                                'rx':14,
+                                'ry':14
                             }));
-
+                        backgrounds.push(d3Helpers.multiAttr(
+                            queued.append('rect'),
+                            {
+                                // 'class': 'connection-label-background',
+                                'class': 'aa-fill',
+                                'width': dimensions.width,
+                                'height': 10,
+                                'y':12
+                            })
+                            .style('fill','#ffffff !important'));
                         // border
                         borders.push(d3Helpers.multiAttr(
                             queued.append('rect'),
@@ -1231,7 +1254,7 @@
                             {
                                 'class': 'stats-label',
                                 'x': 5,
-                                'y': 14
+                                'y': 32
                             })
                             .text('Queued');
 
@@ -1240,7 +1263,7 @@
                             {
                                 'class': 'stats-value queued',
                                 'x': 55,
-                                'y': 14
+                                'y': 32
                             });
 
                         // queued count
@@ -1309,9 +1332,9 @@
                             backpressureObjectContainer.append('rect'),
                             {
                                 'class': 'backpressure-object',
-                                'width': backpressureBarWidth,
+                                'width': 60,
                                 'height': 3,
-                                'x': 0,
+                                'x': 14,
                                 'y': 0
                             });
 
@@ -1369,16 +1392,16 @@
                             });
 
                         // bar
-                        d3Helpers.multiAttr(
-                            backpressureDataSizeContainer.append('rect'),
-                            {
-                                'class': 'backpressure-data-size',
-                                'width': backpressureBarWidth,
-                                'height': 3,
-                                'x': 0,
-                                'y': 0
-                            })
-                            .append('title');
+                        // d3Helpers.multiAttr(
+                        //     backpressureDataSizeContainer.append('rect'),
+                        //     {
+                        //         'class': 'backpressure-data-size',
+                        //         'width': backpressureBarWidth,
+                        //         'height': 3,
+                        //         'x': 0,
+                        //         'y': 0
+                        //     })
+                        //     .append('title');
 
                         // end
                         d3Helpers.multiAttr(
@@ -1443,16 +1466,16 @@
                     // update the coloring of the backgrounds
                     $.each(backgrounds, function (i, background) {
                         if (i % 2 === 0) {
-                            background.attr('fill', '#f4f6f7');
+                            background.attr('fill', '#5734D3');
                         } else {
-                            background.attr('fill', '#ffffff');
+                            background.attr('fill', 'transparent');
                         }
                     });
 
                     // update the coloring of the label borders
                     $.each(borders, function (i, border) {
                         if (i > 0) {
-                            border.attr('fill', '#c7d2d7');
+                            border.attr('fill', '#B6B6B6');
                         } else {
                             border.attr('fill', 'transparent');
                         }
@@ -2006,7 +2029,7 @@
                 .y(function (d) {
                     return d.y;
                 })
-                .curve(d3.curveLinear);
+                .curve(d3.curveCardinal);
 
             // handle bend point drag events
             bendPointDrag = d3.drag()

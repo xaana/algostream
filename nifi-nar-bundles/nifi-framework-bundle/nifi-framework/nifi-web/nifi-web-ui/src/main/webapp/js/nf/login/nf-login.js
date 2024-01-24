@@ -64,7 +64,7 @@
         // reset the forms
         $('#username').val('');
         $('#password').val('');
-        $('#login-submission-button').text('Log in');
+        $('#login-submission-button').text('Log In');
 
         // update the form visibility
         $('#login-container').show();
@@ -117,12 +117,57 @@
 
                 // update according to the access status
                 if (accessStatus.status === 'ACTIVE') {
-                    // reload as appropriate - no need to schedule token refresh as the page is reloading
-                    if (top !== window) {
-                        parent.window.location = '../nifi/';
-                    } else {
-                        window.location = '../nifi/';
-                    }
+                    // // reload as appropriate - no need to schedule token refresh as the page is reloading
+                    // if (top !== window) {
+                    //     parent.window.location = '../nifi/';
+                    // } else {
+                    //     window.location = '../nifi/';
+                    // }
+                    // create a new success page
+                    var name =$('#username').val()
+                    var successPage = "<html>" +
+                        "<head>" +
+                        "<title>Login Successful</title>" +
+                        "<style>" +
+                        "body {" +
+                        "height: 100vh;" +
+                        "display: flex;" +
+                        "justify-content: center;" +
+                        "align-items: center;" +
+                        "}" +
+                        ".center-content {" +
+                        "position: absolute;" +
+                        "top: 50%;" +
+                        "left: 50%;" +
+                        "transform: translate(-50%, -50%);" +
+                        "text-align: center;" +
+                        "font-family: testFont;"+
+                        "}" +
+                        "</style>" +
+                        "</head>" +
+                        "<body>" +
+                        "<div class='center-content'>" +
+                        "<img src='images/ms-qingzhu.svg' alt='Logo' style='width: 100px; height: 100px;'>" +
+                        "<h2 style='font-weight: bold; margin-top: 20px;'>Hello,"+name+"</span></h2>" +
+                        "<p>Login succeeded</p>" +
+                        "<button style='background-color: #5734D3; color: white; padding: 10px 20px; border: none; border-radius: 20px; margin-top: 20px; font-weight: bold; width: 350px;' onclick='redirectToNifi()'>Enter the homepage</button>" +
+                        "</div>" +
+                        "<script>" +
+                        "function redirectToNifi() {" +
+                        "if (top !== window) {" +
+                        "parent.window.location = '../nifi/';" +
+                        "} else {" +
+                        "window.location = '../nifi/';" +
+                        "}" +
+                        "}" +
+                        "</script>" +
+                        "</body>" +
+                        "</html>";
+
+// display the success page
+                    document.open();
+                    document.write(successPage);
+                    document.close();
                 } else {
                     $('#login-message-title').text('Unable to log in');
                     $('#login-message').text(accessStatus.message);

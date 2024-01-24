@@ -151,16 +151,16 @@
                     $('#new-port-dialog > .dialog-header > .dialog-header-text').text('Add Output Port')
 
                     var optionLocal = {
-                                text: 'Local connections',
-                                value: 'false',
-                                description: 'Send FlowFiles to components in parent process groups.'
-                            };
+                        text: 'Local connections',
+                        value: 'false',
+                        description: 'Send FlowFiles to components in parent process groups.'
+                    };
 
                     var optionRemote = {
-                                text: 'Remote connections (site-to-site)',
-                                value: 'true',
-                                description: 'Send FlowFiles to remote process group (site-to-site).'
-                            };
+                        text: 'Remote connections (site-to-site)',
+                        value: 'true',
+                        description: 'Send FlowFiles to remote process group (site-to-site).'
+                    };
 
                     // initialize the remote access combo
                     $('#port-allow-remote-access-label').text('Send to');
@@ -250,8 +250,8 @@
                 this.modal.update('setButtonModel', [{
                     buttonText: 'Add',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -261,9 +261,9 @@
                     {
                         buttonText: 'Cancel',
                         color: {
-                            base: '#E3E8EB',
-                            hover: '#C7D2D7',
-                            text: '#004849'
+                            base: '#FFFFFF',
+                            hover: '#E6E7EB',
+                            text: '#333333'
                         },
                         handler: {
                             click: function () {
@@ -273,9 +273,10 @@
                     }]);
 
                 // update the port type
-                $('#new-port-type').text('Output');
-
                 // set the focus and show the dialog
+
+                // $('#new-port-type').text('Output');
+                $('#new-port-type').text('Output')
                 this.modal.show();
 
                 // set up the focus and key handlers

@@ -16,6 +16,7 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="nf-ok-dialog" class="hidden medium-short-dialog">
+    <img id="nf-ok-dialog_view" src="images/?70.png" style="position: absolute;top: 10px;right: 10px" onclick="$('#nf-ok-dialog').hide()">
     <div class="dialog-content">
         <div id="nf-ok-dialog-content"></div>
     </div>

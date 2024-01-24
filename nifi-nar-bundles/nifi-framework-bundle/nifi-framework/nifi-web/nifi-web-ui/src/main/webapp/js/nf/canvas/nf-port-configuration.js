@@ -69,8 +69,8 @@
             buttons: [{
                 buttonText: 'Apply',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -96,12 +96,6 @@
                             port['state'] = 'DISABLED';
                         } else if ($('#port-enabled').hasClass('checkbox-checked')) {
                             port['state'] = 'STOPPED';
-                        }
-
-                        if ($('#failure-port').hasClass('checkbox-checked')) {
-                            port['portFunction'] = 'FAILURE';
-                        } else {
-                            port['portFunction'] = 'STANDARD';
                         }
 
                         // build the port entity
@@ -134,9 +128,9 @@
                 {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#FFFFFF',
+                        hover: '#E6E7EB',
+                        text: '#333333'
                     },
                     handler: {
                         click: function () {

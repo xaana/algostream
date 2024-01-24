@@ -16,23 +16,36 @@
  */
 
 /* general graph control styles */
+.process-group-sync-failure {
+    font-family: 'FontAwesome' !important
+}
 
 #graph-controls {
     position: absolute;
-    left: 0;
-    top: 110px;
+    left: 18%;
+    bottom: 5%;
     z-index: 2;
+    border-radius: 6px;
 }
 
+#graph-control {
+    position: absolute;
+    right: 38px;
+    top: 53px;
+    z-index: 2;
+    border-radius: 6px;
+}
 #graph-controls .icon {
     font-size: 18px;
     line-height: 23px;
-    margin-left: -2px;
+    margin-left: 0px;
+    margin-top: 1px;
 }
 
 #graph-controls .fa {
     font-size: 18px;
-    margin-left: -2px;
+    /*margin-left: -2px;*/
+    margin-top: 5px;
 }
 
 .graph-control-header-icon.fa {
@@ -41,11 +54,18 @@
 }
 
 div.graph-control {
-    box-shadow: 0 1px 6px rgba(0,0,0,0.25);
-    background-color: rgba(249, 250, 251, 0.9);
-    border-top: 1px solid #aabbc3;
-    border-right: 1px solid #aabbc3;
-    border-bottom: 1px solid #aabbc3;
+    /*box-shadow: 0 1px 6px rgba(0,0,0,0.25);*/
+    /*background-color: rgba(249, 250, 251, 0.9);*/
+    /*border-top: 1px solid #aabbc3;*/
+    /*border-right: 1px solid #aabbc3;*/
+    /*border-bottom: 1px solid #aabbc3;*/
+    /*margin-bottom: 2px;*/
+    box-shadow: 0 1px 6px rgb(255 255 255 / 25%);
+    background-color: rgba(249,250,251,0.9);
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-left:1px solid #FFFFFF;
     margin-bottom: 2px;
 }
 
@@ -76,19 +96,24 @@ div.graph-control-docked {
 
 div.graph-control button {
     line-height: 30px;
-    border: 1px solid #CCDADB; /*tint link-color 80%*/
-    background-color: rgba(249,250,251,1);
-    color: #004849;
+    border: 1px solid #ffffff;
+    background-color: #EBEBEB;
+    color: #666;
+    padding: 0;
+    fill: currentColor;
 }
 
 div.graph-control button:hover {
-    border: 1px solid #004849; /*link-color*/
+    border: 1px solid #ffffff; /*link-color*/
+    background-color: #F1EBFD;
+    color: #5734D3;
 }
 
 div.graph-control button:disabled {
-    color: #CCDADB; /*tint link-color 80%*/
+    fill: currentColor;
+    color: #b3b2b5 !important; /*tint link-color 80%*/
     cursor: not-allowed;
-    border: 1px solid #CCDADB; /*tint link-color 80%*/
+    border: 1px solid #ffffff; /*tint link-color 80%*/
 }
 
 div.graph-control div.graph-control-expansion {
@@ -189,8 +214,9 @@ div.action-button.right {
 }
 
 #operate-delete button {
-    width: inherit;
-    padding: 0 7px;
+    width: 28px;
+    height: 28px;
+    /*padding: 0 7px;*/
 }
 
 #operate-delete button span{
@@ -227,6 +253,7 @@ div.button-spacer-large {
     z-index: 1001;
     overflow: hidden;
     border: 1px solid #e5ebed;
+    display: none!important;
 }
 
 .brush .selection {
@@ -243,15 +270,24 @@ rect.birdseye-brush {
 /* styles for the breadcrumbs bar */
 
 #breadcrumbs {
+    /*position: absolute;*/
+    /*bottom: 0px;*/
+    /*box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);*/
+    /*background-color: rgba(249, 250, 251, 0.9);*/
+    /*border-top: 1px solid #aabbc3;*/
+    /*color: #598599;*/
+    /*z-index: 1202;*/
+    /*height: 32px;*/
+    /*width: 100%;*/
     position: absolute;
-    bottom: 0px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
-    background-color: rgba(249, 250, 251, 0.9);
-    border-top: 1px solid #aabbc3;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 0px solid #aabbc3;
     color: #598599;
-    z-index: 3;
-    height: 31px;
-    width: 100%;
+    z-index: 1202;
+    height: 32px;
+    width: 14%;
+    top: 0px;
+    left: 3.5%;
 }
 
 #cluster-indicator {
@@ -314,4 +350,10 @@ span.breadcrumb-version-control-gray {
     float: left;
     white-space: nowrap;
     line-height: normal;
+    bottom: 5px;
+}
+#data-flow-title-container .link {
+    font-size: 20px;
+
+    color: #5734D3;
 }

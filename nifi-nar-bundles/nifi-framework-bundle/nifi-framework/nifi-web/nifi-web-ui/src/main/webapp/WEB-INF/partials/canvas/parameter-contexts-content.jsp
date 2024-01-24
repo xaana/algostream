@@ -16,17 +16,22 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="parameter-contexts" class="hidden">
-    <button id="new-parameter-context" class="add-button fa fa-plus" title="Create a new parameter context" style="display: block;"></button>
-    <div id="parameter-contexts-header-text" class="parameter-contexts-header-text">NiFi Parameter Contexts</div>
+    <button id="new-parameter-context" class="add-button fa fa-plus" title="Create a new parameter context" style="display: block; background-color: #F1EBFD; color: #834DF0;top: 0;right: 9%">
+        <img src="images/? 87.png" style="width: 28px;height: 28px;margin: -1px 0 0 -6px;">
+    </button>
+<%--    <div id="parameter-contexts-header-text" class="parameter-contexts-header-text">NiFi Parameter Contexts</div>--%>
     <div class="parameter-contexts-container">
-        <div id="parameter-contexts-table" class="parameter-contexts-table"></div>
+        <div id="parameter-contexts-table" class="parameter-contexts-table bb"></div>
     </div>
-    <div id="parameter-contexts-refresh-container">
-        <button id="parameter-contexts-refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh"></button>
-        <div id="parameter-contexts-last-refreshed-container" class="last-refreshed-container">
-            Last updated:&nbsp;<span id="parameter-contexts-last-refreshed" class="value-color"></span>
-        </div>
-        <div id="parameter-contexts-loading-container" class="loading-container"></div>
-        <div class="clear"></div>
+    <div id="parameter-contexts-refresh-container" style="right: 6%;top: 0">
+        <button id="parameter-contexts-refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh">
+            <img src="images/? 81.png" style="width: 28px;height: 28px;margin: -1px 0 0 -6px">
+
+        </button>
+<%--        <div id="parameter-contexts-last-refreshed-container" class="last-refreshed-container">--%>
+<%--            Last updated:&nbsp;<span id="parameter-contexts-last-refreshed" class="value-color"></span>--%>
+<%--        </div>--%>
+<%--        <div id="parameter-contexts-loading-container" class="loading-container"></div>--%>
+<%--        <div class="clear"></div>--%>
     </div>
 </div>

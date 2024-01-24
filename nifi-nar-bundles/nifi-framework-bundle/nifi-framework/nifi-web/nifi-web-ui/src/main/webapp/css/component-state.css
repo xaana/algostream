@@ -57,7 +57,9 @@
     font-size: 13px;
     font-weight: 500;
 }
-
+#component-state-dialog .setting {
+    margin: 0;
+}
 /*
     Clear
 */

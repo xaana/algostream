@@ -58,7 +58,7 @@
 
     /**
      * Return user entity from the dataset of the users table
-     * @param userId 
+     * @param userId
      * @returns user
      */
     var getUserById = function (userId) {
@@ -69,7 +69,7 @@
 
     /**
      * Return group entity from the dataset of the users table
-     * @param groupId 
+     * @param groupId
      * @returns group
      */
     var getGroupById = function (groupId) {
@@ -80,8 +80,8 @@
 
     /**
      * Selects a row in the users table
-     * @param {user | group} type 
-     * @param id 
+     * @param {user | group} type
+     * @param id
      */
     var selectRow = function (type, id) {
         var usersGrid = $('#users-table').data('gridInstance');
@@ -97,8 +97,8 @@
             buttons: [{
                 buttonText: 'Delete',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -130,9 +130,9 @@
             }, {
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#FFFFFF',
+                    hover: '#E6E7EB',
+                    text: '#333333'
                 },
                 handler: {
                     click: function () {
@@ -439,8 +439,8 @@
             buttons: [{
                 buttonText: 'Ok',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -496,9 +496,9 @@
             }, {
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#FFFFFF',
+                    hover: '#E6E7EB',
+                    text: '#333333'
                 },
                 handler: {
                     click: function () {
@@ -544,8 +544,8 @@
             buttons: [{
                 buttonText: 'Close',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -805,6 +805,7 @@
                     parent.$('#shell-close-button').click();
                 }
             }
+            $('#shell-close-button').click();
         });
 
         // wire up the dataview to the grid

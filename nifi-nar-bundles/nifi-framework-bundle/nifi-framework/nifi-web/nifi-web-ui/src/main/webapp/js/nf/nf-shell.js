@@ -50,6 +50,9 @@
         $('#shell-close-button').click(function () {
             // close the shell
             $('#shell-dialog').modal('hide');
+            $(document).ready(function() {
+                $('#graph-controls').css('margin-bottom', '0%');
+            });
         });
 
         // register a listener when the frame is undocked
@@ -63,6 +66,17 @@
                 $('#shell-dialog').modal('hide');
             }
         });
+
+        var testTheme = localStorage.getItem('theme')
+        if(testTheme!==null){
+            var iframObj = $("shell-iframe")
+            var iframEle = iframObj.contents()
+            if (testTheme === 'dark') {
+                iframEle.find('body').css('background-color','red !important')
+            }else{
+                iframEle.find('body').css('background-color','blue !important')
+            }
+        }
     });
 
     var showPageResize = null;
@@ -94,7 +108,8 @@
             var shellIframe = shell.find('#shell-iframe');
             shellIframe.css({
                 width: shell.width(),
-                height: shell.height() - 28 - 40 //subtract shell-close-container and padding
+                // height: shell.height() - 28 - 40 //subtract shell-close-container and padding
+                height:'95%'
             });
             shell.trigger("shell:iframe:resize");
         },
@@ -148,7 +163,8 @@
                     src: uri
                 }).css({
                     width: shell.width(),
-                    height: shell.height() - 28 //subtract shell-close-container
+                    // height: shell.height() - 28 //subtract shell-close-container
+                    height:'95%'
                 }).appendTo(shell);
             }).promise();
         },

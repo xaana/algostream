@@ -43,7 +43,7 @@
 }(this, function ($, d3, nfCommon, nfDialog, nfErrorHandler) {
     var config = {
         nifiInstanceId: 'nifi-instance-id',
-        nifiInstanceLabel: 'NiFi',
+        nifiInstanceLabel: 'Algopipe',
         type: {
             processor: 'Processor',
             inputPort: 'Input Port',
@@ -485,7 +485,7 @@
             // build the chart svg
             var chartSvg = d3.select('#status-history-chart-container').append('svg')
                 .attr('style', 'pointer-events: none;')
-                .attr('width', chartContainer.parent().width())
+                .attr('width', chartContainer.parent().width()+20)
                 .attr('height', chartContainer.innerHeight());
 
             // define a clip the path
@@ -497,7 +497,7 @@
 
             // build the chart
             var chart = chartSvg.append('g')
-                .attr('transform', 'translate(' + margin.left + ', ' + margin.top + ')');
+                .attr('transform', 'translate(' + 110+ ', ' + margin.top + ')');
 
             // determine the min/max date
             var minDate = d3.min(statusData, function (d) {
@@ -902,7 +902,7 @@
             });
 
             // build the cluster container
-            var clusterDetailsContainer = buildDetailsContainer('NiFi');
+            var clusterDetailsContainer = buildDetailsContainer('Algopipe');
 
             // add the total cluster values
             addDetailItem(clusterDetailsContainer, 'Min / Max / Mean', '', 'cluster-aggregate-statistics');
@@ -947,8 +947,8 @@
                     if (nfCommon.isDefinedAndNotNull(dialog.data('nf-dialog'))) {
                         nfDialogData = dialog.data('nf-dialog');
                     }
-                    nfDialogData['min-width'] = (dialog.width() / $(window).width()) * 100 + '%';
-                    nfDialogData['min-height'] = (dialog.height() / $(window).height()) * 100 + '%';
+                    // nfDialogData['min-width'] = (dialog.width() / $(window).width()) * 100 + '%';
+                    // nfDialogData['min-height'] = (dialog.height() / $(window).height()) * 100 + '%';
                     nfDialogData.responsive['fullscreen-width'] = dialog.outerWidth() + 'px';
                     nfDialogData.responsive['fullscreen-height'] = dialog.outerHeight() + 'px';
 
@@ -1099,8 +1099,8 @@
                 buttons: [{
                     buttonText: 'Close',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -1217,6 +1217,11 @@
             }).fail(nfErrorHandler.handleAjaxError);
         }
     };
+    //?? X ??dialog
+    $('#status-history-dialog-cancel-view').click(function (){
+        $('#status-history-dialog').hide()
+    })
+
 
     return nfStatusHistory;
 }));

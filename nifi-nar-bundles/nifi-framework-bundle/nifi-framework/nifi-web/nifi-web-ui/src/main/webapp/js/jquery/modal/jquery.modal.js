@@ -111,7 +111,12 @@
 
                 // create the button
                 var button = $('<div class="button"></div>').append($('<span></span>').text(buttonConfig.buttonText));
-
+                if ('Cancel' === buttonConfig.buttonText) {
+                    button.addClass('cc');
+                }else {
+                    // button.addClass('bb');
+                    button.prop('disabled', false);
+                }
                 // add the class if specified
                 if (isDefinedAndNotNull(buttonConfig.clazz)) {
                     button.addClass(buttonConfig.clazz);
@@ -144,6 +149,14 @@
                             handler.click.call(dialog);
                         }
                     });
+
+                    $('#nf-ok-dialog_view').click(function (){
+                        var handler = $(this).data('handler');
+                        if (isDefinedAndNotNull(handler) && typeof handler.click === 'function') {
+                            handler.click.call(dialog);
+                        }
+                    })
+
                 }
 
                 // add the button to the wrapper

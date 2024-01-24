@@ -15,18 +15,18 @@
   limitations under the License.
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
-<div id="summary">
-    <div id="summary-header-and-filter">
-        <div id="summary-header-text">NiFi Summary</div>
-    </div>
+<div id="summary" class="aa">
+<%--    <div id="summary-header-and-filter">--%>
+<%--        <div id="summary-header-text">NiFi Summary</div>--%>
+<%--    </div>--%>
     <div id="summary-tabs" class="tab-container"></div>
     <div id="summary-tabs-content">
         <div id="summary-filter-controls" class="filter-controls">
-            <div id="summary-filter-status" class="filter-status">
-                Displaying&nbsp;<span id="displayed-items"></span>&nbsp;of&nbsp;<span id="total-items"></span>
-            </div>
+<%--            <div id="summary-filter-status" class="filter-status">--%>
+<%--                Displaying&nbsp;<span id="displayed-items"></span>&nbsp;of&nbsp;<span id="total-items"></span>--%>
+<%--            </div>--%>
             <div id="summary-filter-container" class="filter-container">
-                <input type="text" placeholder="Filter" id="summary-filter" class="filter"/>
+<%--                <input type="text" placeholder="Filter" id="summary-filter" class="filter"/>--%>
                 <div id="summary-filter-type" class="filter-type filter"></div>
                 <div id="summary-filter-status-dropdown" class="filter-status-dropdown"></div>
                 <div id="summary-filter-primary-node-container" class="setting-field summary-filter-primary-node-container">
@@ -40,32 +40,34 @@
             <span id="view-single-node-link" class="link">Single node</span>&nbsp;&nbsp;<span id="view-cluster-link" class="link">Cluster</span>
         </div>
         <div id="processor-summary-tab-content" class="configuration-tab">
-            <div id="processor-summary-table" class="summary-table"></div>
+            <div id="processor-summary-table" class="summary-table" style="top: 0"></div>
         </div>
         <div id="connection-summary-tab-content" class="configuration-tab">
-            <div id="connection-summary-table" class="summary-table"></div>
+            <div id="connection-summary-table" class="summary-table" style="top: 0"></div>
         </div>
         <div id="process-group-summary-tab-content" class="configuration-tab">
-            <div id="process-group-summary-table" class="summary-table"></div>
+            <div id="process-group-summary-table" class="summary-table" style="top: 0"></div>
         </div>
         <div id="input-port-summary-tab-content" class="configuration-tab">
-            <div id="input-port-summary-table" class="summary-table"></div>
+            <div id="input-port-summary-table" class="summary-table" style="top: 0"></div>
         </div>
         <div id="output-port-summary-tab-content" class="configuration-tab">
-            <div id="output-port-summary-table" class="summary-table"></div>
+            <div id="output-port-summary-table" class="summary-table" style="top: 0"></div>
         </div>
         <div id="remote-process-group-summary-tab-content" class="configuration-tab">
-            <div id="remote-process-group-summary-table" class="summary-table"></div>
+            <div id="remote-process-group-summary-table" class="summary-table" style="top: 0"></div>
         </div>
     </div>
 </div>
 <div id="flow-summary-refresh-container">
-    <button id="refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh"></button>
-    <div id="summary-last-refreshed-container" class="last-refreshed-container">
-        Last updated:&nbsp;<span id="summary-last-refreshed" class="value-color"></span>
-    </div>
-    <div id="summary-loading-container" class="loading-container"></div>
-    <div id="system-diagnostics-link-container">
-        <span id="system-diagnostics-link" class="link">system diagnostics</span>
-    </div>
+    <button id="refresh-button" class="refresh-button pointer fa fa-refresh" title="Refresh">
+        <img src="images/? 81.png" style="width: 28px;height: 28px;margin: -1px 0 0 -6px;position: relative;z-index: 1">
+    </button>
+<%--    <div id="summary-last-refreshed-container" class="last-refreshed-container">--%>
+<%--        Last updated:&nbsp;<span id="summary-last-refreshed" class="value-color"></span>--%>
+<%--    </div>--%>
+<%--    <div id="summary-loading-container" class="loading-container"></div>--%>
+<%--    <div id="system-diagnostics-link-container">--%>
+<%--        <span id="system-diagnostics-link" class="link">system diagnostics</span>--%>
+<%--    </div>--%>
 </div>

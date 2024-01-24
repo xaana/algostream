@@ -135,7 +135,7 @@
             {
                 'rx': 2,
                 'ry': 2,
-                'class': 'body',
+                'class': 'body aa-fill',
                 'width': function (d) {
                     return d.dimensions.width;
                 },
@@ -148,13 +148,14 @@
 
         // funnel icon
         d3Helpers.multiAttr(
-            funnel.append('text'),
+            funnel.append('image'),
             {
                 'class': 'funnel-icon',
-                'x': 9,
-                'y': 34
+                'x': 13,
+                'y': 15,
+                'xlink:href': 'images/funnel1.svg'
             })
-            .text('\ue803');
+
 
         // always support selection
         funnel.call(nfSelectable.activate).call(nfContextMenu.activate);

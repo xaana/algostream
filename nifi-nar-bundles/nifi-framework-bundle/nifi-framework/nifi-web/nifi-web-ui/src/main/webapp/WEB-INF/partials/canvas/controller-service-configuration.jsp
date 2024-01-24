@@ -16,13 +16,14 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="controller-service-configuration" class="hidden large-dialog">
+    <img src="images/?70.png" style="position: absolute;right: 15px;top: 15px;z-index: 3;width: 28px" onclick="$('#controller-service-configuration').hide()">
     <div class="controller-service-configuration-tab-container dialog-content">
         <div id="controller-service-configuration-tabs" class="tab-container"></div>
         <div id="controller-service-configuration-tabs-content">
             <div id="controller-service-standard-settings-tab-content" class="configuration-tab">
                 <div class="settings-left">
                     <div class="setting">
-                        <div class="setting-name">Name</div>
+<%--                        <div class="setting-name">Name</div>--%>
                         <div class="controller-service-editable setting-field">
                             <input type="text" id="controller-service-name" name="controller-service-name" class="setting-input"/>
                         </div>
@@ -52,7 +53,7 @@
                     </div>
                     <div class="setting">
                         <div class="bulletin-setting">
-                            <div class="setting-name">
+                            <div class="setting-name" style="display: none">
                                 Bulletin level
                                 <div class="fa fa-question-circle" alt="Info" title="The level at which this controller service will generate bulletins."></div>
                             </div>
@@ -67,7 +68,7 @@
                     </div>
                 </div>
                 <div class="spacer">&nbsp;</div>
-                <div class="settings-right">
+                <div class="settings-right" style="display: none">
                     <div class="setting">
                         <div class="setting-name">
                             Referencing Components
@@ -87,7 +88,7 @@
                 </div>
             </div>
             <div id="controller-service-comments-tab-content" class="configuration-tab">
-                <textarea cols="30" rows="4" id="controller-service-comments" name="controller-service-comments" class="controller-service-editable setting-input"></textarea>
+                <textarea cols="30" rows="4" id="controller-service-comments" name="controller-service-comments" placeholder="Description" class="controller-service-editable setting-input"></textarea>
                 <div class="setting controller-service-read-only hidden">
                     <div class="setting-name">Comments</div>
                     <div class="setting-field">

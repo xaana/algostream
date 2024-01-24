@@ -117,21 +117,21 @@
 
             var ok = $('<div class="button">Ok</div>').css({
                 'color': '#fff',
-                'background': '#728E9B'
+                'background': '#5734D3'
             }).hover(
                 function () {
-                    $(this).css('background', '#004849');
+                    $(this).css('background', '#7747E8');
                 }, function () {
-                    $(this).css('background', '#728E9B');
+                    $(this).css('background', '#5734D3');
                 }).on('click', scope.save);
             var cancel = $('<div class="secondary-button">Cancel</div>').css({
-                'color': '#004849',
-                'background': '#E3E8EB'
+                'color': '#333333',
+                'background': '#ffffff'
             }).hover(
                 function () {
-                    $(this).css('background', '#C7D2D7');
+                    $(this).css('background', '#E6E7EB');
                 }, function () {
-                    $(this).css('background', '#E3E8EB');
+                    $(this).css('background', '#ffffff');
                 }).on('click', scope.cancel);
             $('<div></div>').css({
                 'position': 'relative',
@@ -327,8 +327,8 @@
         $('#referenced-attributes-dialog').modal('setButtonModel', [{
             buttonText: 'Verify',
             color: {
-                base: '#728E9B',
-                hover: '#004849',
+                base: '#5734D3',
+                hover: '#7747E8',
                 text: '#ffffff'
             },
             handler: {
@@ -354,9 +354,9 @@
         }, {
             buttonText: 'Cancel',
             color: {
-                base: '#E3E8EB',
-                hover: '#C7D2D7',
-                text: '#004849'
+                base: '#FFFFFF',
+                hover: '#E6E7EB',
+                text: '#333333'
             },
             handler: {
                 click: function () {
@@ -392,8 +392,8 @@
             buttons: [{
                 buttonText: 'Ok',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -404,9 +404,9 @@
             }, {
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#FFFFFF',
+                    hover: '#E6E7EB',
+                    text: '#333333'
                 },
                 handler: {
                     click: function () {
@@ -672,8 +672,8 @@
                 headerText: 'Verifying Properties',
                 buttonText: 'Stop',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {

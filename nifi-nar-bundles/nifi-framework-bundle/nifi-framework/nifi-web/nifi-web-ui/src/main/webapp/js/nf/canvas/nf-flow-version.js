@@ -794,8 +794,8 @@
             $('#import-flow-version-dialog').modal('setHeaderText', 'Import Version').modal('setButtonModel', [{
                 buttonText: 'Import',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 disabled: disableImportOrChangeButton,
@@ -809,9 +809,9 @@
             }, {
                 buttonText: 'Cancel',
                 color: {
-                    base: '#E3E8EB',
-                    hover: '#C7D2D7',
-                    text: '#004849'
+                    base: '#FFFFFF',
+                    hover: '#F3F3F3',
+                    text: '#333'
                 },
                 handler: {
                     click: function () {
@@ -1127,8 +1127,8 @@
         $('#change-version-status-dialog').modal('setButtonModel', [{
             buttonText: 'Stop',
             color: {
-                base: '#728E9B',
-                hover: '#004849',
+                base: '#5734D3',
+                hover: '#7747E8',
                 text: '#ffffff'
             },
             handler: {
@@ -1205,9 +1205,9 @@
                 $('#change-version-status-dialog').modal('setButtonModel', [{
                     buttonText: 'Close',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
-                        text: '#ffffff'
+                        base: '#FFFFFF',
+                        hover: '#F3F3F3',
+                        text: '#333'
                     },
                     handler: {
                         click: function () {
@@ -1249,9 +1249,9 @@
                         $('#change-version-status-dialog').modal('setButtonModel', [{
                             buttonText: 'Close',
                             color: {
-                                base: '#728E9B',
-                                hover: '#004849',
-                                text: '#ffffff'
+                                base: '#FFFFFF',
+                                hover: '#F3F3F3',
+                                text: '#333'
                             },
                             handler: {
                                 click: function () {
@@ -1477,8 +1477,8 @@
                 $('#change-version-status-dialog').modal('setButtonModel', [{
                     buttonText: 'Stop',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -1549,9 +1549,9 @@
                         $('#change-version-status-dialog').modal('setButtonModel', [{
                             buttonText: 'Close',
                             color: {
-                                base: '#728E9B',
-                                hover: '#004849',
-                                text: '#ffffff'
+                                base: '#FFFFFF',
+                                hover: '#F3F3F3',
+                                text: '#333'
                             },
                             handler: {
                                 click: function () {
@@ -1593,9 +1593,9 @@
                                 $('#change-version-status-dialog').modal('setButtonModel', [{
                                     buttonText: 'Close',
                                     color: {
-                                        base: '#728E9B',
-                                        hover: '#004849',
-                                        text: '#ffffff'
+                                        base: '#FFFFFF',
+                                        hover: '#F3F3F3',
+                                        text: '#333'
                                     },
                                     handler: {
                                         click: function () {
@@ -1651,8 +1651,8 @@
                 buttons: [{
                     buttonText: 'Save',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     disabled: function () {
@@ -1682,9 +1682,9 @@
                 }, {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#FFFFFF',
+                        hover: '#F3F3F3',
+                        text: '#333'
                     },
                     handler: {
                         click: function () {
@@ -1743,9 +1743,9 @@
                 }, {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#FFFFFF',
+                        hover: '#F3F3F3',
+                        text: '#333'
                     },
                     handler: {
                         click: function () {
@@ -1976,9 +1976,9 @@
                 }, {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#FFFFFF',
+                        hover: '#F3F3F3',
+                        text: '#333'
                     },
                     handler: {
                         click: function () {

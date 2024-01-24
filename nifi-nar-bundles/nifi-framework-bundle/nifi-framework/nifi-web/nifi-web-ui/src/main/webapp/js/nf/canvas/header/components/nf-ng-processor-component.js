@@ -728,7 +728,7 @@
                     }
 
                     // hide the dialog
-                    processorComponent.modal.hide();
+                    // processorComponent.modal.hide();
                 };
 
                 // get the grid reference
@@ -842,6 +842,26 @@
         };
 
         var processorComponent = new ProcessorComponent();
+
+        // var scrollEle = $('#processor-types-table .slick-viewport')
+        // scrollEle.addEventListener('scroll',function (){
+        //     console.log('?????')
+        //     if(localStorage.getItem('theme')==='dark') {
+        //         console.log('????')
+        //         $('.ui-widget-content').css({
+        //             backgroundColor:'#000',
+        //             color:'#fff'
+        //         })
+        //     }else{
+        //         console.log('????')
+        //         $('.ui-widget-content').css({
+        //             backgroundColor:'#fff',
+        //             color:'#000'
+        //         })
+        //     }
+        //
+        // })
+
         return processorComponent;
     };
 }));

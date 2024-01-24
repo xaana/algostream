@@ -20,7 +20,7 @@
     left: 0px;
     bottom: 0px;
     right: 0px;
-    background: #ffffff url(../images/bg-error.png) left top no-repeat;
+    /*background: #ffffff url(../images/bg-error.png) left top no-repeat;*/
     z-index: 999999;
 }
 

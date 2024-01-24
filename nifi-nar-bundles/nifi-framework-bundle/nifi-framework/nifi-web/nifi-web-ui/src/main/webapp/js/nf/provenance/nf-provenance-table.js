@@ -1246,6 +1246,7 @@
                         if (nfCommon.isDefinedAndNotNull(parent.nf) && nfCommon.isDefinedAndNotNull(parent.nf.CanvasUtils) && nfCommon.isDefinedAndNotNull(parent.nf.Shell)) {
                             parent.nf.CanvasUtils.showComponent(item.groupId, item.componentId);
                             parent.$('#shell-close-button').click();
+                            $('#shell-close-button').click();
                         }
                     }
                 }

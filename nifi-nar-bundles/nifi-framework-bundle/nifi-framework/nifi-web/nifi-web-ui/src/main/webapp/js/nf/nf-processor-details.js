@@ -335,8 +335,8 @@
                 var buttons = [{
                     buttonText: 'Ok',
                     color: {
-                        base: '#728E9B',
-                        hover: '#004849',
+                        base: '#5734D3',
+                        hover: '#7747E8',
                         text: '#ffffff'
                     },
                     handler: {
@@ -353,9 +353,9 @@
                         buttonText: 'Advanced',
                         clazz: 'fa fa-cog button-icon',
                         color: {
-                            base: '#E3E8EB',
-                            hover: '#C7D2D7',
-                            text: '#004849'
+                            base: '#FFFFFF',
+                            hover: '#E6E7EB',
+                            text: '#333333'
                         },
                         handler: {
                             click: function () {
@@ -422,9 +422,9 @@
                             buttonText: 'Configure',
                             clazz: 'fa fa-cog button-icon',
                             color: {
-                                hover: '#C7D2D7',
-                                base: 'transparent',
-                                text: '#004849'
+                                base: '#FFFFFF',
+                                hover: '#E6E7EB',
+                                text: '#333333'
                             },
                             disabled : function() {
                                 return config.nfCanvasUtils.isStoppable(selection);

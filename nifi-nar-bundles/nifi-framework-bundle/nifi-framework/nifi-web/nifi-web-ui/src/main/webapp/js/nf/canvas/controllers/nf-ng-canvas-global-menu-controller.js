@@ -88,7 +88,13 @@
                      * Launch the summary shell.
                      */
                     launch: function () {
+                        $('#shell-close-button').click();
                         nfShell.showPage('summary');
+                        $(document).ready(function() {
+                            $('#graph-controls').css('margin-bottom', '20%');
+                        });
+                        $('#status-history-dialog').hide()
+
                     }
                 }
             };
@@ -108,7 +114,14 @@
                      */
                     launch: function () {
                         if (nfCommon.canAccessCounters()) {
+                            $('#shell-close-button').click();
                             nfShell.showPage('counters');
+                            $(document).ready(function() {
+                                $('#graph-controls').css('margin-bottom', '20%');
+                            });
+                            $('#status-history-dialog').hide()
+
+
                         }
                     }
                 }
@@ -128,7 +141,14 @@
                      * Launch the bulletin board shell.
                      */
                     launch: function () {
+                        $('#shell-close-button').click();
                         nfShell.showPage('bulletin-board');
+                        $(document).ready(function() {
+                            $('#graph-controls').css('margin-bottom', '20%');
+                        });
+                        $('#status-history-dialog').hide()
+
+
                     }
                 }
             };
@@ -147,8 +167,15 @@
                      * Launch the data provenance shell.
                      */
                     launch: function () {
+                        $('#shell-close-button').click();
                         if (nfCommon.canAccessProvenance()) {
                             nfShell.showPage('provenance');
+                            $(document).ready(function() {
+                                $('#graph-controls').css('margin-bottom', '20%');
+                            });
+                            $('#status-history-dialog').hide()
+
+
                         }
                     }
                 }
@@ -168,7 +195,14 @@
                      * Launch the settings shell.
                      */
                     launch: function () {
+                        $('#shell-close-button').click();
                         nfSettings.showSettings();
+                        $(document).ready(function() {
+                            $('#graph-controls').css('margin-bottom', '20%');
+                        });
+                        $('#status-history-dialog').hide()
+
+
                     }
                 }
             };
@@ -187,7 +221,14 @@
                      * Launch the parameter contexts shell.
                      */
                     launch: function () {
+                        $('#shell-close-button').click();
                         nfParameterContexts.showParameterContexts();
+                        $(document).ready(function() {
+                            $('#graph-controls').css('margin-bottom', '20%');
+                        });
+                        $('#status-history-dialog').hide()
+
+
                     }
                 }
             };
@@ -236,7 +277,14 @@
                      * Launch the history shell.
                      */
                     launch: function () {
+                        $('#shell-close-button').click();
                         nfShell.showPage('history');
+                        $(document).ready(function() {
+                            $('#graph-controls').css('margin-bottom', '20%');
+                        });
+                        $('#status-history-dialog').hide()
+
+
                     }
                 }
             };
@@ -317,9 +365,16 @@
                      * Launch the templates shell.
                      */
                     launch: function () {
+                        $('#shell-close-button').click();
                         nfShell.showPage('templates?' + $.param({
-                                groupId: nfCanvasUtils.getGroupId()
-                            }));
+                            groupId: nfCanvasUtils.getGroupId()
+                        }));
+                        $(document).ready(function() {
+                            $('#graph-controls').css('margin-bottom', '20%');
+                        });
+                        $('#status-history-dialog').hide()
+
+
                     }
                 }
             };
@@ -338,7 +393,14 @@
                      * Launch the help documentation shell.
                      */
                     launch: function () {
+                        $('#shell-close-button').click();
                         nfShell.showPage(config.urls.helpDocument);
+                        $(document).ready(function() {
+                            $('#graph-controls').css('margin-bottom', '20%');
+                        });
+                        $('#status-history-dialog').hide()
+
+
                     }
                 }
             };
@@ -360,7 +422,9 @@
                     }).done(function (response) {
                         var aboutDetails = response.about;
                         // set the document title and the about title
-                        document.title = aboutDetails.title;
+                        // document.title = aboutDetails.title;
+                        document.title = 'Algopipe';
+
                         $('#nf-version').text(aboutDetails.version);
                         var showVersionDetail = false;
                         if (aboutDetails.buildTag && aboutDetails.buildTag !== 'HEAD') {
@@ -421,15 +485,15 @@
 
                         this.getElement().modal({
                             scrollableContentStyle: 'scrollable',
-                            headerText: 'About Apache NiFi',
+                            headerText: 'About AlgoPipe',
                             handler: {
                                 resize: resizeAbout
                             },
                             buttons: [{
                                 buttonText: 'Ok',
                                 color: {
-                                    base: '#728E9B',
-                                    hover: '#004849',
+                                    base: '#5734D3',
+                                    hover: '#7747E8',
                                     text: '#ffffff'
                                 },
                                 handler: {

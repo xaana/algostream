@@ -555,7 +555,9 @@
                         }
                     }
 
-                    window.history.replaceState({'previous_url': url.href}, window.document.title, newUrl);
+                    // window.history.replaceState({'previous_url': url.href}, window.document.title, newUrl);
+                    window.history.replaceState({'previous_url': url.href}, 'Algopipe', newUrl);
+
                 }
             }
         },

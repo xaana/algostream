@@ -20,14 +20,53 @@
 */
 
 #new-processor-dialog {
-    min-height:620px;
+    min-height: 620px;
     height: 620px;
     width: 800px;
     min-width: 760px;
+    top: 60%!important;
+    left: 17.5%!important;
+    bottom: 20px;
+    right: 20px;
+    width: 82.5%;
+    height: 40%;
+    box-shadow: none;
+}
+#new-processor-dialog .dialog-content {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    right: 0;
+    bottom: auto;
+    height: 60%;
+    margin-right: 20px;
+}
+#new-processor-dialog .dialog-header {
+    display: none;
+}
+#new-processor-dialog .dialog-buttons {
+    top: 35px;
+    width: auto;
+    right: 70px;
+}
+#new-processor-dialog .dialog-buttons .button:last-child{
+    display: none;
+}
+#new-processor-dialog .dialog-buttons .button span{
+    display: none;
+}
+#new-processor-dialog .dialog-buttons .button{
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
 }
 
 #processor-types-container {
     padding: 0px;
+    position: relative;
+    top: 15px;
 }
 
 #processor-description-container {
@@ -76,6 +115,9 @@
     height: 70%;
     width: 100%;
 }
+#processor-type-container,#processor-description-container{
+    display: none;
+}
 
 #processor-types-table-container th {
     vertical-align: middle;
@@ -93,7 +135,11 @@
 #processor-type-filter {
     width: 200px;
 }
-
+#processor-tag-cloud-container {
+    position: absolute;
+    top: 0;
+    left: 30%;
+}
 /*
     Restricted
 */

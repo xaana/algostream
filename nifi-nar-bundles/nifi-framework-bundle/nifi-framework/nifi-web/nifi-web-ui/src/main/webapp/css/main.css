@@ -25,7 +25,7 @@ body {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background: #7098AD;
+    background: #5734D3;
     z-index: 2000;
 }
 
@@ -35,7 +35,7 @@ body {
     bottom: 10%;
     left: 10%;
     right: 10%;
-    background: transparent url(../images/nifi-drop-splash.svg) no-repeat center center;
+    /*background: transparent url(../images/nifi-drop-splash.svg) no-repeat center center;*/
 }
 
 div.context-menu-provenance {
@@ -90,7 +90,7 @@ div.context-menu-provenance {
 
 #new-template-description {
     position: absolute;
-    top: 81px;
+    top: 22px;
     bottom: 0px;
     height: inherit;
     min-height: 32px;
@@ -221,8 +221,8 @@ div.has-bulletins, div.warning {
 }
 
 .zero {
-    color: #aabec7 !important;
-    fill: #aabec7 !important;
+    color: #908C96 !important;
+    fill: #908C96 !important;
     text-shadow: none !important;
 }
 
@@ -275,7 +275,7 @@ span.details-title {
 
 #new-template-description,
 #new-file-description {
-    height: 210px;
+    height: 100px;
 }
 
 /* upload */
@@ -308,7 +308,7 @@ span.details-title {
     position: absolute;
     float: right;
     right: 4px;
-    top: 22px;
+    top: 3px;
     font-size: 18px;
     color: #004849;
     border: none;

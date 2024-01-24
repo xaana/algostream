@@ -41,9 +41,7 @@
 
 #counters-refresh-container {
     position: absolute;
-    bottom: 0px;
-    left: 20px;
-    right: 20px;
+    right: 7%;
 }
 
 #counters-loading-container {
@@ -67,11 +65,14 @@
 
 #counters-table {
     position: absolute;
-    top: 98px;
+    top: 50px;
     left: 0px;
     bottom: 47px;
     right: 0px;
     min-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 80%;
 }
 
 #counters-table div.slick-viewport {

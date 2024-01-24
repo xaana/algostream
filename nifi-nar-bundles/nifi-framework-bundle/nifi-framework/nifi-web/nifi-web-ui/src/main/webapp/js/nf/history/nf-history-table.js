@@ -71,8 +71,8 @@
             buttons: [{
                 buttonText: 'Ok',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -100,11 +100,11 @@
         // filter type
         $('#history-filter-type').combo({
             options: [{
-                text: 'by id',
+                text: 'By Id',
                 value: 'by id',
                 description: 'Filters based on the id of the component that was modified'
             }, {
-                text: 'by user',
+                text: 'By User',
                 value: 'by user',
                 description: 'Filters based on the user that performed the action'
             }]
@@ -130,8 +130,8 @@
             buttons: [{
                 buttonText: 'Filter',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -144,9 +144,9 @@
                         var filterText = $('#history-filter').val();
                         if (filterText !== '') {
                             var filterType = $('#history-filter-type').combo('getSelectedOption').text;
-                            if (filterType === 'by id') {
+                            if (filterType === 'By Id') {
                                 filter['sourceId'] = filterText;
-                            } else if (filterType === 'by user') {
+                            } else if (filterType === 'By User') {
                                 filter['userIdentity'] = filterText;
                             }
                         }
@@ -186,9 +186,9 @@
                 {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#FFFFFF',
+                        hover: '#E6E7EB',
+                        text: '#333333'
                     },
                     handler: {
                         click: function () {
@@ -221,8 +221,8 @@
             buttons: [{
                 buttonText: 'Purge',
                 color: {
-                    base: '#728E9B',
-                    hover: '#004849',
+                    base: '#5734D3',
+                    hover: '#7747E8',
                     text: '#ffffff'
                 },
                 handler: {
@@ -259,9 +259,9 @@
                 {
                     buttonText: 'Cancel',
                     color: {
-                        base: '#E3E8EB',
-                        hover: '#C7D2D7',
-                        text: '#004849'
+                        base: '#FFFFFF',
+                        hover: '#E6E7EB',
+                        text: '#333333'
                     },
                     handler: {
                         click: function () {

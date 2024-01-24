@@ -36,9 +36,7 @@
 
 #bulletin-board-refresh-container {
     position: absolute;
-    right: 20px;
-    bottom: 0px;
-    left: 20px;
+    right: 7%;
 }
 
 #bulletin-board-loading-container {

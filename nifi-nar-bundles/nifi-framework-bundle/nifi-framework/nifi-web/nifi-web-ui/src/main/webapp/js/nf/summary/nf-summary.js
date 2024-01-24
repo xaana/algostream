@@ -254,7 +254,9 @@
                             var statusTitle = aboutDetails.title + ' Summary';
 
                             // set the document title and the about title
-                            document.title = statusTitle;
+                            // document.title = statusTitle;
+                            document.title = 'Algopipe';
+
                             $('#status-header-text').text(statusTitle);
 
                             // set the initial size

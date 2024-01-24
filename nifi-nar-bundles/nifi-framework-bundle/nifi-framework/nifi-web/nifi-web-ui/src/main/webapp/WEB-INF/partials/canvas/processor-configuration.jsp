@@ -16,13 +16,14 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="processor-configuration" layout="column" class="hidden large-dialog">
+    <img src="images/? 74.png" style="width: 28px;height: 28px;margin: -2px 0px 1px -6px;position: absolute;right: 10px;top: 10px" onclick="$('#processor-configuration').hide()">
     <div id="processor-configuration-status-bar"></div>
     <div class="processor-configuration-tab-container dialog-content">
         <div id="processor-configuration-tabs" class="tab-container"></div>
         <div id="processor-configuration-tabs-content">
             <div id="processor-standard-settings-tab-content" class="configuration-tab">
                 <div class="settings-left">
-                    <div class="setting">
+                    <div class="setting" style="display: block">
                         <div class="setting-name">Name</div>
                         <div id="processor-name-container" class="setting-field">
                             <input type="text" id="processor-name" name="processor-name"/>
@@ -32,36 +33,29 @@
                             </div>
                         </div>
                     </div>
-                    <div class="setting">
-                        <div class="setting-name">Id</div>
-                        <div class="setting-field">
-                            <span id="processor-id"></span>
-                        </div>
+                    <div class="setting" style="margin-top: 15px">
+                        <div class="setting-name">Id<span id="processor-id" style="margin-left: 10px;line-height: normal;width: 100%; color: #775351; font-size: 13px;font-weight: 500;"></span></div>
                     </div>
-                    <div class="setting">
-                        <div class="setting-name">Type</div>
-                        <div class="setting-field">
-                            <span id="processor-type"></span>
-                        </div>
+                    <div class="setting" style="margin-top: 15px">
+                        <div class="setting-name">Type<span id="processor-type"style="margin-left: 10px;line-height: normal;width: 100%; color: #775351; font-size: 13px;font-weight: 500;"></span></div>
                     </div>
-                    <div class="setting">
-                        <div class="setting-name">Bundle</div>
-                        <div id="processor-bundle" class="setting-field"></div>
+                    <div class="setting" style="margin-top: 15px">
+                        <div class="setting-name">Bundle<span id="processor-bundle"style="margin-left: 10px;line-height: normal;width: 100%; color: #775351; font-size: 13px;font-weight: 500;"></span></div>
                     </div>
-                    <div class="setting">
-                        <div class="penalty-duration-setting">
+                    <div class="setting" style="margin-top: 15px">
+                        <div class="penalty-duration-setting" style="margin-top: 15px">
                             <div class="setting-name">
                                 Penalty duration
-                                <div class="fa fa-question-circle" alt="Info" title="The amount of time used when this processor penalizes a FlowFile."></div>
+                                <div class="fa fa-question-circle" alt="Info" title="The amount of time used when this processor penalizes a FlowFile." style="left: 56%"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><defs><style>.a{}</style></defs><path class="a" d="M12.15,6.87c-.045.818-.292,1.455-1.545,2.7-.63.63-1.035,1.11-1.073,1.5a.63.63,0,0,1-.63.57h-.06a.63.63,0,0,1-.57-.69A4.065,4.065,0,0,1,9.75,8.685c1.133-1.133,1.155-1.5,1.17-1.875a1.627,1.627,0,0,0-.465-1.215A1.972,1.972,0,0,0,9,4.98,1.89,1.89,0,0,0,7.11,6.87a.634.634,0,1,1-1.267,0A3.158,3.158,0,0,1,9,3.75a3.248,3.248,0,0,1,2.355,1A2.872,2.872,0,0,1,12.15,6.87ZM8.887,14.25a.75.75,0,1,1,.75-.75.75.75,0,0,1-.75.75ZM9,0a9,9,0,1,0,9,9A9,9,0,0,0,9,0Z"></path></svg></div>
                             </div>
                             <div class="setting-field">
                                 <input type="text" id="penalty-duration" name="penalty-duration" class="small-setting-input"/>
                             </div>
                         </div>
-                        <div class="yield-duration-setting">
+                        <div class="yield-duration-setting" style="margin-top: 15px">
                             <div class="setting-name">
                                 Yield duration
-                                <div class="fa fa-question-circle" alt="Info" title="When a processor yields, it will not be scheduled again until this amount of time elapses."></div>
+                                <div class="fa fa-question-circle" alt="Info" title="When a processor yields, it will not be scheduled again until this amount of time elapses." style="left: 59%"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><defs><style>.a{}</style></defs><path class="a" d="M12.15,6.87c-.045.818-.292,1.455-1.545,2.7-.63.63-1.035,1.11-1.073,1.5a.63.63,0,0,1-.63.57h-.06a.63.63,0,0,1-.57-.69A4.065,4.065,0,0,1,9.75,8.685c1.133-1.133,1.155-1.5,1.17-1.875a1.627,1.627,0,0,0-.465-1.215A1.972,1.972,0,0,0,9,4.98,1.89,1.89,0,0,0,7.11,6.87a.634.634,0,1,1-1.267,0A3.158,3.158,0,0,1,9,3.75a3.248,3.248,0,0,1,2.355,1A2.872,2.872,0,0,1,12.15,6.87ZM8.887,14.25a.75.75,0,1,1,.75-.75.75.75,0,0,1-.75.75ZM9,0a9,9,0,1,0,9,9A9,9,0,0,0,9,0Z"></path></svg></div>
                             </div>
                             <div class="setting-field">
                                 <input type="text" id="yield-duration" name="yield-duration" class="small-setting-input"/>
@@ -69,11 +63,11 @@
                         </div>
                         <div class="clear"></div>
                     </div>
-                    <div class="setting">
+                    <div class="setting" style="margin-top: 15px">
                         <div class="bulletin-setting">
                             <div class="setting-name">
                                 Bulletin level
-                                <div class="fa fa-question-circle" alt="Info" title="The level at which this processor will generate bulletins."></div>
+                                <div class="fa fa-question-circle" alt="Info" title="The level at which this processor will generate bulletins." style="left: 52%"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><defs><style>.a{}</style></defs><path class="a" d="M12.15,6.87c-.045.818-.292,1.455-1.545,2.7-.63.63-1.035,1.11-1.073,1.5a.63.63,0,0,1-.63.57h-.06a.63.63,0,0,1-.57-.69A4.065,4.065,0,0,1,9.75,8.685c1.133-1.133,1.155-1.5,1.17-1.875a1.627,1.627,0,0,0-.465-1.215A1.972,1.972,0,0,0,9,4.98,1.89,1.89,0,0,0,7.11,6.87a.634.634,0,1,1-1.267,0A3.158,3.158,0,0,1,9,3.75a3.248,3.248,0,0,1,2.355,1A2.872,2.872,0,0,1,12.15,6.87ZM8.887,14.25a.75.75,0,1,1,.75-.75.75.75,0,0,1-.75.75ZM9,0a9,9,0,1,0,9,9A9,9,0,0,0,9,0Z"></path></svg></div>
                             </div>
                             <div class="setting-field">
                                 <div id="bulletin-level-combo"></div>
@@ -196,7 +190,7 @@
                     <div id="processor-properties-verification-results-listing" class="verification-results-listing"></div>
                 </div>
             </div>
-            <div id="processor-relationships-tab-content" class="configuration-tab">
+            <div id="processor-relationships-tab-content" class="configuration-tab" style="display: block">
                 <div class="settings-left">
                     <div class="setting">
                         <div class="setting-name">

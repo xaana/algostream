@@ -84,6 +84,7 @@
             if (nfCommon.isDefinedAndNotNull(parent.nf) && nfCommon.isDefinedAndNotNull(parent.nf.CanvasUtils) && nfCommon.isDefinedAndNotNull(parent.nf.Shell)) {
                 parent.nf.CanvasUtils.showComponent(groupId, componentId);
                 parent.$('#shell-close-button').click();
+                $('#shell-close-button').click();
             }
         }
     };
@@ -1379,6 +1380,7 @@
                     if (nfCommon.isDefinedAndNotNull(parent.nf) && nfCommon.isDefinedAndNotNull(parent.nf.ProcessGroup) && nfCommon.isDefinedAndNotNull(parent.nf.Shell)) {
                         parent.nf.ProcessGroup.enterGroup(item.id);
                         parent.$('#shell-close-button').click();
+                        $('#shell-close-button').click();
                     }
                 } else if (target.hasClass('show-process-group-status-history')) {
                     nfStatusHistory.showProcessGroupChart(item.groupId, item.id);

@@ -16,11 +16,13 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="new-port-dialog" class="hidden small-dialog">
+    <img src="images/?70.png" style="width: 28px;height: 28px;margin: -1px 0px 0px -6px;cursor: pointer;position: absolute;right: 10px;top: 10px" onclick="$('#new-port-dialog').hide()">
+
     <div class="dialog-content">
         <div class="setting">
-            <div class="setting-name"><span id="new-port-type">Input</span>&nbsp;port name</div>
+            <%--            <div class="setting-name"><span id="new-port-type">Input</span>&nbsp;port name</div>--%>
             <div class="setting-field">
-                <input id="new-port-name" type="text"/>
+                <input id="new-port-name"  type="text"/>
             </div>
         </div>
         <div id="port-allow-remote-access-setting" class="setting">

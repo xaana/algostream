@@ -16,6 +16,7 @@
 --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false" %>
 <div id="processor-details" class="hidden large-dialog">
+    <img src="images/? 74.png" style="width: 28px;height: 28px;margin: -1px 0px 0px -6px;position: absolute;right: 10px;top: 10px" onclick="$('#processor-details').hide()">
     <div id="processor-details-status-bar"></div>
     <div class="dialog-content">
         <div id="processor-details-tabs" class="tab-container"></div>

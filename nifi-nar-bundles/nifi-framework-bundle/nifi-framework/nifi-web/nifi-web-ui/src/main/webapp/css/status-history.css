@@ -27,8 +27,8 @@
 
 #status-history-refresh-container {
     position: absolute;
-    left: 20px;
-    bottom: 20px;
+    top: 15px;
+    right: 7%;
     z-index: 1;
 }
 
@@ -56,16 +56,46 @@
 }
 
 #status-history-metric-combo {
-    float: right;
-    width: 250px;
+    width: 300px;
+    height: 30px;
+}
+#status-history-dialog .combo-arrow{
+    background-image: url("../images/input-off-open.png");
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: -25px;
+    right: 5px;
+}
+#status-history-dialog .combo-open .combo-arrow {
+    transform: rotate(180deg);
+    background-image: url("../images/input-off-open.png");
+    width: 14px;
+    height: 14px;
+}
+.combo-arrow{
+    background-image: url("../images/input-off-open.png");
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: -25px;
+    right: 5px;
+}
+.combo-open .combo-arrow {
+    transform: rotate(180deg);
+    background-image: url("../images/input-off-open.png");
+    width: 14px;
+    height: 14px;
 }
 
 #status-history-container {
     position: absolute;
-    top: 32px;
-    left: 40%;
-    right: 0px;
+    top: 140px;
     bottom: 0px;
+    left: 10px;
+    height: 400px;
+    width: 700px;
+    transform: scale(0.5) translate(-50%,-95%);
 }
 
 #status-history-chart-container {
@@ -82,24 +112,72 @@
 
 #status-history-details {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 60%;
-    bottom: 0px;
+    top: 40px;
+    /*left: 0px;*/
+    right: 25%;
+    /*bottom: 0px;*/
     overflow-y: auto;
+    /*float: right;*/
+}
+#status-history-details .detail-container-label{
+    font-size: 16px;
+    text-shadow: 0 0 0.5px #222426;
+    /*color: #222426;*/
+}
+#status-history-details .status-history-detail:first-child>div:last-child{
+    display: flex;
+    align-items: center;
+    column-gap: 100px;
+    margin-bottom: 25px;
+}
+#status-history-details .status-history-detail:first-child>div:last-child>.detail-item:first-child>.setting-name::before{
+   content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/start.png);
+    position: relative;
+    top: 3px;
+
+}
+#status-history-details .status-history-detail:first-child>div:last-child>.detail-item:last-child>.setting-name::before{
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/end.png);
+    position: relative;
+    top: 3px;
 }
 
 #status-history-dialog > .dialog-content {
     overflow: visible;
+    top: 15px;
+    left: 50px;
+    right: 30px;
 }
-
+#status-history-dialog > .dialog-buttons {
+    display: none;
+}
+#status-history-dialog{
+     width: 82.5% !important;
+     height: 40% !important;
+     min-height: 0px !important;
+     min-width: 0px !important;
+     top: 60% !important;
+     left: 17.5% !important;
+     box-shadow: none;
+ }
 div.status-history-detail {
     margin-bottom: 12px;
     cursor: auto;
 }
+#status-history-dialog .dialog-header {
+    display: none;
+}
 
 div.detail-container-label {
-    color: #333;
+    /*color: #333;*/
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 8px;
@@ -123,16 +201,18 @@ div.detail-item-value {
 
 #status-history-chart-control-container {
     height: 125px;
-    background-color: #fff;
     margin-top: 5px;
     cursor: default;
     overflow: hidden;
 }
-
+#status-history-chart-control-container>svg>g{
+    transform: translate(110px,15px);
+}
 div.legend-entry {
     margin-bottom: 3px;
     cursor: default;
     clear: left;
+    display: inline;
 }
 
 div.legend-label {
@@ -140,12 +220,13 @@ div.legend-label {
     overflow: hidden;
     white-space: nowrap;
     line-height: normal;
+    display: inline;
 }
 
 #status-history-chart-container text, #status-history-chart-control-container text {
     fill: #527991;
     font-family: Arial, sans-serif;
-    font-size: 10px;
+    font-size: 18px;
 }
 
 .axis path, .axis line {

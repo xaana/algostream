@@ -20,8 +20,8 @@
 
 #fill-color-dialog {
     display: none;
-    width: 240px;
-    height: 470px;
+    width: 449px !important;
+    height: 700px !important;
 }
 
 #fill-color-value {
@@ -34,12 +34,15 @@
     border-width: 1px;
     border-style: solid;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
 }
 
 #fill-color-processor-preview-icon {
     float: left;
     width: 25px;
     height: 25px;
+    margin-left: 10px;
+    border-radius: 10px;
 }
 
 #fill-color-processor-preview-icon:before {
@@ -56,8 +59,8 @@
 }
 
 #fill-color-label-preview {
-    width: 83px;
-    height: 83px;
+    width: 200px;
+    height: 200px;
     font-weight: bold;
     border: 1px solid rgba(0,0,0,0.25);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
@@ -231,7 +234,7 @@ div.progress-label {
 
 #save-flow-version-label {
     flex: 0 0 30px;
-    background-color: #728E9B;
+    background-color: #5734d3;
     color: #fff;
     height: 30px;
     line-height: 30px;
@@ -352,7 +355,24 @@ div.verification-results {
     left: 0;
     bottom: 0;
 }
-
+#controller-service-properties-verification-results {
+    display: none !important;
+}
+#new-port-name {
+    width: 100%;
+}
+#flow-analysis-rule-configuration,#registry-configuration-dialog,#parameter-provider-configuration {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: 60% !important;
+    width: 60% !important;
+    left: 20% !important;
+    top: 15% !important;
+}
+#controller-services-table {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 div.verification-results-header {
     color: #728e9b;
     font-size: 16px;
@@ -412,18 +432,41 @@ div.verification-result-explanation {
  */
 
 #variable-registry-dialog {
-    width: 850px;
-    height: 575px;
+    width: 82.5% !important;
+    height: 40% !important;
+    left: 17.5% !important;
+    box-shadow: none;
+    top: 60% !important;
+    z-index: 10000 !important;
+}
+#variable-registry-dialog .dialog-buttons {
+    bottom: 78%;
+    right: 4%;
+}
+#variable-registry-dialog .dialog-buttons .button:last-child{
+    display: none;
 }
 
 #variable-registry-dialog div.settings-left {
     float: left;
-    width: 65%;
+    width: 100%;
+}
+#variable-registry-dialog .setting {
+    justify-content: flex-end;
+}
+#variable-registry-dialog .setting div:first-child{
+    flex: 1;
+    margin-left: 77%;
+    display: none;
+}
+#variable-registry-dialog .dialog-content{
+    top: 0;
 }
 
 #variable-registry-dialog div.settings-right {
     float: left;
     width: 33%;
+    display: none;
 }
 
 #variable-registry-table {
@@ -489,12 +532,12 @@ ul.result li {
 
 .dialog-content div.settings-left {
     float: left;
-    width: 49%;
+    width: 100%;
 }
 
 .dialog-content div.settings-right {
     float: left;
-    width: 49%;
+    width: 638px;
 }
 
 .dialog-content div.spacer {
@@ -522,4 +565,9 @@ div.fetch-parameters-step {
     height: 16px;
     background-color: transparent;
     float: right;
+}
+
+#reporting-tasks-table,#flow-analysis-rules-table,#registries-table,#parameter-contexts-table,#templates-table {
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }

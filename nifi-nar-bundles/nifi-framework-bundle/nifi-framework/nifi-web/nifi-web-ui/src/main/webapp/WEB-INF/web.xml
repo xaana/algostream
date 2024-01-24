@@ -18,81 +18,81 @@
 
     <!-- servlet to map to canvas page -->
     <servlet>
-        <servlet-name>NiFiCanvas</servlet-name>
+        <servlet-name>AlgopipecCanvas</servlet-name>
         <jsp-file>/WEB-INF/pages/canvas.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>NiFiCanvas</servlet-name>
+        <servlet-name>AlgopipecCanvas</servlet-name>
         <url-pattern>/canvas</url-pattern>
     </servlet-mapping>
 
     <!-- servlet to map to summary page -->
     <servlet>
-        <servlet-name>NiFiSummary</servlet-name>
+        <servlet-name>AlgopipecSummary</servlet-name>
         <jsp-file>/WEB-INF/pages/summary.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>NiFiSummary</servlet-name>
+        <servlet-name>AlgopipecSummary</servlet-name>
         <url-pattern>/summary</url-pattern>
     </servlet-mapping>
 
     <!-- servlet to map to history page -->
     <servlet>
-        <servlet-name>NiFiHistory</servlet-name>
+        <servlet-name>AlgopipecHistory</servlet-name>
         <jsp-file>/WEB-INF/pages/history.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>NiFiHistory</servlet-name>
+        <servlet-name>AlgopipecHistory</servlet-name>
         <url-pattern>/history</url-pattern>
     </servlet-mapping>
 
     <!-- servlet to map to provenance page -->
     <servlet>
-        <servlet-name>NiFiProvenance</servlet-name>
+        <servlet-name>AlgopipecProvenance</servlet-name>
         <jsp-file>/WEB-INF/pages/provenance.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>NiFiProvenance</servlet-name>
+        <servlet-name>AlgopipecProvenance</servlet-name>
         <url-pattern>/provenance</url-pattern>
     </servlet-mapping>
 
     <!-- servlet to map to counters page -->
     <servlet>
-        <servlet-name>NiFiCounters</servlet-name>
+        <servlet-name>AlgopipecCounters</servlet-name>
         <jsp-file>/WEB-INF/pages/counters.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>NiFiCounters</servlet-name>
+        <servlet-name>AlgopipecCounters</servlet-name>
         <url-pattern>/counters</url-pattern>
     </servlet-mapping>
 
     <!-- servlet to map to templates page -->
     <servlet>
-        <servlet-name>NiFiTemplates</servlet-name>
+        <servlet-name>AlgopipecTemplates</servlet-name>
         <jsp-file>/WEB-INF/pages/templates.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>NiFiTemplates</servlet-name>
+        <servlet-name>AlgopipecTemplates</servlet-name>
         <url-pattern>/templates</url-pattern>
     </servlet-mapping>
 
     <!-- servlet to map to users page -->
     <servlet>
-        <servlet-name>NiFiUsers</servlet-name>
+        <servlet-name>AlgopipecUsers</servlet-name>
         <jsp-file>/WEB-INF/pages/users.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>NiFiUsers</servlet-name>
+        <servlet-name>AlgopipecUsers</servlet-name>
         <url-pattern>/users</url-pattern>
     </servlet-mapping>
 
     <!-- servlet to map to cluster page -->
     <servlet>
-        <servlet-name>NiFiCluster</servlet-name>
+        <servlet-name>AlgopipecCluster</servlet-name>
         <jsp-file>/WEB-INF/pages/cluster.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>NiFiCluster</servlet-name>
+        <servlet-name>AlgopipecCluster</servlet-name>
         <url-pattern>/cluster</url-pattern>
     </servlet-mapping>
 

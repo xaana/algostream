@@ -107,7 +107,7 @@
                         $.each(processor.relationships, function (i, relationship) {
                             createRelationshipOption(relationship.name);
                         });
-                        
+
                         addDialogRelationshipsChangeListener();
 
                         // if there is a single relationship auto select
@@ -120,8 +120,8 @@
                         $('#connection-configuration').modal('setButtonModel', [{
                             buttonText: 'Add',
                             color: {
-                                base: '#728E9B',
-                                hover: '#004849',
+                                base: '#5734D3',
+                                hover: '#7747E8',
                                 text: '#ffffff'
                             },
                             disabled: function () {
@@ -137,9 +137,9 @@
                             {
                                 buttonText: 'Cancel',
                                 color: {
-                                    base: '#E3E8EB',
-                                    hover: '#C7D2D7',
-                                    text: '#004849'
+                                    base: '#FFFFFF',
+                                    hover: '#F3F3F3',
+                                    text: '#333333'
                                 },
                                 disabled: function() {
                                     // when add button is clicked, should disable until the addition action is completed
@@ -190,8 +190,8 @@
                     $('#connection-configuration').modal('setButtonModel', [{
                         buttonText: 'Add',
                         color: {
-                            base: '#728E9B',
-                            hover: '#004849',
+                            base: '#5734D3',
+                            hover: '#7747E8',
                             text: '#ffffff'
                         },
                         disabled : function(){
@@ -208,9 +208,9 @@
                         {
                             buttonText: 'Cancel',
                             color: {
-                                base: '#E3E8EB',
-                                hover: '#C7D2D7',
-                                text: '#004849'
+                                base: '#FFFFFF',
+                                hover: '#F3F3F3',
+                                text: '#333333'
                             },
                             disabled : function(){
                                 return isConnectionUpsertionInProgess();
@@ -383,7 +383,7 @@
                 } else {
                     var message = '\'' + nfCommon.escapeHtml(processGroupName) + '\' does not have any local output ports.';
                     if (nfCommon.isEmpty(processGroupContents.outputPorts) === false
-                            && processGroupContents.outputPorts.length > publicOutputPortCount) {
+                        && processGroupContents.outputPorts.length > publicOutputPortCount) {
                         message = 'Not authorized for any local output ports in \'' + nfCommon.escapeHtml(processGroupName) + '\'.';
                     }
 
@@ -800,7 +800,7 @@
      * @param {boolean} status the status of connection addition/update
      */
     var setConnectionUpsertionInProgess = function(status)
-    {        
+    {
         var needToUpdateDOM = (connectionUpsertionInProgress !== status) ;
         connectionUpsertionInProgress = status;
         if(needToUpdateDOM){
@@ -812,7 +812,7 @@
      * returns whether the connection addition/update in progress
      */
     var isConnectionUpsertionInProgess = function()
-    {        
+    {
         return connectionUpsertionInProgress;
     }
 
@@ -881,7 +881,7 @@
             if (existingConnections.length > 0) {
                 var avoidCollision = false;
                 $.each(existingConnections, function (_, existingConnection) {
-                    // only consider multiple connections with no bend points a collision, the existance of 
+                    // only consider multiple connections with no bend points a collision, the existance of
                     // bend points suggests that the user has placed the connection into a desired location
                     if (nfCommon.isEmpty(existingConnection.bends)) {
                         avoidCollision = true;
@@ -1037,7 +1037,7 @@
                 nfBirdseye.refresh();
             }).fail(function(xhr, status, error){
 
-                // update the button status 
+                // update the button status
                 setConnectionUpsertionInProgess(false);
                 nfErrorHandler.handleConfigurationUpdateAjaxError(xhr, status, error);
             });
@@ -1620,8 +1620,8 @@
                     $('#connection-configuration').modal('setButtonModel', [{
                         buttonText: 'Apply',
                         color: {
-                            base: '#728E9B',
-                            hover: '#004849',
+                            base: '#5734D3',
+                            hover: '#7747E8',
                             text: '#ffffff'
                         },
                         disabled: function () {
@@ -1660,9 +1660,9 @@
                         {
                             buttonText: 'Cancel',
                             color: {
-                                base: '#E3E8EB',
-                                hover: '#C7D2D7',
-                                text: '#004849'
+                                base: '#FFFFFF',
+                                hover: '#F3F3F3',
+                                text: '#333333'
                             },
                             disabled: function(){
                                 return isConnectionUpsertionInProgess();

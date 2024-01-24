@@ -525,8 +525,8 @@
                         var buttonModel = [{
                                 buttonText: 'Add',
                                 color: {
-                                    base: '#728E9B',
-                                    hover: '#004849',
+                                    base: '#5734D3',
+                                    hover: 'rgba(87,52,211,0.51)',
                                     text: '#ffffff'
                                 },
                                 disabled: function () {
@@ -543,9 +543,9 @@
                             {
                                 buttonText: 'Cancel',
                                 color: {
-                                    base: '#E3E8EB',
-                                    hover: '#C7D2D7',
-                                    text: '#004849'
+                                    base: '#ffffff',
+                                    hover: 'rgba(227,232,235)',
+                                    text: '#333333'
                                 },
                                 handler: {
                                     click: function () {
@@ -557,7 +557,13 @@
                                     }
                                 }
                             }];
+                        $('#cancel_dialog_view').click(function (){
+                            // reject the deferred
+                            deferred.reject();
 
+                            // close the dialog
+                            groupComponent.modal.hide();
+                        })
                         if (showImportLink === true && nfCommon.canVersionFlows()) {
                             buttonModel.push({
                                 buttonText: 'Import from Registry',

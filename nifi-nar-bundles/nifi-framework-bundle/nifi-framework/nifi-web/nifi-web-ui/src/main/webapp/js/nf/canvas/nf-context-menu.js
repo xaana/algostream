@@ -768,7 +768,42 @@
         if (nfCommon.isDefinedAndNotNull(item['imgStyle'])) {
             img.addClass(item['imgStyle']);
         }
-
+        var imageMap = {
+            'reload-menu-item': 'images/reload-menu.svg',
+            'show-configuration-menu-item': 'images/configuration.svg',
+            'variable-registry-menu-item':'images/variable-registry.svg',
+            'start-menu-item':'images/start.svg',
+            'stop-menu-item':'images/stop.svg',
+            'enable-menu-item':'images/enable.svg',
+            'disable-menu-item':'images/disable.svg',
+            'enable-all-controller-services-menu-item-noselection':'images/enable.svg',
+            'disable-all-controller-services-menu-item-noselection':'images/disable.svg',
+            'download-menu-item':'images/download.svg',
+            'upload-template-menu-item':'images/upload.svg',
+            'template-menu-item':'images/template.svg',
+            'empty-all-queues-menu-item-noselection':'images/delete.svg',
+            'paste-menu-item':'images/paste.svg',
+            'delete-menu-item':'images/delete.svg',
+            'copy-menu-item':'images/copy.svg',
+            'data-provenance-menu-item':'images/data-provenance.svg',
+            'view-menu-item':'images/view-menu.svg',
+            'center-menu-item':'images/center-menu.svg',
+            'group-menu-item':'images/group-menu.svg',
+            'data-provenance-replay-last-menu-item':'images/data-provenance-replay.svg',
+            'show-stats-menu-item':'images/show-stats.svg',
+            'view-state-menu-item':'images/view-state.svg',
+            // 'show-usage-menu-item':'images/show-usage.svg',
+            'fill-color-menu-item':'images/fill-color.svg',
+            'enable-all-controller-services-menu-item':'images/enable.svg',
+            'disable-all-controller-services-menu-item':'images/disable.svg',
+            'to-front-menu-item':'images/to-front.svg',
+            'enter-group-menu-item':'images/enter-group.svg',
+            'empty-all-queues-menu-item':'images/empty-all.svg'
+            // ????????id????????
+        };
+        if (item.id in imageMap) {
+            $('<img>').attr('src', imageMap[item.id]).attr('style','margin-left:4px').appendTo(img);
+        }
         $('<div class="context-menu-item-text"></div>').text(item['text']).appendTo(menuItem);
         if (item.isGroup) {
             $('<div class="fa fa-caret-right context-menu-group-item-img"></div>').appendTo(menuItem);
@@ -853,7 +888,7 @@
         {id: 'show-stats-menu-item', condition: supportsStats, menuItem: {clazz: 'fa fa-area-chart', text: 'View status history', action: 'showStats'}},
         {id: 'view-state-menu-item', condition: isStatefulProcessor, menuItem: {clazz: 'fa fa-tasks', text: 'View state', action: 'viewState'}},
         {id: 'list-queue-menu-item', condition: canListQueue, menuItem: {clazz: 'fa fa-list', text: 'List queue', action: 'listQueue'}},
-        {id: 'show-usage-menu-item', condition: hasUsage, menuItem: {clazz: 'fa fa-book', text: 'View usage', action: 'showUsage'}},
+        // {id: 'show-usage-menu-item', condition: hasUsage, menuItem: {clazz: 'fa fa-book', text: 'View usage', action: 'showUsage'}},
         {id: 'view-menu-item', groupMenuItem: {clazz: 'icon icon-connect', text: 'View connections'}, menuItems: [
             {id: 'show-upstream-menu-item', condition: hasUpstream, menuItem: {clazz: 'icon', text: 'Upstream', action: 'showUpstream'}},
             {id: 'show-downstream-menu-item', condition: hasDownstream, menuItem: {clazz: 'icon', text: 'Downstream', action: 'showDownstream'}}
@@ -951,7 +986,8 @@
                     imgStyle: item.imgStyle,
                     text: item.text,
                     isGroup: false
-                }).on('click', function (evt) {
+                }).on('click',  function (evt) {
+                    $('#shell-dialog').hide()
                     executeAction(item.action, selection, evt);
                 }).on('contextmenu', function (evt) {
                     executeAction(item.action, selection, evt);

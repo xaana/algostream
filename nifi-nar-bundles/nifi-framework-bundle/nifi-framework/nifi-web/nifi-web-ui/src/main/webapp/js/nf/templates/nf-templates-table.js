@@ -118,6 +118,7 @@
             if (nfCommon.isDefinedAndNotNull(parent.nf) && nfCommon.isDefinedAndNotNull(parent.nf.PolicyManagement) && nfCommon.isDefinedAndNotNull(parent.nf.Shell)) {
                 parent.nf.PolicyManagement.showTemplatePolicy(templateEntity);
                 parent.$('#shell-close-button').click();
+                $('#shell-close-button').click();
             }
         }
     };
@@ -444,7 +445,10 @@
                 } else {
                     $('#total-templates').text('0');
                 }
-            }).fail(nfErrorHandler.handleAjaxError);
-        }
+            // }).fail(nfErrorHandler.handleAjaxError);
+        });
+
+
+}
     };
 }));
